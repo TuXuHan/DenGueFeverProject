@@ -1,141 +1,141 @@
-# 🦟 Tainan City Dengue Fever Monitoring System
+# 🦟 臺南市登革熱監測系統
 
-A comprehensive dengue fever monitoring and prediction system for Tainan City, Taiwan, featuring interactive maps, machine learning predictions, and real-time data visualization.
+一個針對臺南市設計的綜合性登革熱監測與預測系統，具備互動式地圖、機器學習預測和即時資料視覺化功能。
 
-## 📋 Project Description
+## 📋 專案描述
 
-This project is a sophisticated dengue fever monitoring system that combines web scraping, machine learning, and interactive mapping to provide real-time dengue fever risk assessment for Tainan City. The system features:
+本專案是一個先進的登革熱監測系統，結合網頁爬蟲、機器學習和互動式地圖技術，為臺南市提供即時登革熱風險評估。系統特色包括：
 
-- **Interactive Web Interface**: FastAPI-based web application with modern UI
-- **Machine Learning Predictions**: Deep learning models for dengue risk prediction
-- **Real-time Data Updates**: Automated data collection from government APIs
-- **Interactive Maps**: Folium-based visualization with district boundaries
-- **Risk Assessment**: Multi-level risk classification (low, medium, high)
-- **Data Management**: Comprehensive data processing and storage
+- **互動式網頁介面**：基於FastAPI的現代化網頁應用程式
+- **機器學習預測**：深度學習模型進行登革熱風險預測
+- **即時資料更新**：從政府API自動收集資料
+- **互動式地圖**：基於Folium的地圖視覺化，包含行政區邊界
+- **風險評估**：多層級風險分類（低、中、高風險）
+- **資料管理**：完整的資料處理和儲存功能
 
-The system processes mosquito trap data, weather information, and historical dengue cases to predict outbreak risks across different districts in Tainan City.
+系統處理誘卵桶資料、氣象資訊和歷史登革熱病例，以預測臺南市各行政區的疫情爆發風險。
 
-## 🚀 How to Run
+## 🚀 如何執行
 
-### Prerequisites
-- Python 3.8 or higher
-- Chrome browser (for web scraping functionality)
-- Required dependencies (see requirements.txt)
+### 系統需求
+- Python 3.8 或更高版本
+- Chrome 瀏覽器（用於網頁爬蟲功能）
+- 所需依賴套件（請參考 requirements.txt）
 
-### Installation Steps
+### 安裝步驟
 
-1. **Clone the repository**
+1. **複製專案**
    ```bash
    git clone <repository-url>
    cd DengueFeverProject
    ```
 
-2. **Install dependencies**
+2. **安裝依賴套件**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Configure the system**
-   - Copy the example configuration file:
+3. **設定系統**
+   - 複製範例設定檔：
      ```bash
      cp config_example.py config.py
      ```
-   - Edit `config.py` to match your system requirements
+   - 編輯 `config.py` 以符合您的系統需求
 
-4. **Run the main application**
+4. **執行主應用程式**
    ```bash
    python main.py
    ```
 
-5. **Access the web interface**
-   - Open your browser and navigate to: `http://localhost:8000`
-   - The system will automatically update map data on startup
+5. **存取網頁介面**
+   - 開啟瀏覽器並導航至：`http://localhost:8000`
+   - 系統啟動時會自動更新地圖資料
 
-### Alternative Startup Methods
+### 其他啟動方式
 
-**For the legacy Node.js system:**
+**舊版 Node.js 系統：**
 ```bash
 cd 臺南市校園登革熱預警系統
 node server.js
 ```
 
-**For data updates only:**
+**僅更新資料：**
 ```bash
 python UpdateData.py
 ```
 
-### System Components
+### 系統元件
 
-- **main.py**: FastAPI web server and main application
-- **UpdateData.py**: Data collection and update scripts
-- **臺南市校園登革熱預警系統/**: Legacy Node.js system with ML models
-- **data/**: Data processing and map generation scripts
+- **main.py**：FastAPI 網頁伺服器和主應用程式
+- **UpdateData.py**：資料收集和更新腳本
+- **臺南市校園登革熱預警系統/**：包含機器學習模型的舊版 Node.js 系統
+- **data/**：資料處理和地圖生成腳本
 
-## 🧪 How to Test
+## 🧪 如何測試
 
-### Running Tests
+### 執行測試
 
-Since `test_main.py` doesn't exist in the current project structure, here are the recommended testing approaches:
+由於目前專案結構中沒有 `test_main.py` 檔案，以下是建議的測試方法：
 
-1. **Manual Testing**
+1. **手動測試**
    ```bash
-   # Start the main application
+   # 啟動主應用程式
    python main.py
    
-   # In another terminal, test the API endpoints
+   # 在另一個終端機中測試 API 端點
    curl http://localhost:8000/
    curl http://localhost:8000/api/update-map
    ```
 
-2. **Data Validation Tests**
+2. **資料驗證測試**
    ```bash
-   # Test data update functionality
+   # 測試資料更新功能
    python test.py
    ```
 
-3. **Create a test file** (recommended):
+3. **建立測試檔案**（建議）：
    ```bash
-   # Create a simple test file
+   # 建立簡單的測試檔案
    cat > test_main.py << 'EOF'
    import requests
    import time
    
    def test_main_app():
-       """Test the main FastAPI application"""
+       """測試主 FastAPI 應用程式"""
        base_url = "http://localhost:8000"
        
-       # Test main page
+       # 測試主頁面
        response = requests.get(base_url)
-       assert response.status_code == 200, "Main page should be accessible"
+       assert response.status_code == 200, "主頁面應該可以存取"
        
-       # Test API endpoint
+       # 測試 API 端點
        api_response = requests.get(f"{base_url}/api/update-map")
-       assert api_response.status_code == 200, "API should respond successfully"
+       assert api_response.status_code == 200, "API 應該成功回應"
        
-       print("All tests passed!")
+       print("所有測試通過！")
    
    if __name__ == "__main__":
        test_main_app()
    EOF
    
-   # Run the test
+   # 執行測試
    python test_main.py
    ```
 
-4. **Machine Learning Model Tests**
+4. **機器學習模型測試**
    ```bash
    cd 臺南市校園登革熱預警系統
    python model_pred.py
    ```
 
-### Testing Checklist
+### 測試檢查清單
 
-- [ ] Web interface loads correctly
-- [ ] Map displays properly
-- [ ] Data update functionality works
-- [ ] API endpoints respond correctly
-- [ ] Machine learning predictions execute
-- [ ] File upload functionality (if applicable)
+- [ ] 網頁介面正確載入
+- [ ] 地圖正常顯示
+- [ ] 資料更新功能正常運作
+- [ ] API 端點正確回應
+- [ ] 機器學習預測執行成功
+- [ ] 檔案上傳功能（如適用）
 
 ## 📁 Project Structure
 

@@ -1,0 +1,372 @@
+[
+  {
+    "id": 7,
+    "name": "永康區",
+    "population": 235000,
+    "dengue_cases": 49,
+    "risk_level": "中風險",
+    "last_update": "2025-09-25 10:52",
+    "value": 49,
+    "rate_per_10k": 2.09
+  },
+  {
+    "id": 3,
+    "name": "東區",
+    "population": 185000,
+    "dengue_cases": 44,
+    "risk_level": "中風險",
+    "last_update": "2025-09-25 10:52",
+    "value": 44,
+    "rate_per_10k": 2.38
+  },
+  {
+    "id": 5,
+    "name": "北區",
+    "population": 135000,
+    "dengue_cases": 37,
+    "risk_level": "中風險",
+    "last_update": "2025-09-27 10:52",
+    "value": 37,
+    "rate_per_10k": 2.74
+  },
+  {
+    "id": 4,
+    "name": "南區",
+    "population": 125000,
+    "dengue_cases": 30,
+    "risk_level": "中風險",
+    "last_update": "2025-09-21 10:52",
+    "value": 30,
+    "rate_per_10k": 2.4
+  },
+  {
+    "id": 28,
+    "name": "新營區",
+    "population": 78000,
+    "dengue_cases": 29,
+    "risk_level": "中風險",
+    "last_update": "2025-09-22 10:52",
+    "value": 29,
+    "rate_per_10k": 3.72
+  },
+  {
+    "id": 23,
+    "name": "佳里區",
+    "population": 60000,
+    "dengue_cases": 24,
+    "risk_level": "中風險",
+    "last_update": "2025-09-22 10:52",
+    "value": 24,
+    "rate_per_10k": 4.0
+  },
+  {
+    "id": 2,
+    "name": "安平區",
+    "population": 65000,
+    "dengue_cases": 23,
+    "risk_level": "中風險",
+    "last_update": "2025-09-26 10:52",
+    "value": 23,
+    "rate_per_10k": 3.54
+  },
+  {
+    "id": 1,
+    "name": "中西區",
+    "population": 78000,
+    "dengue_cases": 22,
+    "risk_level": "中風險",
+    "last_update": "2025-09-27 10:52",
+    "value": 22,
+    "rate_per_10k": 2.82
+  },
+  {
+    "id": 10,
+    "name": "左鎮區",
+    "population": 5000,
+    "dengue_cases": 20,
+    "risk_level": "極高風險",
+    "last_update": "2025-09-20 10:52",
+    "value": 20,
+    "rate_per_10k": 40.0
+  },
+  {
+    "id": 29,
+    "name": "鹽水區",
+    "population": 28000,
+    "dengue_cases": 20,
+    "risk_level": "高風險",
+    "last_update": "2025-09-25 10:52",
+    "value": 20,
+    "rate_per_10k": 7.14
+  },
+  {
+    "id": 19,
+    "name": "關廟區",
+    "population": 35000,
+    "dengue_cases": 19,
+    "risk_level": "高風險",
+    "last_update": "2025-09-24 10:52",
+    "value": 19,
+    "rate_per_10k": 5.43
+  },
+  {
+    "id": 24,
+    "name": "學甲區",
+    "population": 28000,
+    "dengue_cases": 19,
+    "risk_level": "高風險",
+    "last_update": "2025-09-27 10:52",
+    "value": 19,
+    "rate_per_10k": 6.79
+  },
+  {
+    "id": 25,
+    "name": "西港區",
+    "population": 25000,
+    "dengue_cases": 19,
+    "risk_level": "高風險",
+    "last_update": "2025-09-21 10:52",
+    "value": 19,
+    "rate_per_10k": 7.6
+  },
+  {
+    "id": 32,
+    "name": "東山區",
+    "population": 22000,
+    "dengue_cases": 19,
+    "risk_level": "高風險",
+    "last_update": "2025-09-26 10:52",
+    "value": 19,
+    "rate_per_10k": 8.64
+  },
+  {
+    "id": 35,
+    "name": "麻豆區",
+    "population": 45000,
+    "dengue_cases": 19,
+    "risk_level": "中風險",
+    "last_update": "2025-09-22 10:52",
+    "value": 19,
+    "rate_per_10k": 4.22
+  },
+  {
+    "id": 33,
+    "name": "六甲區",
+    "population": 23000,
+    "dengue_cases": 18,
+    "risk_level": "高風險",
+    "last_update": "2025-09-26 10:52",
+    "value": 18,
+    "rate_per_10k": 7.83
+  },
+  {
+    "id": 15,
+    "name": "大內區",
+    "population": 10000,
+    "dengue_cases": 17,
+    "risk_level": "極高風險",
+    "last_update": "2025-09-21 10:52",
+    "value": 17,
+    "rate_per_10k": 17.0
+  },
+  {
+    "id": 27,
+    "name": "北門區",
+    "population": 12000,
+    "dengue_cases": 17,
+    "risk_level": "極高風險",
+    "last_update": "2025-09-23 10:52",
+    "value": 17,
+    "rate_per_10k": 14.17
+  },
+  {
+    "id": 8,
+    "name": "歸仁區",
+    "population": 68000,
+    "dengue_cases": 16,
+    "risk_level": "中風險",
+    "last_update": "2025-09-24 10:52",
+    "value": 16,
+    "rate_per_10k": 2.35
+  },
+  {
+    "id": 36,
+    "name": "下營區",
+    "population": 25000,
+    "dengue_cases": 16,
+    "risk_level": "高風險",
+    "last_update": "2025-09-24 10:52",
+    "value": 16,
+    "rate_per_10k": 6.4
+  },
+  {
+    "id": 30,
+    "name": "白河區",
+    "population": 30000,
+    "dengue_cases": 15,
+    "risk_level": "高風險",
+    "last_update": "2025-09-22 10:52",
+    "value": 15,
+    "rate_per_10k": 5.0
+  },
+  {
+    "id": 14,
+    "name": "善化區",
+    "population": 48000,
+    "dengue_cases": 14,
+    "risk_level": "中風險",
+    "last_update": "2025-09-25 10:52",
+    "value": 14,
+    "rate_per_10k": 2.92
+  },
+  {
+    "id": 18,
+    "name": "安定區",
+    "population": 31000,
+    "dengue_cases": 14,
+    "risk_level": "中風險",
+    "last_update": "2025-09-22 10:52",
+    "value": 14,
+    "rate_per_10k": 4.52
+  },
+  {
+    "id": 16,
+    "name": "山上區",
+    "population": 8000,
+    "dengue_cases": 13,
+    "risk_level": "極高風險",
+    "last_update": "2025-09-21 10:52",
+    "value": 13,
+    "rate_per_10k": 16.25
+  },
+  {
+    "id": 9,
+    "name": "新化區",
+    "population": 45000,
+    "dengue_cases": 11,
+    "risk_level": "中風險",
+    "last_update": "2025-09-26 10:52",
+    "value": 11,
+    "rate_per_10k": 2.44
+  },
+  {
+    "id": 26,
+    "name": "將軍區",
+    "population": 20000,
+    "dengue_cases": 11,
+    "risk_level": "高風險",
+    "last_update": "2025-09-26 10:52",
+    "value": 11,
+    "rate_per_10k": 5.5
+  },
+  {
+    "id": 31,
+    "name": "後壁區",
+    "population": 25000,
+    "dengue_cases": 10,
+    "risk_level": "中風險",
+    "last_update": "2025-09-26 10:52",
+    "value": 10,
+    "rate_per_10k": 4.0
+  },
+  {
+    "id": 12,
+    "name": "南化區",
+    "population": 9000,
+    "dengue_cases": 9,
+    "risk_level": "極高風險",
+    "last_update": "2025-09-25 10:52",
+    "value": 9,
+    "rate_per_10k": 10.0
+  },
+  {
+    "id": 20,
+    "name": "龍崎區",
+    "population": 4000,
+    "dengue_cases": 9,
+    "risk_level": "極高風險",
+    "last_update": "2025-09-25 10:52",
+    "value": 9,
+    "rate_per_10k": 22.5
+  },
+  {
+    "id": 22,
+    "name": "七股區",
+    "population": 23000,
+    "dengue_cases": 9,
+    "risk_level": "中風險",
+    "last_update": "2025-09-22 10:52",
+    "value": 9,
+    "rate_per_10k": 3.91
+  },
+  {
+    "id": 37,
+    "name": "柳營區",
+    "population": 22000,
+    "dengue_cases": 8,
+    "risk_level": "中風險",
+    "last_update": "2025-09-22 10:52",
+    "value": 8,
+    "rate_per_10k": 3.64
+  },
+  {
+    "id": 6,
+    "name": "安南區",
+    "population": 195000,
+    "dengue_cases": 4,
+    "risk_level": "低風險",
+    "last_update": "2025-09-23 10:52",
+    "value": 4,
+    "rate_per_10k": 0.21
+  },
+  {
+    "id": 21,
+    "name": "仁德區",
+    "population": 75000,
+    "dengue_cases": 4,
+    "risk_level": "低風險",
+    "last_update": "2025-09-23 10:52",
+    "value": 4,
+    "rate_per_10k": 0.53
+  },
+  {
+    "id": 13,
+    "name": "楠西區",
+    "population": 11000,
+    "dengue_cases": 2,
+    "risk_level": "低風險",
+    "last_update": "2025-09-21 10:52",
+    "value": 2,
+    "rate_per_10k": 1.82
+  },
+  {
+    "id": 11,
+    "name": "玉井區",
+    "population": 15000,
+    "dengue_cases": 1,
+    "risk_level": "低風險",
+    "last_update": "2025-09-20 10:52",
+    "value": 1,
+    "rate_per_10k": 0.67
+  },
+  {
+    "id": 17,
+    "name": "新市區",
+    "population": 36000,
+    "dengue_cases": 0,
+    "risk_level": "低風險",
+    "last_update": "2025-09-27 10:52",
+    "value": 0,
+    "rate_per_10k": 0.0
+  },
+  {
+    "id": 34,
+    "name": "官田區",
+    "population": 22000,
+    "dengue_cases": 0,
+    "risk_level": "低風險",
+    "last_update": "2025-09-24 10:52",
+    "value": 0,
+    "rate_per_10k": 0.0
+  }
+]

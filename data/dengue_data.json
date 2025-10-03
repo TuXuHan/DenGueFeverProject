@@ -1,0 +1,4577 @@
+{
+  "districts": [
+    {
+      "id": 7,
+      "name": "永康區",
+      "population": 235000,
+      "dengue_cases": 49,
+      "risk_level": "中風險",
+      "last_update": "2025-09-25 10:52",
+      "value": 49,
+      "rate_per_10k": 2.09
+    },
+    {
+      "id": 3,
+      "name": "東區",
+      "population": 185000,
+      "dengue_cases": 44,
+      "risk_level": "中風險",
+      "last_update": "2025-09-25 10:52",
+      "value": 44,
+      "rate_per_10k": 2.38
+    },
+    {
+      "id": 5,
+      "name": "北區",
+      "population": 135000,
+      "dengue_cases": 37,
+      "risk_level": "中風險",
+      "last_update": "2025-09-27 10:52",
+      "value": 37,
+      "rate_per_10k": 2.74
+    },
+    {
+      "id": 4,
+      "name": "南區",
+      "population": 125000,
+      "dengue_cases": 30,
+      "risk_level": "中風險",
+      "last_update": "2025-09-21 10:52",
+      "value": 30,
+      "rate_per_10k": 2.4
+    },
+    {
+      "id": 28,
+      "name": "新營區",
+      "population": 78000,
+      "dengue_cases": 29,
+      "risk_level": "中風險",
+      "last_update": "2025-09-22 10:52",
+      "value": 29,
+      "rate_per_10k": 3.72
+    },
+    {
+      "id": 23,
+      "name": "佳里區",
+      "population": 60000,
+      "dengue_cases": 24,
+      "risk_level": "中風險",
+      "last_update": "2025-09-22 10:52",
+      "value": 24,
+      "rate_per_10k": 4.0
+    },
+    {
+      "id": 2,
+      "name": "安平區",
+      "population": 65000,
+      "dengue_cases": 23,
+      "risk_level": "中風險",
+      "last_update": "2025-09-26 10:52",
+      "value": 23,
+      "rate_per_10k": 3.54
+    },
+    {
+      "id": 1,
+      "name": "中西區",
+      "population": 78000,
+      "dengue_cases": 22,
+      "risk_level": "中風險",
+      "last_update": "2025-09-27 10:52",
+      "value": 22,
+      "rate_per_10k": 2.82
+    },
+    {
+      "id": 10,
+      "name": "左鎮區",
+      "population": 5000,
+      "dengue_cases": 20,
+      "risk_level": "極高風險",
+      "last_update": "2025-09-20 10:52",
+      "value": 20,
+      "rate_per_10k": 40.0
+    },
+    {
+      "id": 29,
+      "name": "鹽水區",
+      "population": 28000,
+      "dengue_cases": 20,
+      "risk_level": "高風險",
+      "last_update": "2025-09-25 10:52",
+      "value": 20,
+      "rate_per_10k": 7.14
+    },
+    {
+      "id": 19,
+      "name": "關廟區",
+      "population": 35000,
+      "dengue_cases": 19,
+      "risk_level": "高風險",
+      "last_update": "2025-09-24 10:52",
+      "value": 19,
+      "rate_per_10k": 5.43
+    },
+    {
+      "id": 24,
+      "name": "學甲區",
+      "population": 28000,
+      "dengue_cases": 19,
+      "risk_level": "高風險",
+      "last_update": "2025-09-27 10:52",
+      "value": 19,
+      "rate_per_10k": 6.79
+    },
+    {
+      "id": 25,
+      "name": "西港區",
+      "population": 25000,
+      "dengue_cases": 19,
+      "risk_level": "高風險",
+      "last_update": "2025-09-21 10:52",
+      "value": 19,
+      "rate_per_10k": 7.6
+    },
+    {
+      "id": 32,
+      "name": "東山區",
+      "population": 22000,
+      "dengue_cases": 19,
+      "risk_level": "高風險",
+      "last_update": "2025-09-26 10:52",
+      "value": 19,
+      "rate_per_10k": 8.64
+    },
+    {
+      "id": 35,
+      "name": "麻豆區",
+      "population": 45000,
+      "dengue_cases": 19,
+      "risk_level": "中風險",
+      "last_update": "2025-09-22 10:52",
+      "value": 19,
+      "rate_per_10k": 4.22
+    },
+    {
+      "id": 33,
+      "name": "六甲區",
+      "population": 23000,
+      "dengue_cases": 18,
+      "risk_level": "高風險",
+      "last_update": "2025-09-26 10:52",
+      "value": 18,
+      "rate_per_10k": 7.83
+    },
+    {
+      "id": 15,
+      "name": "大內區",
+      "population": 10000,
+      "dengue_cases": 17,
+      "risk_level": "極高風險",
+      "last_update": "2025-09-21 10:52",
+      "value": 17,
+      "rate_per_10k": 17.0
+    },
+    {
+      "id": 27,
+      "name": "北門區",
+      "population": 12000,
+      "dengue_cases": 17,
+      "risk_level": "極高風險",
+      "last_update": "2025-09-23 10:52",
+      "value": 17,
+      "rate_per_10k": 14.17
+    },
+    {
+      "id": 8,
+      "name": "歸仁區",
+      "population": 68000,
+      "dengue_cases": 16,
+      "risk_level": "中風險",
+      "last_update": "2025-09-24 10:52",
+      "value": 16,
+      "rate_per_10k": 2.35
+    },
+    {
+      "id": 36,
+      "name": "下營區",
+      "population": 25000,
+      "dengue_cases": 16,
+      "risk_level": "高風險",
+      "last_update": "2025-09-24 10:52",
+      "value": 16,
+      "rate_per_10k": 6.4
+    },
+    {
+      "id": 30,
+      "name": "白河區",
+      "population": 30000,
+      "dengue_cases": 15,
+      "risk_level": "高風險",
+      "last_update": "2025-09-22 10:52",
+      "value": 15,
+      "rate_per_10k": 5.0
+    },
+    {
+      "id": 14,
+      "name": "善化區",
+      "population": 48000,
+      "dengue_cases": 14,
+      "risk_level": "中風險",
+      "last_update": "2025-09-25 10:52",
+      "value": 14,
+      "rate_per_10k": 2.92
+    },
+    {
+      "id": 18,
+      "name": "安定區",
+      "population": 31000,
+      "dengue_cases": 14,
+      "risk_level": "中風險",
+      "last_update": "2025-09-22 10:52",
+      "value": 14,
+      "rate_per_10k": 4.52
+    },
+    {
+      "id": 16,
+      "name": "山上區",
+      "population": 8000,
+      "dengue_cases": 13,
+      "risk_level": "極高風險",
+      "last_update": "2025-09-21 10:52",
+      "value": 13,
+      "rate_per_10k": 16.25
+    },
+    {
+      "id": 9,
+      "name": "新化區",
+      "population": 45000,
+      "dengue_cases": 11,
+      "risk_level": "中風險",
+      "last_update": "2025-09-26 10:52",
+      "value": 11,
+      "rate_per_10k": 2.44
+    },
+    {
+      "id": 26,
+      "name": "將軍區",
+      "population": 20000,
+      "dengue_cases": 11,
+      "risk_level": "高風險",
+      "last_update": "2025-09-26 10:52",
+      "value": 11,
+      "rate_per_10k": 5.5
+    },
+    {
+      "id": 31,
+      "name": "後壁區",
+      "population": 25000,
+      "dengue_cases": 10,
+      "risk_level": "中風險",
+      "last_update": "2025-09-26 10:52",
+      "value": 10,
+      "rate_per_10k": 4.0
+    },
+    {
+      "id": 12,
+      "name": "南化區",
+      "population": 9000,
+      "dengue_cases": 9,
+      "risk_level": "極高風險",
+      "last_update": "2025-09-25 10:52",
+      "value": 9,
+      "rate_per_10k": 10.0
+    },
+    {
+      "id": 20,
+      "name": "龍崎區",
+      "population": 4000,
+      "dengue_cases": 9,
+      "risk_level": "極高風險",
+      "last_update": "2025-09-25 10:52",
+      "value": 9,
+      "rate_per_10k": 22.5
+    },
+    {
+      "id": 22,
+      "name": "七股區",
+      "population": 23000,
+      "dengue_cases": 9,
+      "risk_level": "中風險",
+      "last_update": "2025-09-22 10:52",
+      "value": 9,
+      "rate_per_10k": 3.91
+    },
+    {
+      "id": 37,
+      "name": "柳營區",
+      "population": 22000,
+      "dengue_cases": 8,
+      "risk_level": "中風險",
+      "last_update": "2025-09-22 10:52",
+      "value": 8,
+      "rate_per_10k": 3.64
+    },
+    {
+      "id": 6,
+      "name": "安南區",
+      "population": 195000,
+      "dengue_cases": 4,
+      "risk_level": "低風險",
+      "last_update": "2025-09-23 10:52",
+      "value": 4,
+      "rate_per_10k": 0.21
+    },
+    {
+      "id": 21,
+      "name": "仁德區",
+      "population": 75000,
+      "dengue_cases": 4,
+      "risk_level": "低風險",
+      "last_update": "2025-09-23 10:52",
+      "value": 4,
+      "rate_per_10k": 0.53
+    },
+    {
+      "id": 13,
+      "name": "楠西區",
+      "population": 11000,
+      "dengue_cases": 2,
+      "risk_level": "低風險",
+      "last_update": "2025-09-21 10:52",
+      "value": 2,
+      "rate_per_10k": 1.82
+    },
+    {
+      "id": 11,
+      "name": "玉井區",
+      "population": 15000,
+      "dengue_cases": 1,
+      "risk_level": "低風險",
+      "last_update": "2025-09-20 10:52",
+      "value": 1,
+      "rate_per_10k": 0.67
+    },
+    {
+      "id": 17,
+      "name": "新市區",
+      "population": 36000,
+      "dengue_cases": 0,
+      "risk_level": "低風險",
+      "last_update": "2025-09-27 10:52",
+      "value": 0,
+      "rate_per_10k": 0.0
+    },
+    {
+      "id": 34,
+      "name": "官田區",
+      "population": 22000,
+      "dengue_cases": 0,
+      "risk_level": "低風險",
+      "last_update": "2025-09-24 10:52",
+      "value": 0,
+      "rate_per_10k": 0.0
+    }
+  ],
+  "weather": {
+    "temperature": 32.2,
+    "humidity": 73,
+    "rainfall": 36.2,
+    "update_time": "2025-09-27 10:52"
+  },
+  "ovitraps": [
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_001",
+      "egg_count": 160,
+      "location": {
+        "lat": 23.498284,
+        "lng": 119.854225
+      },
+      "status": "故障",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_002",
+      "egg_count": 137,
+      "location": {
+        "lat": 22.659182,
+        "lng": 120.053045
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_003",
+      "egg_count": 186,
+      "location": {
+        "lat": 23.308777,
+        "lng": 120.008006
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_004",
+      "egg_count": 30,
+      "location": {
+        "lat": 23.031188,
+        "lng": 120.161232
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_005",
+      "egg_count": 123,
+      "location": {
+        "lat": 23.324479,
+        "lng": 120.343728
+      },
+      "status": "正常",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_006",
+      "egg_count": 121,
+      "location": {
+        "lat": 22.734593,
+        "lng": 119.808475
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_007",
+      "egg_count": 139,
+      "location": {
+        "lat": 23.217514,
+        "lng": 120.599807
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_008",
+      "egg_count": 193,
+      "location": {
+        "lat": 23.474445,
+        "lng": 120.464806
+      },
+      "status": "需更換",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_009",
+      "egg_count": 43,
+      "location": {
+        "lat": 22.680749,
+        "lng": 120.278211
+      },
+      "status": "需更換",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_010",
+      "egg_count": 66,
+      "location": {
+        "lat": 22.698557,
+        "lng": 120.254053
+      },
+      "status": "需更換",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_011",
+      "egg_count": 3,
+      "location": {
+        "lat": 23.285667,
+        "lng": 119.918858
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_012",
+      "egg_count": 38,
+      "location": {
+        "lat": 22.626324,
+        "lng": 119.911574
+      },
+      "status": "正常",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_013",
+      "egg_count": 5,
+      "location": {
+        "lat": 23.006871,
+        "lng": 119.815904
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "中西區",
+      "ovitrap_id": "中西區_014",
+      "egg_count": 27,
+      "location": {
+        "lat": 22.940628,
+        "lng": 120.28029
+      },
+      "status": "正常",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_001",
+      "egg_count": 11,
+      "location": {
+        "lat": 23.227978,
+        "lng": 120.193153
+      },
+      "status": "正常",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_002",
+      "egg_count": 35,
+      "location": {
+        "lat": 22.695685,
+        "lng": 120.090731
+      },
+      "status": "正常",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_003",
+      "egg_count": 160,
+      "location": {
+        "lat": 22.551967,
+        "lng": 120.459461
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_004",
+      "egg_count": 120,
+      "location": {
+        "lat": 22.673818,
+        "lng": 120.287644
+      },
+      "status": "故障",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_005",
+      "egg_count": 124,
+      "location": {
+        "lat": 22.549912,
+        "lng": 120.334993
+      },
+      "status": "故障",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_006",
+      "egg_count": 86,
+      "location": {
+        "lat": 23.433511,
+        "lng": 119.798305
+      },
+      "status": "正常",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_007",
+      "egg_count": 11,
+      "location": {
+        "lat": 23.396725,
+        "lng": 120.117506
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_008",
+      "egg_count": 163,
+      "location": {
+        "lat": 22.930743,
+        "lng": 119.932864
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_009",
+      "egg_count": 168,
+      "location": {
+        "lat": 22.906468,
+        "lng": 120.543054
+      },
+      "status": "正常",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_010",
+      "egg_count": 124,
+      "location": {
+        "lat": 22.876159,
+        "lng": 119.933069
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_011",
+      "egg_count": 149,
+      "location": {
+        "lat": 22.779231,
+        "lng": 120.445425
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_012",
+      "egg_count": 89,
+      "location": {
+        "lat": 23.240437,
+        "lng": 119.868791
+      },
+      "status": "正常",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_013",
+      "egg_count": 15,
+      "location": {
+        "lat": 22.551077,
+        "lng": 120.148284
+      },
+      "status": "故障",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_014",
+      "egg_count": 151,
+      "location": {
+        "lat": 22.843732,
+        "lng": 120.618449
+      },
+      "status": "正常",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "安平區",
+      "ovitrap_id": "安平區_015",
+      "egg_count": 40,
+      "location": {
+        "lat": 23.358957,
+        "lng": 119.850895
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_001",
+      "egg_count": 111,
+      "location": {
+        "lat": 23.073417,
+        "lng": 120.01552
+      },
+      "status": "正常",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_002",
+      "egg_count": 48,
+      "location": {
+        "lat": 23.352318,
+        "lng": 119.990579
+      },
+      "status": "正常",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_003",
+      "egg_count": 9,
+      "location": {
+        "lat": 22.632484,
+        "lng": 119.785534
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_004",
+      "egg_count": 36,
+      "location": {
+        "lat": 23.407477,
+        "lng": 119.828565
+      },
+      "status": "正常",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_005",
+      "egg_count": 67,
+      "location": {
+        "lat": 22.874144,
+        "lng": 120.068823
+      },
+      "status": "需更換",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_006",
+      "egg_count": 167,
+      "location": {
+        "lat": 23.423312,
+        "lng": 120.692667
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_007",
+      "egg_count": 66,
+      "location": {
+        "lat": 23.291834,
+        "lng": 120.468338
+      },
+      "status": "需更換",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_008",
+      "egg_count": 125,
+      "location": {
+        "lat": 22.95093,
+        "lng": 120.140605
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_009",
+      "egg_count": 35,
+      "location": {
+        "lat": 23.047179,
+        "lng": 120.661597
+      },
+      "status": "正常",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_010",
+      "egg_count": 185,
+      "location": {
+        "lat": 23.055342,
+        "lng": 120.257069
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_011",
+      "egg_count": 155,
+      "location": {
+        "lat": 22.67719,
+        "lng": 119.897702
+      },
+      "status": "故障",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "東區",
+      "ovitrap_id": "東區_012",
+      "egg_count": 149,
+      "location": {
+        "lat": 22.581781,
+        "lng": 120.013026
+      },
+      "status": "需更換",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "南區",
+      "ovitrap_id": "南區_001",
+      "egg_count": 63,
+      "location": {
+        "lat": 22.973403,
+        "lng": 119.806582
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "南區",
+      "ovitrap_id": "南區_002",
+      "egg_count": 125,
+      "location": {
+        "lat": 23.259045,
+        "lng": 120.160286
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "南區",
+      "ovitrap_id": "南區_003",
+      "egg_count": 178,
+      "location": {
+        "lat": 22.678173,
+        "lng": 120.237333
+      },
+      "status": "故障",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "南區",
+      "ovitrap_id": "南區_004",
+      "egg_count": 47,
+      "location": {
+        "lat": 23.037606,
+        "lng": 120.355128
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "南區",
+      "ovitrap_id": "南區_005",
+      "egg_count": 199,
+      "location": {
+        "lat": 23.174703,
+        "lng": 120.189075
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_001",
+      "egg_count": 65,
+      "location": {
+        "lat": 22.693798,
+        "lng": 120.612356
+      },
+      "status": "需更換",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_002",
+      "egg_count": 196,
+      "location": {
+        "lat": 23.31116,
+        "lng": 120.047329
+      },
+      "status": "需更換",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_003",
+      "egg_count": 154,
+      "location": {
+        "lat": 23.310099,
+        "lng": 120.47383
+      },
+      "status": "故障",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_004",
+      "egg_count": 128,
+      "location": {
+        "lat": 23.267551,
+        "lng": 120.665973
+      },
+      "status": "需更換",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_005",
+      "egg_count": 188,
+      "location": {
+        "lat": 22.547068,
+        "lng": 120.590241
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_006",
+      "egg_count": 158,
+      "location": {
+        "lat": 22.873712,
+        "lng": 119.880403
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_007",
+      "egg_count": 155,
+      "location": {
+        "lat": 22.751091,
+        "lng": 120.28071
+      },
+      "status": "故障",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_008",
+      "egg_count": 165,
+      "location": {
+        "lat": 22.94645,
+        "lng": 120.60924
+      },
+      "status": "需更換",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_009",
+      "egg_count": 29,
+      "location": {
+        "lat": 23.479621,
+        "lng": 119.882364
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_010",
+      "egg_count": 50,
+      "location": {
+        "lat": 22.939214,
+        "lng": 120.573181
+      },
+      "status": "故障",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_011",
+      "egg_count": 90,
+      "location": {
+        "lat": 23.037058,
+        "lng": 119.90822
+      },
+      "status": "正常",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_012",
+      "egg_count": 123,
+      "location": {
+        "lat": 23.293912,
+        "lng": 120.597042
+      },
+      "status": "正常",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "北區",
+      "ovitrap_id": "北區_013",
+      "egg_count": 22,
+      "location": {
+        "lat": 22.933675,
+        "lng": 119.709325
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_001",
+      "egg_count": 109,
+      "location": {
+        "lat": 22.940733,
+        "lng": 120.14029
+      },
+      "status": "故障",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_002",
+      "egg_count": 180,
+      "location": {
+        "lat": 23.104049,
+        "lng": 120.411298
+      },
+      "status": "正常",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_003",
+      "egg_count": 63,
+      "location": {
+        "lat": 22.934228,
+        "lng": 120.548353
+      },
+      "status": "需更換",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_004",
+      "egg_count": 116,
+      "location": {
+        "lat": 23.026877,
+        "lng": 120.555416
+      },
+      "status": "故障",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_005",
+      "egg_count": 192,
+      "location": {
+        "lat": 22.590358,
+        "lng": 120.251211
+      },
+      "status": "需更換",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_006",
+      "egg_count": 190,
+      "location": {
+        "lat": 22.857087,
+        "lng": 120.510458
+      },
+      "status": "正常",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_007",
+      "egg_count": 187,
+      "location": {
+        "lat": 22.871577,
+        "lng": 120.21676
+      },
+      "status": "故障",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_008",
+      "egg_count": 126,
+      "location": {
+        "lat": 23.131803,
+        "lng": 120.041545
+      },
+      "status": "正常",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_009",
+      "egg_count": 173,
+      "location": {
+        "lat": 22.606825,
+        "lng": 119.746126
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_010",
+      "egg_count": 166,
+      "location": {
+        "lat": 22.648919,
+        "lng": 120.673908
+      },
+      "status": "需更換",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_011",
+      "egg_count": 100,
+      "location": {
+        "lat": 23.462652,
+        "lng": 120.508727
+      },
+      "status": "需更換",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_012",
+      "egg_count": 149,
+      "location": {
+        "lat": 22.90393,
+        "lng": 119.73911
+      },
+      "status": "需更換",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_013",
+      "egg_count": 15,
+      "location": {
+        "lat": 22.851264,
+        "lng": 120.517186
+      },
+      "status": "正常",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_014",
+      "egg_count": 186,
+      "location": {
+        "lat": 22.904815,
+        "lng": 120.328016
+      },
+      "status": "故障",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "安南區",
+      "ovitrap_id": "安南區_015",
+      "egg_count": 112,
+      "location": {
+        "lat": 22.704374,
+        "lng": 120.098166
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "永康區",
+      "ovitrap_id": "永康區_001",
+      "egg_count": 92,
+      "location": {
+        "lat": 23.129282,
+        "lng": 119.765039
+      },
+      "status": "正常",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "永康區",
+      "ovitrap_id": "永康區_002",
+      "egg_count": 75,
+      "location": {
+        "lat": 22.674952,
+        "lng": 120.176485
+      },
+      "status": "正常",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "永康區",
+      "ovitrap_id": "永康區_003",
+      "egg_count": 8,
+      "location": {
+        "lat": 23.435886,
+        "lng": 120.51752
+      },
+      "status": "正常",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "永康區",
+      "ovitrap_id": "永康區_004",
+      "egg_count": 77,
+      "location": {
+        "lat": 22.748883,
+        "lng": 120.373605
+      },
+      "status": "正常",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "永康區",
+      "ovitrap_id": "永康區_005",
+      "egg_count": 29,
+      "location": {
+        "lat": 23.166862,
+        "lng": 120.442806
+      },
+      "status": "需更換",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_001",
+      "egg_count": 178,
+      "location": {
+        "lat": 22.72801,
+        "lng": 120.44201
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_002",
+      "egg_count": 118,
+      "location": {
+        "lat": 23.140628,
+        "lng": 120.694214
+      },
+      "status": "正常",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_003",
+      "egg_count": 12,
+      "location": {
+        "lat": 22.740913,
+        "lng": 120.320784
+      },
+      "status": "需更換",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_004",
+      "egg_count": 164,
+      "location": {
+        "lat": 23.026739,
+        "lng": 120.417885
+      },
+      "status": "故障",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_005",
+      "egg_count": 193,
+      "location": {
+        "lat": 23.004324,
+        "lng": 120.355817
+      },
+      "status": "需更換",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_006",
+      "egg_count": 169,
+      "location": {
+        "lat": 23.278701,
+        "lng": 120.339301
+      },
+      "status": "故障",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_007",
+      "egg_count": 194,
+      "location": {
+        "lat": 22.593156,
+        "lng": 120.390626
+      },
+      "status": "正常",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_008",
+      "egg_count": 36,
+      "location": {
+        "lat": 23.248389,
+        "lng": 120.591381
+      },
+      "status": "故障",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_009",
+      "egg_count": 165,
+      "location": {
+        "lat": 22.830006,
+        "lng": 120.657122
+      },
+      "status": "故障",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_010",
+      "egg_count": 181,
+      "location": {
+        "lat": 22.850923,
+        "lng": 119.992404
+      },
+      "status": "正常",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_011",
+      "egg_count": 66,
+      "location": {
+        "lat": 22.563008,
+        "lng": 120.32515
+      },
+      "status": "需更換",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "歸仁區",
+      "ovitrap_id": "歸仁區_012",
+      "egg_count": 165,
+      "location": {
+        "lat": 23.184346,
+        "lng": 119.792712
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "新化區",
+      "ovitrap_id": "新化區_001",
+      "egg_count": 196,
+      "location": {
+        "lat": 23.377202,
+        "lng": 120.626744
+      },
+      "status": "正常",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "新化區",
+      "ovitrap_id": "新化區_002",
+      "egg_count": 12,
+      "location": {
+        "lat": 23.316729,
+        "lng": 120.173271
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "新化區",
+      "ovitrap_id": "新化區_003",
+      "egg_count": 46,
+      "location": {
+        "lat": 23.245858,
+        "lng": 120.161839
+      },
+      "status": "故障",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "新化區",
+      "ovitrap_id": "新化區_004",
+      "egg_count": 86,
+      "location": {
+        "lat": 23.305693,
+        "lng": 120.164571
+      },
+      "status": "故障",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "新化區",
+      "ovitrap_id": "新化區_005",
+      "egg_count": 200,
+      "location": {
+        "lat": 23.007411,
+        "lng": 120.676173
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "新化區",
+      "ovitrap_id": "新化區_006",
+      "egg_count": 189,
+      "location": {
+        "lat": 23.08297,
+        "lng": 120.295135
+      },
+      "status": "故障",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "新化區",
+      "ovitrap_id": "新化區_007",
+      "egg_count": 90,
+      "location": {
+        "lat": 22.808576,
+        "lng": 120.627341
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "新化區",
+      "ovitrap_id": "新化區_008",
+      "egg_count": 78,
+      "location": {
+        "lat": 23.161711,
+        "lng": 119.862615
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "新化區",
+      "ovitrap_id": "新化區_009",
+      "egg_count": 62,
+      "location": {
+        "lat": 22.94476,
+        "lng": 120.209996
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "新化區",
+      "ovitrap_id": "新化區_010",
+      "egg_count": 173,
+      "location": {
+        "lat": 23.092854,
+        "lng": 119.781997
+      },
+      "status": "故障",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_001",
+      "egg_count": 124,
+      "location": {
+        "lat": 22.566849,
+        "lng": 120.57941
+      },
+      "status": "需更換",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_002",
+      "egg_count": 22,
+      "location": {
+        "lat": 23.1874,
+        "lng": 120.40475
+      },
+      "status": "需更換",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_003",
+      "egg_count": 177,
+      "location": {
+        "lat": 23.494496,
+        "lng": 120.447253
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_004",
+      "egg_count": 148,
+      "location": {
+        "lat": 22.826696,
+        "lng": 120.1081
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_005",
+      "egg_count": 175,
+      "location": {
+        "lat": 23.377389,
+        "lng": 120.509656
+      },
+      "status": "故障",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_006",
+      "egg_count": 56,
+      "location": {
+        "lat": 22.513679,
+        "lng": 120.063068
+      },
+      "status": "正常",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_007",
+      "egg_count": 64,
+      "location": {
+        "lat": 23.436495,
+        "lng": 120.390124
+      },
+      "status": "正常",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_008",
+      "egg_count": 21,
+      "location": {
+        "lat": 22.827761,
+        "lng": 120.111474
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_009",
+      "egg_count": 159,
+      "location": {
+        "lat": 22.687948,
+        "lng": 120.268385
+      },
+      "status": "正常",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_010",
+      "egg_count": 21,
+      "location": {
+        "lat": 23.177756,
+        "lng": 120.032837
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_011",
+      "egg_count": 140,
+      "location": {
+        "lat": 23.087432,
+        "lng": 120.632475
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_012",
+      "egg_count": 138,
+      "location": {
+        "lat": 22.97972,
+        "lng": 120.400594
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_013",
+      "egg_count": 77,
+      "location": {
+        "lat": 23.13286,
+        "lng": 120.102437
+      },
+      "status": "正常",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_014",
+      "egg_count": 50,
+      "location": {
+        "lat": 22.585577,
+        "lng": 119.760201
+      },
+      "status": "正常",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "左鎮區",
+      "ovitrap_id": "左鎮區_015",
+      "egg_count": 142,
+      "location": {
+        "lat": 22.856792,
+        "lng": 120.56936
+      },
+      "status": "正常",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_001",
+      "egg_count": 126,
+      "location": {
+        "lat": 23.131576,
+        "lng": 120.061231
+      },
+      "status": "需更換",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_002",
+      "egg_count": 139,
+      "location": {
+        "lat": 22.66557,
+        "lng": 120.123286
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_003",
+      "egg_count": 103,
+      "location": {
+        "lat": 22.648541,
+        "lng": 120.550508
+      },
+      "status": "需更換",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_004",
+      "egg_count": 70,
+      "location": {
+        "lat": 22.843215,
+        "lng": 120.375885
+      },
+      "status": "需更換",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_005",
+      "egg_count": 192,
+      "location": {
+        "lat": 23.422802,
+        "lng": 119.8845
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_006",
+      "egg_count": 142,
+      "location": {
+        "lat": 23.08497,
+        "lng": 120.597965
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_007",
+      "egg_count": 126,
+      "location": {
+        "lat": 22.606924,
+        "lng": 120.507055
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_008",
+      "egg_count": 137,
+      "location": {
+        "lat": 22.517293,
+        "lng": 119.805932
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_009",
+      "egg_count": 132,
+      "location": {
+        "lat": 22.971506,
+        "lng": 119.992603
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_010",
+      "egg_count": 102,
+      "location": {
+        "lat": 22.980801,
+        "lng": 120.378963
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_011",
+      "egg_count": 189,
+      "location": {
+        "lat": 22.770419,
+        "lng": 120.441282
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "玉井區",
+      "ovitrap_id": "玉井區_012",
+      "egg_count": 153,
+      "location": {
+        "lat": 23.431687,
+        "lng": 120.099382
+      },
+      "status": "需更換",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_001",
+      "egg_count": 70,
+      "location": {
+        "lat": 22.78822,
+        "lng": 120.57931
+      },
+      "status": "故障",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_002",
+      "egg_count": 193,
+      "location": {
+        "lat": 22.515242,
+        "lng": 120.490691
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_003",
+      "egg_count": 183,
+      "location": {
+        "lat": 23.244388,
+        "lng": 120.136451
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_004",
+      "egg_count": 119,
+      "location": {
+        "lat": 23.361962,
+        "lng": 120.202456
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_005",
+      "egg_count": 108,
+      "location": {
+        "lat": 22.546374,
+        "lng": 120.133494
+      },
+      "status": "故障",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_006",
+      "egg_count": 181,
+      "location": {
+        "lat": 22.573149,
+        "lng": 120.577302
+      },
+      "status": "正常",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_007",
+      "egg_count": 24,
+      "location": {
+        "lat": 23.144229,
+        "lng": 119.834628
+      },
+      "status": "正常",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_008",
+      "egg_count": 171,
+      "location": {
+        "lat": 22.958445,
+        "lng": 119.827471
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_009",
+      "egg_count": 164,
+      "location": {
+        "lat": 22.791952,
+        "lng": 119.964491
+      },
+      "status": "正常",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_010",
+      "egg_count": 29,
+      "location": {
+        "lat": 23.354624,
+        "lng": 120.107989
+      },
+      "status": "需更換",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_011",
+      "egg_count": 91,
+      "location": {
+        "lat": 23.245582,
+        "lng": 120.110352
+      },
+      "status": "正常",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "南化區",
+      "ovitrap_id": "南化區_012",
+      "egg_count": 142,
+      "location": {
+        "lat": 23.000298,
+        "lng": 120.079505
+      },
+      "status": "需更換",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "楠西區",
+      "ovitrap_id": "楠西區_001",
+      "egg_count": 165,
+      "location": {
+        "lat": 22.595419,
+        "lng": 120.66647
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "楠西區",
+      "ovitrap_id": "楠西區_002",
+      "egg_count": 123,
+      "location": {
+        "lat": 22.646819,
+        "lng": 120.305574
+      },
+      "status": "需更換",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "楠西區",
+      "ovitrap_id": "楠西區_003",
+      "egg_count": 171,
+      "location": {
+        "lat": 22.834668,
+        "lng": 120.444527
+      },
+      "status": "正常",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "楠西區",
+      "ovitrap_id": "楠西區_004",
+      "egg_count": 83,
+      "location": {
+        "lat": 23.389835,
+        "lng": 120.460571
+      },
+      "status": "需更換",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "楠西區",
+      "ovitrap_id": "楠西區_005",
+      "egg_count": 107,
+      "location": {
+        "lat": 22.551507,
+        "lng": 120.621502
+      },
+      "status": "需更換",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "楠西區",
+      "ovitrap_id": "楠西區_006",
+      "egg_count": 158,
+      "location": {
+        "lat": 22.558536,
+        "lng": 119.846301
+      },
+      "status": "需更換",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_001",
+      "egg_count": 32,
+      "location": {
+        "lat": 23.249888,
+        "lng": 120.148824
+      },
+      "status": "正常",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_002",
+      "egg_count": 115,
+      "location": {
+        "lat": 22.800141,
+        "lng": 120.049065
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_003",
+      "egg_count": 180,
+      "location": {
+        "lat": 23.070969,
+        "lng": 120.085775
+      },
+      "status": "需更換",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_004",
+      "egg_count": 186,
+      "location": {
+        "lat": 23.176735,
+        "lng": 119.726457
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_005",
+      "egg_count": 48,
+      "location": {
+        "lat": 22.793755,
+        "lng": 119.850364
+      },
+      "status": "故障",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_006",
+      "egg_count": 120,
+      "location": {
+        "lat": 23.126874,
+        "lng": 120.338428
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_007",
+      "egg_count": 191,
+      "location": {
+        "lat": 23.13738,
+        "lng": 120.121197
+      },
+      "status": "需更換",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_008",
+      "egg_count": 88,
+      "location": {
+        "lat": 23.449819,
+        "lng": 120.613978
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_009",
+      "egg_count": 104,
+      "location": {
+        "lat": 22.62719,
+        "lng": 120.476936
+      },
+      "status": "需更換",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_010",
+      "egg_count": 156,
+      "location": {
+        "lat": 22.616406,
+        "lng": 120.506569
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_011",
+      "egg_count": 187,
+      "location": {
+        "lat": 22.66273,
+        "lng": 120.129462
+      },
+      "status": "正常",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_012",
+      "egg_count": 161,
+      "location": {
+        "lat": 22.889331,
+        "lng": 120.300357
+      },
+      "status": "需更換",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_013",
+      "egg_count": 19,
+      "location": {
+        "lat": 23.010224,
+        "lng": 120.051096
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "善化區",
+      "ovitrap_id": "善化區_014",
+      "egg_count": 55,
+      "location": {
+        "lat": 23.274005,
+        "lng": 120.356798
+      },
+      "status": "需更換",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_001",
+      "egg_count": 144,
+      "location": {
+        "lat": 23.032921,
+        "lng": 120.562174
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_002",
+      "egg_count": 105,
+      "location": {
+        "lat": 23.206208,
+        "lng": 120.66075
+      },
+      "status": "故障",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_003",
+      "egg_count": 166,
+      "location": {
+        "lat": 22.755872,
+        "lng": 120.665748
+      },
+      "status": "需更換",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_004",
+      "egg_count": 88,
+      "location": {
+        "lat": 23.223415,
+        "lng": 120.311935
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_005",
+      "egg_count": 181,
+      "location": {
+        "lat": 22.797864,
+        "lng": 120.468143
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_006",
+      "egg_count": 164,
+      "location": {
+        "lat": 22.906229,
+        "lng": 119.702997
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_007",
+      "egg_count": 129,
+      "location": {
+        "lat": 22.970432,
+        "lng": 120.558398
+      },
+      "status": "需更換",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_008",
+      "egg_count": 92,
+      "location": {
+        "lat": 22.99201,
+        "lng": 120.404589
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_009",
+      "egg_count": 133,
+      "location": {
+        "lat": 23.276975,
+        "lng": 119.90073
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_010",
+      "egg_count": 67,
+      "location": {
+        "lat": 23.156169,
+        "lng": 119.841045
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_011",
+      "egg_count": 79,
+      "location": {
+        "lat": 22.977462,
+        "lng": 120.487081
+      },
+      "status": "需更換",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "大內區",
+      "ovitrap_id": "大內區_012",
+      "egg_count": 72,
+      "location": {
+        "lat": 23.237392,
+        "lng": 120.413948
+      },
+      "status": "正常",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "山上區",
+      "ovitrap_id": "山上區_001",
+      "egg_count": 88,
+      "location": {
+        "lat": 22.72164,
+        "lng": 119.845452
+      },
+      "status": "故障",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "山上區",
+      "ovitrap_id": "山上區_002",
+      "egg_count": 8,
+      "location": {
+        "lat": 22.912998,
+        "lng": 119.783692
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "山上區",
+      "ovitrap_id": "山上區_003",
+      "egg_count": 197,
+      "location": {
+        "lat": 22.916773,
+        "lng": 120.161188
+      },
+      "status": "故障",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "山上區",
+      "ovitrap_id": "山上區_004",
+      "egg_count": 145,
+      "location": {
+        "lat": 22.575272,
+        "lng": 119.973651
+      },
+      "status": "故障",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "山上區",
+      "ovitrap_id": "山上區_005",
+      "egg_count": 173,
+      "location": {
+        "lat": 22.829131,
+        "lng": 119.82534
+      },
+      "status": "需更換",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_001",
+      "egg_count": 193,
+      "location": {
+        "lat": 22.655103,
+        "lng": 119.972312
+      },
+      "status": "故障",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_002",
+      "egg_count": 58,
+      "location": {
+        "lat": 22.825661,
+        "lng": 120.561266
+      },
+      "status": "正常",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_003",
+      "egg_count": 47,
+      "location": {
+        "lat": 22.581879,
+        "lng": 119.843078
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_004",
+      "egg_count": 122,
+      "location": {
+        "lat": 23.194442,
+        "lng": 119.910366
+      },
+      "status": "故障",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_005",
+      "egg_count": 1,
+      "location": {
+        "lat": 23.375763,
+        "lng": 119.715057
+      },
+      "status": "需更換",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_006",
+      "egg_count": 138,
+      "location": {
+        "lat": 23.131391,
+        "lng": 120.001304
+      },
+      "status": "需更換",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_007",
+      "egg_count": 191,
+      "location": {
+        "lat": 23.19614,
+        "lng": 120.49
+      },
+      "status": "故障",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_008",
+      "egg_count": 137,
+      "location": {
+        "lat": 22.658147,
+        "lng": 120.262774
+      },
+      "status": "需更換",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_009",
+      "egg_count": 90,
+      "location": {
+        "lat": 23.16554,
+        "lng": 119.874667
+      },
+      "status": "正常",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_010",
+      "egg_count": 80,
+      "location": {
+        "lat": 22.540338,
+        "lng": 120.264319
+      },
+      "status": "故障",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_011",
+      "egg_count": 122,
+      "location": {
+        "lat": 22.692055,
+        "lng": 119.857068
+      },
+      "status": "需更換",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_012",
+      "egg_count": 134,
+      "location": {
+        "lat": 23.215838,
+        "lng": 120.310055
+      },
+      "status": "故障",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "新市區",
+      "ovitrap_id": "新市區_013",
+      "egg_count": 66,
+      "location": {
+        "lat": 23.256773,
+        "lng": 120.238163
+      },
+      "status": "正常",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "安定區",
+      "ovitrap_id": "安定區_001",
+      "egg_count": 3,
+      "location": {
+        "lat": 22.761593,
+        "lng": 120.264317
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "安定區",
+      "ovitrap_id": "安定區_002",
+      "egg_count": 200,
+      "location": {
+        "lat": 22.687141,
+        "lng": 120.24886
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "安定區",
+      "ovitrap_id": "安定區_003",
+      "egg_count": 77,
+      "location": {
+        "lat": 22.525717,
+        "lng": 120.460927
+      },
+      "status": "故障",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "安定區",
+      "ovitrap_id": "安定區_004",
+      "egg_count": 100,
+      "location": {
+        "lat": 23.123946,
+        "lng": 120.020662
+      },
+      "status": "正常",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "安定區",
+      "ovitrap_id": "安定區_005",
+      "egg_count": 192,
+      "location": {
+        "lat": 23.082397,
+        "lng": 120.440324
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "安定區",
+      "ovitrap_id": "安定區_006",
+      "egg_count": 171,
+      "location": {
+        "lat": 22.994166,
+        "lng": 119.712314
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "安定區",
+      "ovitrap_id": "安定區_007",
+      "egg_count": 71,
+      "location": {
+        "lat": 22.767278,
+        "lng": 119.781556
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "關廟區",
+      "ovitrap_id": "關廟區_001",
+      "egg_count": 175,
+      "location": {
+        "lat": 23.311278,
+        "lng": 119.981298
+      },
+      "status": "正常",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "關廟區",
+      "ovitrap_id": "關廟區_002",
+      "egg_count": 135,
+      "location": {
+        "lat": 22.890539,
+        "lng": 119.990667
+      },
+      "status": "故障",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "關廟區",
+      "ovitrap_id": "關廟區_003",
+      "egg_count": 164,
+      "location": {
+        "lat": 23.10077,
+        "lng": 120.439647
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "關廟區",
+      "ovitrap_id": "關廟區_004",
+      "egg_count": 15,
+      "location": {
+        "lat": 23.187774,
+        "lng": 120.120035
+      },
+      "status": "需更換",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "關廟區",
+      "ovitrap_id": "關廟區_005",
+      "egg_count": 8,
+      "location": {
+        "lat": 22.683112,
+        "lng": 120.56576
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "關廟區",
+      "ovitrap_id": "關廟區_006",
+      "egg_count": 180,
+      "location": {
+        "lat": 22.739863,
+        "lng": 120.245873
+      },
+      "status": "正常",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "關廟區",
+      "ovitrap_id": "關廟區_007",
+      "egg_count": 53,
+      "location": {
+        "lat": 23.322502,
+        "lng": 119.971124
+      },
+      "status": "故障",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "龍崎區",
+      "ovitrap_id": "龍崎區_001",
+      "egg_count": 62,
+      "location": {
+        "lat": 22.596673,
+        "lng": 120.417253
+      },
+      "status": "故障",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "龍崎區",
+      "ovitrap_id": "龍崎區_002",
+      "egg_count": 59,
+      "location": {
+        "lat": 22.558907,
+        "lng": 120.392924
+      },
+      "status": "需更換",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "龍崎區",
+      "ovitrap_id": "龍崎區_003",
+      "egg_count": 62,
+      "location": {
+        "lat": 22.500543,
+        "lng": 120.133963
+      },
+      "status": "故障",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "龍崎區",
+      "ovitrap_id": "龍崎區_004",
+      "egg_count": 199,
+      "location": {
+        "lat": 22.83318,
+        "lng": 120.463592
+      },
+      "status": "正常",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "龍崎區",
+      "ovitrap_id": "龍崎區_005",
+      "egg_count": 58,
+      "location": {
+        "lat": 22.627114,
+        "lng": 119.858274
+      },
+      "status": "需更換",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "龍崎區",
+      "ovitrap_id": "龍崎區_006",
+      "egg_count": 184,
+      "location": {
+        "lat": 22.979209,
+        "lng": 120.033753
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "龍崎區",
+      "ovitrap_id": "龍崎區_007",
+      "egg_count": 81,
+      "location": {
+        "lat": 22.517711,
+        "lng": 119.836135
+      },
+      "status": "故障",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "龍崎區",
+      "ovitrap_id": "龍崎區_008",
+      "egg_count": 171,
+      "location": {
+        "lat": 23.408919,
+        "lng": 119.85091
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "龍崎區",
+      "ovitrap_id": "龍崎區_009",
+      "egg_count": 123,
+      "location": {
+        "lat": 22.594436,
+        "lng": 120.39918
+      },
+      "status": "需更換",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "龍崎區",
+      "ovitrap_id": "龍崎區_010",
+      "egg_count": 121,
+      "location": {
+        "lat": 22.841041,
+        "lng": 120.029255
+      },
+      "status": "需更換",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "仁德區",
+      "ovitrap_id": "仁德區_001",
+      "egg_count": 46,
+      "location": {
+        "lat": 22.936199,
+        "lng": 120.595638
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "仁德區",
+      "ovitrap_id": "仁德區_002",
+      "egg_count": 91,
+      "location": {
+        "lat": 23.121172,
+        "lng": 120.632458
+      },
+      "status": "故障",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "仁德區",
+      "ovitrap_id": "仁德區_003",
+      "egg_count": 156,
+      "location": {
+        "lat": 22.59984,
+        "lng": 119.938221
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "仁德區",
+      "ovitrap_id": "仁德區_004",
+      "egg_count": 38,
+      "location": {
+        "lat": 23.494899,
+        "lng": 120.691492
+      },
+      "status": "正常",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "仁德區",
+      "ovitrap_id": "仁德區_005",
+      "egg_count": 48,
+      "location": {
+        "lat": 22.738663,
+        "lng": 119.853702
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "仁德區",
+      "ovitrap_id": "仁德區_006",
+      "egg_count": 134,
+      "location": {
+        "lat": 22.748037,
+        "lng": 120.000255
+      },
+      "status": "正常",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "仁德區",
+      "ovitrap_id": "仁德區_007",
+      "egg_count": 2,
+      "location": {
+        "lat": 23.293078,
+        "lng": 120.260902
+      },
+      "status": "故障",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "仁德區",
+      "ovitrap_id": "仁德區_008",
+      "egg_count": 152,
+      "location": {
+        "lat": 22.935413,
+        "lng": 120.641496
+      },
+      "status": "正常",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "仁德區",
+      "ovitrap_id": "仁德區_009",
+      "egg_count": 149,
+      "location": {
+        "lat": 23.305822,
+        "lng": 120.245049
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_001",
+      "egg_count": 90,
+      "location": {
+        "lat": 22.686096,
+        "lng": 119.820066
+      },
+      "status": "正常",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_002",
+      "egg_count": 138,
+      "location": {
+        "lat": 23.319888,
+        "lng": 119.723197
+      },
+      "status": "故障",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_003",
+      "egg_count": 141,
+      "location": {
+        "lat": 23.446336,
+        "lng": 120.076338
+      },
+      "status": "需更換",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_004",
+      "egg_count": 193,
+      "location": {
+        "lat": 22.52771,
+        "lng": 120.596289
+      },
+      "status": "正常",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_005",
+      "egg_count": 95,
+      "location": {
+        "lat": 23.288473,
+        "lng": 120.429104
+      },
+      "status": "正常",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_006",
+      "egg_count": 99,
+      "location": {
+        "lat": 23.444387,
+        "lng": 120.140325
+      },
+      "status": "正常",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_007",
+      "egg_count": 197,
+      "location": {
+        "lat": 22.83649,
+        "lng": 120.27787
+      },
+      "status": "正常",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_008",
+      "egg_count": 102,
+      "location": {
+        "lat": 22.714642,
+        "lng": 120.326737
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_009",
+      "egg_count": 59,
+      "location": {
+        "lat": 22.809767,
+        "lng": 119.862194
+      },
+      "status": "故障",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_010",
+      "egg_count": 189,
+      "location": {
+        "lat": 23.033082,
+        "lng": 120.267313
+      },
+      "status": "故障",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "七股區",
+      "ovitrap_id": "七股區_011",
+      "egg_count": 95,
+      "location": {
+        "lat": 23.197295,
+        "lng": 119.806737
+      },
+      "status": "正常",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_001",
+      "egg_count": 35,
+      "location": {
+        "lat": 23.110179,
+        "lng": 120.333671
+      },
+      "status": "故障",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_002",
+      "egg_count": 199,
+      "location": {
+        "lat": 22.776624,
+        "lng": 120.246955
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_003",
+      "egg_count": 135,
+      "location": {
+        "lat": 23.136351,
+        "lng": 119.952565
+      },
+      "status": "需更換",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_004",
+      "egg_count": 89,
+      "location": {
+        "lat": 23.155167,
+        "lng": 120.498825
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_005",
+      "egg_count": 70,
+      "location": {
+        "lat": 22.656322,
+        "lng": 120.670742
+      },
+      "status": "需更換",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_006",
+      "egg_count": 110,
+      "location": {
+        "lat": 23.493964,
+        "lng": 120.065872
+      },
+      "status": "故障",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_007",
+      "egg_count": 5,
+      "location": {
+        "lat": 22.73239,
+        "lng": 119.793666
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_008",
+      "egg_count": 125,
+      "location": {
+        "lat": 23.46818,
+        "lng": 120.563133
+      },
+      "status": "故障",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_009",
+      "egg_count": 68,
+      "location": {
+        "lat": 23.125255,
+        "lng": 119.931156
+      },
+      "status": "故障",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_010",
+      "egg_count": 126,
+      "location": {
+        "lat": 22.517323,
+        "lng": 119.72814
+      },
+      "status": "正常",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_011",
+      "egg_count": 161,
+      "location": {
+        "lat": 23.475718,
+        "lng": 120.247991
+      },
+      "status": "需更換",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_012",
+      "egg_count": 85,
+      "location": {
+        "lat": 22.665257,
+        "lng": 119.865619
+      },
+      "status": "正常",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_013",
+      "egg_count": 115,
+      "location": {
+        "lat": 23.130278,
+        "lng": 119.994892
+      },
+      "status": "故障",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_014",
+      "egg_count": 116,
+      "location": {
+        "lat": 22.823532,
+        "lng": 119.736575
+      },
+      "status": "正常",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "佳里區",
+      "ovitrap_id": "佳里區_015",
+      "egg_count": 137,
+      "location": {
+        "lat": 22.507114,
+        "lng": 120.543692
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_001",
+      "egg_count": 77,
+      "location": {
+        "lat": 22.795944,
+        "lng": 119.872649
+      },
+      "status": "正常",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_002",
+      "egg_count": 26,
+      "location": {
+        "lat": 22.978519,
+        "lng": 120.366466
+      },
+      "status": "故障",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_003",
+      "egg_count": 200,
+      "location": {
+        "lat": 23.467741,
+        "lng": 120.368036
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_004",
+      "egg_count": 106,
+      "location": {
+        "lat": 22.662727,
+        "lng": 119.713387
+      },
+      "status": "正常",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_005",
+      "egg_count": 7,
+      "location": {
+        "lat": 23.125583,
+        "lng": 120.01675
+      },
+      "status": "需更換",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_006",
+      "egg_count": 63,
+      "location": {
+        "lat": 23.462108,
+        "lng": 119.898473
+      },
+      "status": "需更換",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_007",
+      "egg_count": 63,
+      "location": {
+        "lat": 22.658038,
+        "lng": 119.717964
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_008",
+      "egg_count": 34,
+      "location": {
+        "lat": 23.151583,
+        "lng": 119.915342
+      },
+      "status": "正常",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_009",
+      "egg_count": 57,
+      "location": {
+        "lat": 22.823412,
+        "lng": 120.518569
+      },
+      "status": "正常",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_010",
+      "egg_count": 23,
+      "location": {
+        "lat": 23.270829,
+        "lng": 119.893388
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "學甲區",
+      "ovitrap_id": "學甲區_011",
+      "egg_count": 133,
+      "location": {
+        "lat": 23.426454,
+        "lng": 119.96271
+      },
+      "status": "需更換",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "西港區",
+      "ovitrap_id": "西港區_001",
+      "egg_count": 30,
+      "location": {
+        "lat": 23.469702,
+        "lng": 120.499379
+      },
+      "status": "正常",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "西港區",
+      "ovitrap_id": "西港區_002",
+      "egg_count": 94,
+      "location": {
+        "lat": 23.224739,
+        "lng": 119.828899
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "西港區",
+      "ovitrap_id": "西港區_003",
+      "egg_count": 10,
+      "location": {
+        "lat": 23.214144,
+        "lng": 119.785391
+      },
+      "status": "需更換",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "西港區",
+      "ovitrap_id": "西港區_004",
+      "egg_count": 22,
+      "location": {
+        "lat": 23.395615,
+        "lng": 120.225979
+      },
+      "status": "正常",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "西港區",
+      "ovitrap_id": "西港區_005",
+      "egg_count": 37,
+      "location": {
+        "lat": 23.20417,
+        "lng": 119.865779
+      },
+      "status": "正常",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "將軍區",
+      "ovitrap_id": "將軍區_001",
+      "egg_count": 98,
+      "location": {
+        "lat": 22.743772,
+        "lng": 119.865644
+      },
+      "status": "故障",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "將軍區",
+      "ovitrap_id": "將軍區_002",
+      "egg_count": 170,
+      "location": {
+        "lat": 22.569034,
+        "lng": 120.17087
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "將軍區",
+      "ovitrap_id": "將軍區_003",
+      "egg_count": 52,
+      "location": {
+        "lat": 23.226946,
+        "lng": 120.699153
+      },
+      "status": "故障",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "將軍區",
+      "ovitrap_id": "將軍區_004",
+      "egg_count": 156,
+      "location": {
+        "lat": 23.368647,
+        "lng": 119.937173
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "將軍區",
+      "ovitrap_id": "將軍區_005",
+      "egg_count": 147,
+      "location": {
+        "lat": 23.489196,
+        "lng": 120.367052
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "將軍區",
+      "ovitrap_id": "將軍區_006",
+      "egg_count": 4,
+      "location": {
+        "lat": 23.475031,
+        "lng": 120.10515
+      },
+      "status": "正常",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_001",
+      "egg_count": 161,
+      "location": {
+        "lat": 23.215245,
+        "lng": 119.951016
+      },
+      "status": "正常",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_002",
+      "egg_count": 145,
+      "location": {
+        "lat": 23.14791,
+        "lng": 120.472635
+      },
+      "status": "需更換",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_003",
+      "egg_count": 149,
+      "location": {
+        "lat": 23.253886,
+        "lng": 120.302947
+      },
+      "status": "正常",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_004",
+      "egg_count": 115,
+      "location": {
+        "lat": 22.900239,
+        "lng": 120.437017
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_005",
+      "egg_count": 188,
+      "location": {
+        "lat": 23.270844,
+        "lng": 120.027488
+      },
+      "status": "故障",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_006",
+      "egg_count": 23,
+      "location": {
+        "lat": 23.493845,
+        "lng": 119.942448
+      },
+      "status": "正常",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_007",
+      "egg_count": 87,
+      "location": {
+        "lat": 22.840819,
+        "lng": 120.381205
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_008",
+      "egg_count": 150,
+      "location": {
+        "lat": 23.052787,
+        "lng": 120.065536
+      },
+      "status": "故障",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_009",
+      "egg_count": 200,
+      "location": {
+        "lat": 23.281277,
+        "lng": 119.747193
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_010",
+      "egg_count": 77,
+      "location": {
+        "lat": 23.055134,
+        "lng": 120.181195
+      },
+      "status": "需更換",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_011",
+      "egg_count": 184,
+      "location": {
+        "lat": 23.013198,
+        "lng": 120.569658
+      },
+      "status": "故障",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_012",
+      "egg_count": 101,
+      "location": {
+        "lat": 23.317232,
+        "lng": 119.865067
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_013",
+      "egg_count": 107,
+      "location": {
+        "lat": 23.403435,
+        "lng": 120.208299
+      },
+      "status": "正常",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_014",
+      "egg_count": 121,
+      "location": {
+        "lat": 23.001903,
+        "lng": 120.379278
+      },
+      "status": "正常",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "北門區",
+      "ovitrap_id": "北門區_015",
+      "egg_count": 146,
+      "location": {
+        "lat": 23.403911,
+        "lng": 120.449518
+      },
+      "status": "需更換",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_001",
+      "egg_count": 129,
+      "location": {
+        "lat": 23.273077,
+        "lng": 119.970418
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_002",
+      "egg_count": 185,
+      "location": {
+        "lat": 22.673764,
+        "lng": 120.190049
+      },
+      "status": "故障",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_003",
+      "egg_count": 184,
+      "location": {
+        "lat": 22.753059,
+        "lng": 120.146433
+      },
+      "status": "正常",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_004",
+      "egg_count": 154,
+      "location": {
+        "lat": 23.111111,
+        "lng": 120.629612
+      },
+      "status": "正常",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_005",
+      "egg_count": 168,
+      "location": {
+        "lat": 23.147181,
+        "lng": 120.607515
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_006",
+      "egg_count": 197,
+      "location": {
+        "lat": 22.960352,
+        "lng": 120.121534
+      },
+      "status": "故障",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_007",
+      "egg_count": 50,
+      "location": {
+        "lat": 23.055799,
+        "lng": 120.061575
+      },
+      "status": "需更換",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_008",
+      "egg_count": 142,
+      "location": {
+        "lat": 23.193366,
+        "lng": 120.439943
+      },
+      "status": "正常",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_009",
+      "egg_count": 150,
+      "location": {
+        "lat": 22.728309,
+        "lng": 119.969464
+      },
+      "status": "故障",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_010",
+      "egg_count": 28,
+      "location": {
+        "lat": 23.120728,
+        "lng": 120.155638
+      },
+      "status": "需更換",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_011",
+      "egg_count": 66,
+      "location": {
+        "lat": 22.695254,
+        "lng": 119.762511
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_012",
+      "egg_count": 148,
+      "location": {
+        "lat": 22.541037,
+        "lng": 120.621202
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_013",
+      "egg_count": 61,
+      "location": {
+        "lat": 23.005914,
+        "lng": 120.48134
+      },
+      "status": "需更換",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "新營區",
+      "ovitrap_id": "新營區_014",
+      "egg_count": 133,
+      "location": {
+        "lat": 23.027441,
+        "lng": 120.009469
+      },
+      "status": "故障",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_001",
+      "egg_count": 20,
+      "location": {
+        "lat": 22.798651,
+        "lng": 120.468058
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_002",
+      "egg_count": 84,
+      "location": {
+        "lat": 22.718636,
+        "lng": 120.65962
+      },
+      "status": "故障",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_003",
+      "egg_count": 67,
+      "location": {
+        "lat": 23.110514,
+        "lng": 120.286822
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_004",
+      "egg_count": 68,
+      "location": {
+        "lat": 22.841612,
+        "lng": 120.65436
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_005",
+      "egg_count": 139,
+      "location": {
+        "lat": 23.263273,
+        "lng": 119.780292
+      },
+      "status": "需更換",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_006",
+      "egg_count": 68,
+      "location": {
+        "lat": 23.100569,
+        "lng": 119.857807
+      },
+      "status": "正常",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_007",
+      "egg_count": 0,
+      "location": {
+        "lat": 22.537943,
+        "lng": 120.097942
+      },
+      "status": "故障",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_008",
+      "egg_count": 176,
+      "location": {
+        "lat": 22.651912,
+        "lng": 120.165471
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_009",
+      "egg_count": 104,
+      "location": {
+        "lat": 23.025126,
+        "lng": 120.225522
+      },
+      "status": "故障",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_010",
+      "egg_count": 134,
+      "location": {
+        "lat": 22.871148,
+        "lng": 120.686718
+      },
+      "status": "故障",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_011",
+      "egg_count": 35,
+      "location": {
+        "lat": 22.570629,
+        "lng": 119.776617
+      },
+      "status": "需更換",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_012",
+      "egg_count": 143,
+      "location": {
+        "lat": 22.906625,
+        "lng": 120.173277
+      },
+      "status": "故障",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "鹽水區",
+      "ovitrap_id": "鹽水區_013",
+      "egg_count": 31,
+      "location": {
+        "lat": 22.637446,
+        "lng": 120.542654
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "白河區",
+      "ovitrap_id": "白河區_001",
+      "egg_count": 145,
+      "location": {
+        "lat": 23.178052,
+        "lng": 120.631787
+      },
+      "status": "正常",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "白河區",
+      "ovitrap_id": "白河區_002",
+      "egg_count": 49,
+      "location": {
+        "lat": 22.631937,
+        "lng": 120.244309
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "白河區",
+      "ovitrap_id": "白河區_003",
+      "egg_count": 57,
+      "location": {
+        "lat": 22.720199,
+        "lng": 120.302719
+      },
+      "status": "正常",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "白河區",
+      "ovitrap_id": "白河區_004",
+      "egg_count": 133,
+      "location": {
+        "lat": 23.065491,
+        "lng": 120.03505
+      },
+      "status": "故障",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "白河區",
+      "ovitrap_id": "白河區_005",
+      "egg_count": 133,
+      "location": {
+        "lat": 22.992932,
+        "lng": 120.402776
+      },
+      "status": "正常",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "白河區",
+      "ovitrap_id": "白河區_006",
+      "egg_count": 60,
+      "location": {
+        "lat": 23.486951,
+        "lng": 120.447494
+      },
+      "status": "故障",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "白河區",
+      "ovitrap_id": "白河區_007",
+      "egg_count": 93,
+      "location": {
+        "lat": 23.481066,
+        "lng": 120.500501
+      },
+      "status": "故障",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "白河區",
+      "ovitrap_id": "白河區_008",
+      "egg_count": 177,
+      "location": {
+        "lat": 23.449383,
+        "lng": 120.602809
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "白河區",
+      "ovitrap_id": "白河區_009",
+      "egg_count": 64,
+      "location": {
+        "lat": 22.933296,
+        "lng": 120.360264
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_001",
+      "egg_count": 172,
+      "location": {
+        "lat": 23.429494,
+        "lng": 120.497662
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_002",
+      "egg_count": 89,
+      "location": {
+        "lat": 23.09565,
+        "lng": 119.940495
+      },
+      "status": "正常",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_003",
+      "egg_count": 3,
+      "location": {
+        "lat": 23.34485,
+        "lng": 119.731858
+      },
+      "status": "需更換",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_004",
+      "egg_count": 125,
+      "location": {
+        "lat": 22.804328,
+        "lng": 120.476336
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_005",
+      "egg_count": 106,
+      "location": {
+        "lat": 22.650187,
+        "lng": 120.492554
+      },
+      "status": "正常",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_006",
+      "egg_count": 58,
+      "location": {
+        "lat": 22.735228,
+        "lng": 119.734531
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_007",
+      "egg_count": 18,
+      "location": {
+        "lat": 22.67139,
+        "lng": 120.125635
+      },
+      "status": "故障",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_008",
+      "egg_count": 182,
+      "location": {
+        "lat": 22.822031,
+        "lng": 120.266232
+      },
+      "status": "正常",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_009",
+      "egg_count": 173,
+      "location": {
+        "lat": 23.067865,
+        "lng": 119.969729
+      },
+      "status": "需更換",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_010",
+      "egg_count": 98,
+      "location": {
+        "lat": 23.492115,
+        "lng": 120.122445
+      },
+      "status": "故障",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "後壁區",
+      "ovitrap_id": "後壁區_011",
+      "egg_count": 144,
+      "location": {
+        "lat": 22.611316,
+        "lng": 119.947175
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "東山區",
+      "ovitrap_id": "東山區_001",
+      "egg_count": 14,
+      "location": {
+        "lat": 22.875959,
+        "lng": 120.297818
+      },
+      "status": "正常",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "東山區",
+      "ovitrap_id": "東山區_002",
+      "egg_count": 178,
+      "location": {
+        "lat": 22.548752,
+        "lng": 120.477547
+      },
+      "status": "需更換",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "東山區",
+      "ovitrap_id": "東山區_003",
+      "egg_count": 36,
+      "location": {
+        "lat": 23.067973,
+        "lng": 120.349345
+      },
+      "status": "故障",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "東山區",
+      "ovitrap_id": "東山區_004",
+      "egg_count": 86,
+      "location": {
+        "lat": 22.633264,
+        "lng": 120.585992
+      },
+      "status": "需更換",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "東山區",
+      "ovitrap_id": "東山區_005",
+      "egg_count": 58,
+      "location": {
+        "lat": 22.607004,
+        "lng": 120.636794
+      },
+      "status": "故障",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "東山區",
+      "ovitrap_id": "東山區_006",
+      "egg_count": 72,
+      "location": {
+        "lat": 22.669982,
+        "lng": 120.521172
+      },
+      "status": "需更換",
+      "last_check": "2025-09-15"
+    },
+    {
+      "district": "東山區",
+      "ovitrap_id": "東山區_007",
+      "egg_count": 36,
+      "location": {
+        "lat": 23.404283,
+        "lng": 120.527219
+      },
+      "status": "需更換",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "六甲區",
+      "ovitrap_id": "六甲區_001",
+      "egg_count": 118,
+      "location": {
+        "lat": 22.73988,
+        "lng": 120.167549
+      },
+      "status": "需更換",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "六甲區",
+      "ovitrap_id": "六甲區_002",
+      "egg_count": 175,
+      "location": {
+        "lat": 22.720896,
+        "lng": 120.303566
+      },
+      "status": "需更換",
+      "last_check": "2025-09-23"
+    },
+    {
+      "district": "六甲區",
+      "ovitrap_id": "六甲區_003",
+      "egg_count": 171,
+      "location": {
+        "lat": 23.384007,
+        "lng": 120.346231
+      },
+      "status": "故障",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "六甲區",
+      "ovitrap_id": "六甲區_004",
+      "egg_count": 45,
+      "location": {
+        "lat": 23.131942,
+        "lng": 120.610435
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "六甲區",
+      "ovitrap_id": "六甲區_005",
+      "egg_count": 9,
+      "location": {
+        "lat": 23.148255,
+        "lng": 120.224505
+      },
+      "status": "需更換",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "六甲區",
+      "ovitrap_id": "六甲區_006",
+      "egg_count": 10,
+      "location": {
+        "lat": 23.367376,
+        "lng": 120.658684
+      },
+      "status": "故障",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "六甲區",
+      "ovitrap_id": "六甲區_007",
+      "egg_count": 28,
+      "location": {
+        "lat": 22.94827,
+        "lng": 119.844175
+      },
+      "status": "正常",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "六甲區",
+      "ovitrap_id": "六甲區_008",
+      "egg_count": 140,
+      "location": {
+        "lat": 23.002709,
+        "lng": 120.525569
+      },
+      "status": "正常",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "六甲區",
+      "ovitrap_id": "六甲區_009",
+      "egg_count": 135,
+      "location": {
+        "lat": 22.585533,
+        "lng": 120.495842
+      },
+      "status": "需更換",
+      "last_check": "2025-09-24"
+    },
+    {
+      "district": "官田區",
+      "ovitrap_id": "官田區_001",
+      "egg_count": 175,
+      "location": {
+        "lat": 23.267318,
+        "lng": 120.09596
+      },
+      "status": "需更換",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "官田區",
+      "ovitrap_id": "官田區_002",
+      "egg_count": 172,
+      "location": {
+        "lat": 23.327873,
+        "lng": 120.666578
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "官田區",
+      "ovitrap_id": "官田區_003",
+      "egg_count": 16,
+      "location": {
+        "lat": 22.691037,
+        "lng": 120.387843
+      },
+      "status": "故障",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "官田區",
+      "ovitrap_id": "官田區_004",
+      "egg_count": 76,
+      "location": {
+        "lat": 22.545901,
+        "lng": 120.420531
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "官田區",
+      "ovitrap_id": "官田區_005",
+      "egg_count": 31,
+      "location": {
+        "lat": 22.84796,
+        "lng": 119.802389
+      },
+      "status": "正常",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_001",
+      "egg_count": 61,
+      "location": {
+        "lat": 23.0271,
+        "lng": 120.660899
+      },
+      "status": "正常",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_002",
+      "egg_count": 118,
+      "location": {
+        "lat": 22.873556,
+        "lng": 119.744965
+      },
+      "status": "需更換",
+      "last_check": "2025-09-22"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_003",
+      "egg_count": 141,
+      "location": {
+        "lat": 22.585129,
+        "lng": 120.08353
+      },
+      "status": "需更換",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_004",
+      "egg_count": 125,
+      "location": {
+        "lat": 22.666939,
+        "lng": 120.351217
+      },
+      "status": "需更換",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_005",
+      "egg_count": 195,
+      "location": {
+        "lat": 23.248894,
+        "lng": 120.085575
+      },
+      "status": "故障",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_006",
+      "egg_count": 28,
+      "location": {
+        "lat": 23.213603,
+        "lng": 120.637947
+      },
+      "status": "正常",
+      "last_check": "2025-09-19"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_007",
+      "egg_count": 82,
+      "location": {
+        "lat": 23.48931,
+        "lng": 120.442425
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_008",
+      "egg_count": 160,
+      "location": {
+        "lat": 23.145896,
+        "lng": 120.323753
+      },
+      "status": "故障",
+      "last_check": "2025-09-26"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_009",
+      "egg_count": 0,
+      "location": {
+        "lat": 22.99472,
+        "lng": 119.937904
+      },
+      "status": "故障",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_010",
+      "egg_count": 24,
+      "location": {
+        "lat": 22.740917,
+        "lng": 120.191592
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_011",
+      "egg_count": 81,
+      "location": {
+        "lat": 22.841671,
+        "lng": 120.300318
+      },
+      "status": "需更換",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_012",
+      "egg_count": 121,
+      "location": {
+        "lat": 22.632382,
+        "lng": 120.364699
+      },
+      "status": "需更換",
+      "last_check": "2025-09-16"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_013",
+      "egg_count": 46,
+      "location": {
+        "lat": 22.968821,
+        "lng": 120.12064
+      },
+      "status": "正常",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "麻豆區",
+      "ovitrap_id": "麻豆區_014",
+      "egg_count": 142,
+      "location": {
+        "lat": 23.358119,
+        "lng": 119.993509
+      },
+      "status": "需更換",
+      "last_check": "2025-09-17"
+    },
+    {
+      "district": "下營區",
+      "ovitrap_id": "下營區_001",
+      "egg_count": 20,
+      "location": {
+        "lat": 22.641102,
+        "lng": 119.705262
+      },
+      "status": "故障",
+      "last_check": "2025-09-13"
+    },
+    {
+      "district": "下營區",
+      "ovitrap_id": "下營區_002",
+      "egg_count": 66,
+      "location": {
+        "lat": 22.545015,
+        "lng": 120.410914
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "下營區",
+      "ovitrap_id": "下營區_003",
+      "egg_count": 5,
+      "location": {
+        "lat": 23.008623,
+        "lng": 120.534777
+      },
+      "status": "需更換",
+      "last_check": "2025-09-21"
+    },
+    {
+      "district": "下營區",
+      "ovitrap_id": "下營區_004",
+      "egg_count": 67,
+      "location": {
+        "lat": 23.272943,
+        "lng": 119.878891
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "下營區",
+      "ovitrap_id": "下營區_005",
+      "egg_count": 80,
+      "location": {
+        "lat": 23.147945,
+        "lng": 120.069588
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "下營區",
+      "ovitrap_id": "下營區_006",
+      "egg_count": 72,
+      "location": {
+        "lat": 23.4976,
+        "lng": 120.637825
+      },
+      "status": "故障",
+      "last_check": "2025-09-25"
+    },
+    {
+      "district": "下營區",
+      "ovitrap_id": "下營區_007",
+      "egg_count": 135,
+      "location": {
+        "lat": 22.985798,
+        "lng": 119.823619
+      },
+      "status": "正常",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "柳營區",
+      "ovitrap_id": "柳營區_001",
+      "egg_count": 107,
+      "location": {
+        "lat": 22.996294,
+        "lng": 120.10778
+      },
+      "status": "故障",
+      "last_check": "2025-09-27"
+    },
+    {
+      "district": "柳營區",
+      "ovitrap_id": "柳營區_002",
+      "egg_count": 21,
+      "location": {
+        "lat": 23.036336,
+        "lng": 120.380334
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "柳營區",
+      "ovitrap_id": "柳營區_003",
+      "egg_count": 110,
+      "location": {
+        "lat": 23.392502,
+        "lng": 119.715061
+      },
+      "status": "故障",
+      "last_check": "2025-09-20"
+    },
+    {
+      "district": "柳營區",
+      "ovitrap_id": "柳營區_004",
+      "egg_count": 190,
+      "location": {
+        "lat": 22.576756,
+        "lng": 119.786018
+      },
+      "status": "故障",
+      "last_check": "2025-09-18"
+    },
+    {
+      "district": "柳營區",
+      "ovitrap_id": "柳營區_005",
+      "egg_count": 8,
+      "location": {
+        "lat": 23.245161,
+        "lng": 120.636864
+      },
+      "status": "需更換",
+      "last_check": "2025-09-14"
+    },
+    {
+      "district": "柳營區",
+      "ovitrap_id": "柳營區_006",
+      "egg_count": 150,
+      "location": {
+        "lat": 22.629493,
+        "lng": 119.773354
+      },
+      "status": "正常",
+      "last_check": "2025-09-13"
+    }
+  ],
+  "generated_at": "2025-09-27 10:52:45",
+  "total_districts": 37,
+  "total_cases": 611,
+  "high_risk_districts": 15
+}

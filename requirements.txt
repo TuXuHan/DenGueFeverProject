@@ -1,0 +1,26 @@
+# 登革熱疫情資料系統 - Python 依賴套件
+
+# Web 框架
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+jinja2>=3.1.0
+python-multipart>=0.0.6
+
+# 地圖和地理資料處理
+folium>=0.14.0
+geopandas>=0.14.0
+shapely>=2.0.0
+fiona>=1.9.0
+pyproj>=3.6.0
+
+# 資料處理
+pandas>=2.0.0
+numpy>=1.24.0
+
+# 網頁爬蟲
+selenium>=4.15.0
+webdriver-manager>=4.0.0
+requests>=2.31.0
+
+# 其他工具
+pathlib2>=2.3.0
