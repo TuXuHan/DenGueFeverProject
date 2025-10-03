@@ -137,65 +137,65 @@ python UpdateData.py
 - [ ] 機器學習預測執行成功
 - [ ] 檔案上傳功能（如適用）
 
-## 📁 Project Structure
+## 📁 專案結構
 
 ```
 DengueFeverProject/
-├── main.py                          # FastAPI main application
-├── test.py                          # Basic data update test
-├── UpdateData.py                    # Data collection script
-├── requirements.txt                 # Python dependencies
-├── config.py                        # Configuration file
-├── data/                           # Data processing
-│   ├── process_map.py              # Map generation
-│   ├── dengue_data.json            # Dengue case data
-│   ├── weather_data.json           # Weather information
-│   └── district_boundaries.geojson # Geographic boundaries
-├── template/                       # Web templates
-│   ├── map.html                    # Main map interface
-│   └── map_temp.html               # Template file
-├── web/                           # Static web assets
-│   └── style.css                  # CSS styles
-└── 臺南市校園登革熱預警系統/        # Legacy ML system
-    ├── server.js                  # Node.js server
-    ├── model_pred.py              # ML prediction script
-    ├── model_train_const.py       # Model training
-    └── data/                      # ML data and models
+├── main.py                          # FastAPI 主應用程式
+├── test.py                          # 基本資料更新測試
+├── UpdateData.py                    # 資料收集腳本
+├── requirements.txt                 # Python 依賴套件
+├── config.py                        # 設定檔
+├── data/                           # 資料處理
+│   ├── process_map.py              # 地圖生成
+│   ├── dengue_data.json            # 登革熱病例資料
+│   ├── weather_data.json           # 氣象資訊
+│   └── district_boundaries.geojson # 地理邊界
+├── template/                       # 網頁模板
+│   ├── map.html                    # 主地圖介面
+│   └── map_temp.html               # 模板檔案
+├── web/                           # 靜態網頁資源
+│   └── style.css                  # CSS 樣式
+└── 臺南市校園登革熱預警系統/        # 舊版機器學習系統
+    ├── server.js                  # Node.js 伺服器
+    ├── model_pred.py              # 機器學習預測腳本
+    ├── model_train_const.py       # 模型訓練
+    └── data/                      # 機器學習資料和模型
 ```
 
-## 🔧 Configuration
+## 🔧 設定
 
-Key configuration options in `config.py`:
+`config.py` 中的主要設定選項：
 
-- **FASTAPI_CONFIG**: Web server settings (host, port, etc.)
-- **MAP_CONFIG**: Map display settings (center coordinates, zoom level)
-- **DATA_SOURCES**: API endpoints and data sources
-- **ML_MODELS**: Machine learning model paths and settings
+- **FASTAPI_CONFIG**：網頁伺服器設定（主機、埠號等）
+- **MAP_CONFIG**：地圖顯示設定（中心座標、縮放等級）
+- **DATA_SOURCES**：API 端點和資料來源
+- **ML_MODELS**：機器學習模型路徑和設定
 
-## 📊 Data Sources
+## 📊 資料來源
 
-- **Government APIs**: Tainan City dengue case data
-- **Weather Data**: Meteorological information for risk assessment
-- **Geographic Data**: District boundaries and administrative regions
-- **Mosquito Trap Data**: Ovitrap monitoring results
+- **政府 API**：臺南市登革熱病例資料
+- **氣象資料**：用於風險評估的氣象資訊
+- **地理資料**：行政區邊界和管理區域
+- **誘卵桶資料**：誘卵桶監測結果
 
-## 🛠️ Technologies Used
+## 🛠️ 使用技術
 
-- **Backend**: FastAPI, Python
-- **Frontend**: HTML5, CSS3, JavaScript, Bootstrap
-- **Mapping**: Folium, Leaflet, GeoJSON
-- **Data Processing**: Pandas, NumPy, GeoPandas
-- **Machine Learning**: Keras, TensorFlow, scikit-learn
-- **Web Scraping**: Selenium, Requests
+- **後端**：FastAPI、Python
+- **前端**：HTML5、CSS3、JavaScript、Bootstrap
+- **地圖**：Folium、Leaflet、GeoJSON
+- **資料處理**：Pandas、NumPy、GeoPandas
+- **機器學習**：Keras、TensorFlow、scikit-learn
+- **網頁爬蟲**：Selenium、Requests
 
-## 📞 Support
+## 📞 技術支援
 
-For issues or questions:
-1. Check the existing Chinese documentation
-2. Review the configuration files
-3. Verify all dependencies are installed
-4. Check system logs for error messages
+如有問題或疑問：
+1. 查看現有的中文文件
+2. 檢查設定檔
+3. 確認所有依賴套件已安裝
+4. 檢查系統日誌中的錯誤訊息
 
-## 📄 License
+## 📄 授權
 
-This project is part of an academic research initiative for dengue fever monitoring and prediction in Tainan City, Taiwan.# DenGueFeverProject
+本專案是臺南市登革熱監測和預測學術研究計畫的一部分。
