@@ -10,8 +10,9 @@ from config import (
     MAP_TEMP_HTML, MAP_HTML, SCRIPT_JS, TEMPLATE_DIR
 )
 
-shp_path = TAINAN_TOWN_SHP
-gdf = gpd.read_file(shp_path)
+# 使用包含區域名稱的 GeoJSON 檔案
+geojson_path = "district_boundaries.geojson"
+gdf = gpd.read_file(geojson_path)
 
 if gdf.crs is None:
     gdf = gdf.set_crs(COORDINATE_SYSTEM["input_crs"])
@@ -40,6 +41,12 @@ m = folium.Map(
 
 fields = [col for col in gdf.columns if col != gdf.geometry.name]
 
+# 調試：打印欄位資訊
+print(f"GeoDataFrame 欄位: {list(gdf.columns)}")
+print(f"非幾何欄位: {fields}")
+if len(gdf) > 0:
+    print(f"第一筆資料的屬性: {gdf.iloc[0].to_dict()}")
+
 # 定義行政區樣式函數（所有區域預設透明，不填充）
 def style_function(feature):
     return {
@@ -49,7 +56,13 @@ def style_function(feature):
         'opacity': DISTRICT_STYLE["default"]["opacity"]
     }
 
-folium.GeoJson(
+# 確保 GeoDataFrame 有正確的屬性
+print("處理前的 GeoDataFrame:")
+print(gdf.head(2))
+print("Fields:", fields)
+
+# 創建 GeoJSON 圖層
+geojson_layer = folium.GeoJson(
     gdf,
     name="行政區",
     style_function=style_function,
@@ -57,7 +70,18 @@ folium.GeoJson(
         fields=fields,
         aliases=fields
     )
-).add_to(m)
+)
+
+# 添加圖層到地圖
+geojson_layer.add_to(m)
+
+# 調試：檢查生成的 GeoJSON 資料
+import json
+geojson_data = json.loads(gdf.to_json())
+print("GeoJSON 資料範例:")
+if geojson_data['features']:
+    print("第一個 feature 的 properties:", geojson_data['features'][0]['properties'])
+    print("第一個 feature 的 name:", geojson_data['features'][0]['properties'].get('name', 'No name'))
 
 # 保存基礎地圖
 m.save(str(MAP_TEMP_HTML))
