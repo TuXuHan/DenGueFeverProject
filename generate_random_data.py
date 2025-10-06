@@ -8,11 +8,12 @@ import os
 
 class DengueDataGenerator:
     def __init__(self):
+        # 按照 GeoJSON 的順序（與 district_boundaries.geojson 一致）
         self.tainan_districts = [
-            "中西區", "安平區", "東區", "南區", "北區", "安南區", "永康區", "歸仁區", "新化區", "左鎮區",
-            "玉井區", "南化區", "楠西區", "善化區", "大內區", "山上區", "新市區", "安定區", "關廟區", "龍崎區",
-            "仁德區", "七股區", "佳里區", "學甲區", "西港區", "將軍區", "北門區", "新營區", "鹽水區", "白河區",
-            "後壁區", "東山區", "六甲區", "官田區", "麻豆區", "下營區", "柳營區"
+            "七股區", "下營區", "大內區", "山上區", "中西區", "仁德區", "六甲區", "北門區", "北區", "左鎮區",
+            "永康區", "玉井區", "白河區", "安平區", "安定區", "安南區", "西港區", "佳里區", "官田區", "東山區",
+            "東區", "南化區", "南區", "後壁區", "柳營區", "將軍區", "麻豆區", "善化區", "新化區", "新市區",
+            "新營區", "楠西區", "學甲區", "龍崎區", "歸仁區", "關廟區", "鹽水區"
         ]
         
         self.risk_levels = ["低風險", "中風險", "高風險", "極高風險"]
@@ -81,7 +82,8 @@ class DengueDataGenerator:
             
             district_data.append(district_info)
         
-        district_data.sort(key=lambda x: x['dengue_cases'], reverse=True)
+        # 不再排序，保持與 GeoJSON 相同的順序
+        # district_data.sort(key=lambda x: x['dengue_cases'], reverse=True)
         
         return district_data
     

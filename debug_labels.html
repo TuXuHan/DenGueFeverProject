@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>标签数据调试</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #4CAF50; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        .match { color: green; font-weight: bold; }
+        .mismatch { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>台南市行政区标签数据验证</h1>
+    <p>验证 GeoJSON 边界、district_data.json 和地图标签的对应关系</p>
+    
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>索引</th>
+                <th>GeoJSON 区域</th>
+                <th>数据文件区域</th>
+                <th>标签坐标</th>
+                <th>人口</th>
+                <th>病例数</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+    <script>
+        // 从实际文件加载数据
+        Promise.all([
+            fetch('/data/district_boundaries.geojson').then(r => r.json()),
+            fetch('/data/district_data.json').then(r => r.json())
+        ]).then(([geojson, districtData]) => {
+            const tbody = document.getElementById('tableBody');
+            
+            geojson.features.forEach((feature, index) => {
+                const geoName = feature.properties.name;
+                const dataItem = districtData[index];
+                const dataName = dataItem.name;
+                const match = geoName === dataName;
+                
+                const row = tbody.insertRow();
+                row.innerHTML = `
+                    <td>${index}</td>
+                    <td class="${match ? 'match' : 'mismatch'}">${geoName}</td>
+                    <td class="${match ? 'match' : 'mismatch'}">${dataName}</td>
+                    <td style="font-size: 11px;">${dataItem.population ? 'Yes' : 'No'}</td>
+                    <td>${dataItem.population ? dataItem.population.toLocaleString() : 'N/A'}</td>
+                    <td>${dataItem.dengue_cases || 0}</td>
+                `;
+            });
+            
+            // 统计
+            const totalRows = geojson.features.length;
+            const matchCount = geojson.features.filter((f, i) => 
+                f.properties.name === districtData[i].name
+            ).length;
+            
+            document.body.insertAdjacentHTML('beforeend', `
+                <div style="margin-top: 20px; padding: 15px; background: #e8f5e9; border-radius: 5px;">
+                    <h2>验证结果</h2>
+                    <p><strong>总区域数：</strong> ${totalRows}</p>
+                    <p><strong>匹配数量：</strong> <span class="match">${matchCount}</span></p>
+                    <p><strong>不匹配数量：</strong> <span class="mismatch">${totalRows - matchCount}</span></p>
+                    ${matchCount === totalRows ? 
+                        '<p class="match">✅ 所有区域完全匹配！</p>' : 
+                        '<p class="mismatch">❌ 发现不匹配！请检查数据文件。</p>'
+                    }
+                </div>
+            `);
+        }).catch(error => {
+            document.body.innerHTML += `<p style="color: red;">加载数据失败：${error}</p>`;
+        });
+    </script>
+</body>
+</html>

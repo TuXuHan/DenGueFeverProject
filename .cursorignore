@@ -1,0 +1,15 @@
+# Environment
+node_modules/
+.venv/
+.env
+__pycache__/
+
+# Build
+dist/
+build/
+out/
+
+coverage/
+
+# Large file
+bucket.json
