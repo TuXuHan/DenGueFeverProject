@@ -82,7 +82,15 @@ def setup_config():
     
     # 驗證設定檔
     try:
-        exec(open(config_file).read())
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("config", config_file)
+        config_module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(config_module)
+        # 檢查必要的變數是否存在
+        required_vars = ['DATA_DIR', 'TEMPLATE_DIR', 'WEB_DIR', 'MAP_CONFIG']
+        for var in required_vars:
+            if not hasattr(config_module, var):
+                raise NameError(f"name '{var}' is not defined")
         print("✅ 設定檔驗證通過")
     except Exception as e:
         print(f"❌ 設定檔驗證失敗:{e}")

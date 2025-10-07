@@ -118,22 +118,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // 處理左側導覽列點擊
-    function handleDistrictClick(item) {
-        // 移除所有active樣式
-        var allItems = document.querySelectorAll('.district-item');
-        allItems.forEach(function(activeItem) {
-            activeItem.style.backgroundColor = '';
-            activeItem.style.borderLeft = '';
-        });
+    // 顯示區域詳細資訊的通用函數
+    function showDistrictInfo(districtName, isFromMap) {
+        console.log('顯示區域資訊:', districtName, '來源:', isFromMap ? '地圖' : '導覽列');
         
-        // 為當前點擊的地區添加active樣式
-        item.style.backgroundColor = '#e1f5fe';
-        item.style.borderLeft = '4px solid #2196F3';
+        // 如果不是從地圖點擊，則處理導覽列樣式
+        if (!isFromMap) {
+            // 移除所有active樣式
+            var allItems = document.querySelectorAll('.district-item');
+            allItems.forEach(function(activeItem) {
+                activeItem.style.backgroundColor = '';
+                activeItem.style.borderLeft = '';
+            });
+            
+            // 為當前點擊的地區添加active樣式
+            var clickedItem = document.querySelector('[data-district-name="' + districtName + '"]');
+            if (clickedItem) {
+                clickedItem.style.backgroundColor = '#e1f5fe';
+                clickedItem.style.borderLeft = '4px solid #2196F3';
+            }
+        }
         
-        // 從 data 屬性獲取區域名稱
-        var districtName = item.getAttribute('data-district-name');
-        console.log('點擊的區域:', districtName);
+        // 高亮地圖區域
         highlightMapDistrict(districtName);
         
         // 顯示詳細資料
@@ -183,28 +189,26 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (lastUpdate) lastUpdate.textContent = forecast.week_start;
-            
-            
-/*            if (detailData) {
-                var detailHtml = '<strong>預測病例數:</strong> ' + forecast.pred_cases + '<br>' +
-                               '<strong>嚴重程度排名:</strong> #' + forecast.rank;
-                
-                if (popData) {
-                    detailHtml += // '<br><strong>戶數:</strong> ' + popData.households.toLocaleString() + ' 戶' +
-                                '<br><strong>里數:</strong> ' + popData.villages + ' 里';
-                }
-                
-                detailData.innerHTML = detailHtml;
-            }
-
-*/
-
         }
         
         if (infoPanel) {
             infoPanel.style.display = 'block';
             console.log('選中地區：', districtName);
         }
+    }
+    
+    // 處理左側導覽列點擊
+    function handleDistrictClick(item) {
+        // 從 data 屬性獲取區域名稱
+        var districtName = item.getAttribute('data-district-name');
+        console.log('點擊的區域:', districtName);
+        showDistrictInfo(districtName, false);
+    }
+    
+    // 處理地圖區域點擊
+    function handleMapDistrictClick(districtName) {
+        console.log('地圖點擊區域:', districtName);
+        showDistrictInfo(districtName, true);
     }
     
     // 生成左側導覽列（按嚴重程度排序）
