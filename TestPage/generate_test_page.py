@@ -1,4 +1,38 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+自動生成包含所有 GeoJSON 檔案的測試頁面
+無需伺服器，直接用瀏覽器開啟即可
+"""
+
+import os
+import json
+from pathlib import Path
+
+def generate_geojson_test_page():
+    """生成包含所有 GeoJSON 檔案的測試頁面"""
+    
+    # 獲取當前目錄下的所有 .geojson 檔案
+    current_dir = Path('.')
+    geojson_files = []
+    
+    for file in sorted(current_dir.glob('*.geojson')):
+        file_size = file.stat().st_size
+        # 格式化文件大小
+        if file_size < 1024:
+            size_str = f"{file_size} B"
+        elif file_size < 1024 * 1024:
+            size_str = f"{file_size / 1024:.2f} KB"
+        else:
+            size_str = f"{file_size / (1024 * 1024):.2f} MB"
+        
+        geojson_files.append({
+            'name': file.name,
+            'size': size_str
+        })
+    
+    # 生成 HTML
+    html_template = f"""<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -7,51 +41,51 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
     <style>
-        body {
+        body {{
             margin: 0;
             padding: 20px;
             font-family: Arial, sans-serif;
-        }
-        #map {
+        }}
+        #map {{
             height: 500px;
             width: 100%;
             border: 1px solid #ccc;
             border-radius: 8px;
-        }
-        .info {
+        }}
+        .info {{
             margin: 20px 0;
             padding: 15px;
             background-color: #f5f5f5;
             border-radius: 8px;
-        }
-        .status {
+        }}
+        .status {{
             padding: 10px;
             margin: 10px 0;
             border-radius: 5px;
-        }
-        .success {
+        }}
+        .success {{
             background-color: #d4edda;
             color: #155724;
             border: 1px solid #c3e6cb;
-        }
-        .error {
+        }}
+        .error {{
             background-color: #f8d7da;
             color: #721c24;
             border: 1px solid #f5c6cb;
-        }
-        .info-badge {
+        }}
+        .info-badge {{
             background-color: #d1ecf1;
             color: #0c5460;
             border: 1px solid #bee5eb;
-        }
-        select {
+        }}
+        select {{
             padding: 8px;
             font-size: 14px;
             border-radius: 4px;
             border: 1px solid #ccc;
             min-width: 300px;
-        }
-        button {
+        }}
+        button {{
             padding: 8px 15px;
             font-size: 14px;
             cursor: pointer;
@@ -60,18 +94,18 @@
             background-color: #007bff;
             color: white;
             transition: background-color 0.2s;
-        }
-        button:hover {
+        }}
+        button:hover {{
             background-color: #0056b3;
-        }
-        pre {
+        }}
+        pre {{
             max-height: 300px;
             overflow: auto;
             background: white;
             padding: 10px;
             border-radius: 4px;
             border: 1px solid #ddd;
-        }
+        }}
     </style>
 </head>
 <body>
@@ -84,17 +118,20 @@
     </div>
 
     <div class="status info-badge">
-        <strong>📊 統計：</strong> 找到 3 個 GeoJSON 檔案
+        <strong>📊 統計：</strong> 找到 {len(geojson_files)} 個 GeoJSON 檔案
     </div>
 
     <div class="info">
         <h3>🔍 選擇檔案</h3>
         <select id="fileSelect" onchange="loadGeoJSON()">
             <option value="">請選擇檔案</option>
-            <option value="10_tn-village.geojson">10_tn-village.geojson (8.14 MB)</option>
-            <option value="test_output.geojson">test_output.geojson (3.12 MB)</option>
-            <option value="test_output_wgs84.geojson">test_output_wgs84.geojson (3.37 MB)</option>
-        </select>
+"""
+    
+    # 添加所有檔案選項
+    for file_info in geojson_files:
+        html_template += f'            <option value="{file_info["name"]}">{file_info["name"]} ({file_info["size"]})</option>\n'
+    
+    html_template += """        </select>
         <button onclick="location.reload()" style="margin-left: 10px;">🔄 重新整理</button>
     </div>
 
@@ -161,7 +198,7 @@
                 // 顯示 GeoJSON 資訊（限制顯示前5000個字符）
                 const jsonStr = JSON.stringify(geojsonData, null, 2);
                 if (jsonStr.length > 5000) {
-                    infoDiv.textContent = jsonStr.substring(0, 5000) + '\n\n... (資料太大，僅顯示前5000字符)';
+                    infoDiv.textContent = jsonStr.substring(0, 5000) + '\\n\\n... (資料太大，僅顯示前5000字符)';
                 } else {
                     infoDiv.textContent = jsonStr;
                 }
@@ -259,3 +296,27 @@
     </script>
 </body>
 </html>
+"""
+    
+    # 寫入檔案
+    output_file = 'test_geojson.html'
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(html_template)
+    
+    print("="*60)
+    print("✅ 測試頁面生成成功！")
+    print("="*60)
+    print(f"輸出文件: {output_file}")
+    print(f"包含檔案數: {len(geojson_files)}")
+    print()
+    print("📋 包含的 GeoJSON 檔案:")
+    for file_info in geojson_files:
+        print(f"  - {file_info['name']} ({file_info['size']})")
+    print()
+    print("💡 使用方法:")
+    print(f"   直接用瀏覽器開啟: file://{os.path.abspath(output_file)}")
+    print("="*60)
+
+if __name__ == '__main__':
+    generate_geojson_test_page()
+

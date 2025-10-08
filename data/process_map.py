@@ -2,6 +2,8 @@ import geopandas as gpd
 import folium
 import sys
 import os
+import json
+import re
 
 # 添加專案根目錄到路徑，以便導入 config
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -10,41 +12,31 @@ from config import (
     MAP_TEMP_HTML, MAP_HTML, SCRIPT_JS, TEMPLATE_DIR
 )
 
+print("載入地圖數據...")
+
 # 使用包含區域名稱的 GeoJSON 檔案
 geojson_path = os.path.join(os.path.dirname(__file__), "district_boundaries.geojson")
 gdf = gpd.read_file(geojson_path)
 
+# 設定坐標系統
 if gdf.crs is None:
     gdf = gdf.set_crs(COORDINATE_SYSTEM["input_crs"])
 
 if gdf.crs.to_string() != COORDINATE_SYSTEM["output_crs"]:
     gdf = gdf.to_crs(COORDINATE_SYSTEM["output_crs"])
 
-# 動態計算地圖中心點
-center = [gdf.geometry.centroid.y.mean(), gdf.geometry.centroid.x.mean()]
-print(f"計算出的地圖中心點: {center}")
-
-# 使用中西區作為中心點，並往左調整
+# 計算地圖中心點（使用善化區並調整位置）
 zhongxi = gdf[gdf['name'] == '善化區'].iloc[0]
 zhongxi_center = zhongxi.geometry.centroid
-# 經度減0.05（往左），保持緯度不變
 map_center = [zhongxi_center.y + 0.01, zhongxi_center.x + 0.15]
-print(f"使用中西區中心點並往左調整（經度-0.05）: {map_center}")
 
+# 創建基礎地圖
 m = folium.Map(
     location=map_center, 
     zoom_start=MAP_CONFIG["zoom_start"],
     zoom_control=MAP_CONFIG["zoom_control"],
     prefer_canvas=MAP_CONFIG["prefer_canvas"]
 )
-
-fields = [col for col in gdf.columns if col != gdf.geometry.name]
-
-# 調試：打印欄位資訊
-print(f"GeoDataFrame 欄位: {list(gdf.columns)}")
-print(f"非幾何欄位: {fields}")
-if len(gdf) > 0:
-    print(f"第一筆資料的屬性: {gdf.iloc[0].to_dict()}")
 
 # 定義行政區樣式函數（所有區域預設透明，不填充）
 def style_function(feature):
@@ -55,111 +47,21 @@ def style_function(feature):
         'opacity': DISTRICT_STYLE["default"]["opacity"]
     }
 
-# 確保 GeoDataFrame 有正確的屬性
-print("處理前的 GeoDataFrame:")
-print(gdf.head(2))
-print("Fields:", fields)
+# 將 GeoDataFrame 轉換為字典（只轉換一次）
+geojson_dict = json.loads(gdf.to_json())
+print(f"已載入 {len(geojson_dict.get('features', []))} 個行政區")
 
 # 創建 GeoJSON 圖層
-# 將GeoDataFrame轉換為JSON字符串
-geojson_data = gdf.to_json()
-print(f"GeoJSON數據長度: {len(geojson_data)} 字符")
-print(f"GeoJSON數據前100字符: {geojson_data[:100]}")
-
-# 嘗試使用不同的方法創建GeoJSON圖層
-import json
-geojson_dict = json.loads(geojson_data)
-print(f"GeoJSON字典類型: {type(geojson_dict)}")
-print(f"Features數量: {len(geojson_dict.get('features', []))}")
-
 geojson_layer = folium.GeoJson(
-    geojson_dict,  # 使用字典而不是字符串
+    geojson_dict,
     name="行政區",
-    style_function=style_function,
-    # 移除 tooltip，因为我们用 JavaScript 添加了固定标签
-    # tooltip=folium.GeoJsonTooltip(
-    #     fields=fields,
-    #     aliases=fields
-    # )
+    style_function=style_function
 )
 
 # 添加圖層到地圖
 geojson_layer.add_to(m)
 
-# 為每個區域添加標籤（使用DivIcon創建自定義標籤）
-from folium import Marker, DivIcon
-import numpy as np
-
-def add_district_labels(map_obj, gdf):
-    """為每個行政區添加標籤"""
-    print(f"開始為 {len(gdf)} 個區域添加標籤...")
-    for idx, row in gdf.iterrows():
-        # 使用 representative_point() 而不是 centroid，確保點在多邊形內
-        try:
-            label_point = row.geometry.representative_point()
-        except:
-            # 如果失敗則使用 centroid
-            label_point = row.geometry.centroid
-        
-        # 獲取區域名稱
-        district_name = row.get('name', f'區域{idx}')
-        print(f"處理區域 {idx+1}: {district_name}")
-        
-        # 創建自定義HTML標籤
-        label_html = f'''
-        <div class="district-label" data-district-name="{district_name}">
-            <span class="label-text">{district_name}</span>
-        </div>
-        '''
-        
-        # 創建標籤樣式
-        label_css = '''
-        .district-label {
-            background: rgba(255, 255, 255, 0.9);
-            border: 1px solid #1f78b4;
-            border-radius: 4px;
-            padding: 2px 6px;
-            font-size: 12px;
-            font-weight: bold;
-            color: #1f78b4;
-            text-align: center;
-            white-space: nowrap;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-            pointer-events: none;
-            user-select: none;
-        }
-        .district-label:hover {
-            background: rgba(31, 120, 180, 0.1);
-        }
-        '''
-        
-        # 創建DivIcon
-        div_icon = DivIcon(
-            html=label_html,
-            icon_size=(100, 18),
-            icon_anchor=(40, 10)
-        )
-        
-        # 添加標籤到地圖
-        marker = Marker(
-            location=[label_point.y, label_point.x],
-            icon=div_icon,
-            popup=f"<b>{district_name}</b><br>行政區標籤"
-        )
-        marker.add_to(map_obj)
-        print(f"  已添加標籤到地圖: {district_name} at [{label_point.y}, {label_point.x}]")
-
-# 不再使用 Folium 的 Marker 添加標籤，改用 JavaScript 在客戶端添加
-# 這樣可以確保標籤順序與 GeoJSON 順序完全一致
-print("準備標籤數據（將在 JavaScript 中添加標籤）...")
-
-# 調試：檢查生成的 GeoJSON 資料
-import json
-geojson_data = json.loads(gdf.to_json())
-print("GeoJSON 資料範例:")
-if geojson_data['features']:
-    print("第一個 feature 的 properties:", geojson_data['features'][0]['properties'])
-    print("第一個 feature 的 name:", geojson_data['features'][0]['properties'].get('name', 'No name'))
+print("生成地圖HTML...")
 
 # 保存基礎地圖
 m.save(str(MAP_TEMP_HTML))
@@ -168,69 +70,33 @@ m.save(str(MAP_TEMP_HTML))
 with open(str(MAP_TEMP_HTML), "r", encoding="utf-8") as f:
     html_content = f.read()
 
-# 提取包含標籤的JavaScript代碼
+# 提取JavaScript代碼
 script_start = html_content.find("<script>")
 script_end = html_content.rfind("</script>") + len("</script>")
 if script_start != -1 and script_end > script_start:
     script_content = html_content[script_start:script_end]
-    # 提取純JavaScript代碼（移除<script>標籤）
     folium_script = script_content.replace("<script>", "").replace("</script>", "")
     
-    # 清理錯誤的HTML標籤（Folium有時會在<script>裡面插入HTML標籤）
-    import re
-    
-    # 1. 移除包含樣式定義的<style>...</style>區塊
+    # 清理HTML標籤和CSS代碼
     folium_script = re.sub(r'<style[^>]*>.*?</style>', '', folium_script, flags=re.DOTALL)
-    
-    # 2. 移除獨立的HTML標籤（<style>, </head>, <body>, </body>, <div>等）
     folium_script = re.sub(r'^\s*<(?:style|head|body|div|/style|/head|/body|/div)(?:\s[^>]*)?>\s*$', '', folium_script, flags=re.MULTILINE)
-    
-    # 3. 移除行內的<div>標籤（包含屬性）
     folium_script = re.sub(r'<div[^>]*>.*?</div>', '', folium_script, flags=re.DOTALL)
     folium_script = re.sub(r'<div[^>]*>', '', folium_script)
-    
-    # 4. 移除裸露的CSS代碼（以.開頭的選擇器）
-    # 找出看起來像CSS的區塊（以.classname {開頭，以}結尾）
     folium_script = re.sub(r'^\s*\.[a-zA-Z][\w-]*\s*\{[^}]*\}\s*$', '', folium_script, flags=re.MULTILINE)
-    # 移除多行CSS區塊
     folium_script = re.sub(r'^\s*\.[a-zA-Z][\w-]*\s*\{[\s\S]*?^\s*\}\s*$', '', folium_script, flags=re.MULTILINE)
-    
-    # 5. 移除多餘的空行
     folium_script = re.sub(r'\n\s*\n\s*\n+', '\n\n', folium_script)
     
-    # 6. 修正JavaScript縮排（將多餘的縮排統一為4個空格）
-    folium_script = re.sub(r'^\s*(L_NO_TOUCH\s*=)', r'    \1', folium_script, flags=re.MULTILINE)
-    folium_script = re.sub(r'^\s*(L_DISABLE_3D\s*=)', r'    \1', folium_script, flags=re.MULTILINE)
-    folium_script = re.sub(r'^\s*(var\s+map_[a-f0-9]+\s*=)', r'    \1', folium_script, flags=re.MULTILINE)
-    
-    # 7. 提取Folium生成的map ID
+    # 提取地圖ID
     map_id_match = re.search(r'var\s+(map_[a-f0-9]+)\s*=\s*L\.map', folium_script)
-    if map_id_match:
-        actual_map_id = map_id_match.group(1)
-        print(f"提取到的地圖ID: {actual_map_id}")
-    else:
-        actual_map_id = "map_77ff566063aa1b38b36e2b840672f46d"
-        print("警告: 無法提取地圖ID，使用默認值")
-    
-    print(f"成功提取並清理JavaScript代碼，長度: {len(folium_script)} 字符")
+    actual_map_id = map_id_match.group(1) if map_id_match else "map_77ff566063aa1b38b36e2b840672f46d"
 else:
     folium_script = "// 無法提取Folium生成的JavaScript"
     actual_map_id = "map_77ff566063aa1b38b36e2b840672f46d"
-    print("警告: 無法找到JavaScript代碼")
 
-# 檢查是否已存在 script.js，如果存在則保留（不覆蓋）
+# 只在 script.js 不存在時才創建新的
 if not os.path.exists(SCRIPT_JS):
-    # 只在 script.js 不存在時才創建新的
     with open(str(SCRIPT_JS), "w", encoding="utf-8") as f:
-        script_only = folium_script
-        # 添加緩存破壞機制到數據加載
-        script_only = script_only.replace(
-            "return fetch('data/dengue_data.json')",
-            "var timestamp = new Date().getTime(); return fetch('data/dengue_data.json?t=' + timestamp, {cache: 'no-store'})"
-        )
-        f.write(script_only)
-else:
-    print("script.js 已存在，保留現有版本以維持自定義功能")
+        f.write(folium_script)
 
 # 創建包含側邊欄的完整HTML
 full_html = """<!DOCTYPE html>
@@ -567,11 +433,10 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.backgroundColor = 'transparent';
         });
         
-        // 點擊事件
+        // 點擊地圖事件監聽
         districtItem.addEventListener('click', function() {
-            console.log('點擊了區域:', name);
-            // 這裡可以添加顯示區域詳情的邏輯
-            // 例如：打開資訊面板並顯示該區域的數據
+            console.log('點擊了側邊欄區域:', name);
+            
         });
         
         districtListDiv.appendChild(districtItem);
@@ -581,21 +446,88 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+// 為地圖上的區域添加點擊事件監聽器
+(function() {
+    console.log('初始化地圖區域點擊事件監聽器...');
+    
+    // 等待地圖完全載入
+    setTimeout(function() {
+        var mapId = 'MAP_ID_PLACEHOLDER';
+        var map = window[mapId];
+        
+        if (!map) {
+            console.error('找不到地圖對象:', mapId);
+            return;
+        }
+        
+        console.log('地圖對象已找到，設置點擊事件監聽器');
+        
+        // 監聽所有圖層的點擊事件
+        map.eachLayer(function(layer) {
+            // 檢查是否為 GeoJSON 圖層
+            if (layer.feature && layer.feature.properties) {
+                layer.on('click', function(e) {
+                    var districtName = e.target.feature.properties.name || '未知區域';
+                    console.log('========================================');
+                    console.log('點擊了地圖區域:', districtName);
+                    console.log('點擊位置 (經緯度):', e.latlng);
+                    console.log('區域屬性資料:', e.target.feature.properties);
+                    console.log('========================================');
+                    
+                    // 視覺反饋：改變區域顏色
+                    var originalStyle = {
+                        fillOpacity: e.target.options.fillOpacity,
+                        color: e.target.options.color
+                    };
+                    
+                    // 高亮顯示
+                    e.target.setStyle({
+                        fillOpacity: 0.3,
+                        color: '#ff0000',
+                        weight: 3
+                    });
+                    
+                    // 0.5秒後恢復原樣
+                    setTimeout(function() {
+                        e.target.setStyle(originalStyle);
+                    }, 500);
+                });
+                
+                // 添加滑鼠懸停效果
+                layer.on('mouseover', function(e) {
+                    var districtName = e.target.feature.properties.name || '未知區域';
+                    console.log('滑鼠懸停於:', districtName);
+                    e.target.setStyle({
+                        fillOpacity: 0.2,
+                        weight: 3
+                    });
+                });
+                
+                layer.on('mouseout', function(e) {
+                    e.target.setStyle({
+                        fillOpacity: 0,
+                        weight: 2
+                    });
+                });
+            }
+        });
+        
+        console.log('地圖區域點擊事件監聽器設置完成！');
+    }, 1000);  // 延遲 1 秒確保地圖完全初始化
+})();
+</script>
+
 <script src="/template/script.js"></script>
 </body>
 </html>
 """
 
-# 修復GeoJSON數據 - 將null替換為實際的GeoJSON數據
-print("修復GeoJSON數據...")
-geojson_json = json.dumps(geojson_dict, ensure_ascii=False)
-print(f"修復後的GeoJSON數據長度: {len(geojson_json)} 字符")
+print("準備數據...")
 
 # 從 GeoJSON 中提取所有區域名稱（按順序）
 district_names = [feature['properties']['name'] for feature in geojson_dict['features']]
 district_names_json = json.dumps(district_names, ensure_ascii=False)
-print(f"提取到 {len(district_names)} 個區域名稱")
-print(f"區域名稱列表（前5個）: {district_names[:5]}")
 
 # 讀取人口資料
 population_data = {}
@@ -603,16 +535,14 @@ try:
     with open(os.path.join(os.path.dirname(__file__), "population.json"), "r", encoding="utf-8") as f:
         population_json = json.load(f)
         for item in population_json['data']:
-            if item['區域別'] != '臺南市':  # 跳過總計資料
+            if item['區域別'] != '臺南市':
                 population_data[item['區域別']] = {
                     'population': int(item['人口數總計']),
                     'households': int(item['戶數']),
                     'villages': int(item['里數現有門牌'])
                 }
-    print(f"成功讀取 {len(population_data)} 個區域的人口資料")
 except Exception as e:
-    print(f"讀取人口資料失敗: {e}")
-    population_data = {}
+    print(f"警告: 讀取人口資料失敗: {e}")
 
 population_data_json = json.dumps(population_data, ensure_ascii=False)
 
@@ -631,18 +561,16 @@ for idx, row in gdf.iterrows():
     })
 
 district_labels_json = json.dumps(district_labels, ensure_ascii=False)
-print(f"準備了 {len(district_labels)} 個標籤數據")
-print(f"前3個標籤: {district_labels[:3]}")
+geojson_json = json.dumps(geojson_dict, ensure_ascii=False)
 
-# 替換HTML中的null為實際GeoJSON數據
+print("組裝最終HTML...")
+
+# 替換HTML中的placeholder
 fixed_html = full_html.replace("FOLIUM_SCRIPT_PLACEHOLDER", folium_script)
 fixed_html = fixed_html.replace("DISTRICT_NAMES_PLACEHOLDER", district_names_json)
 fixed_html = fixed_html.replace("DISTRICT_LABELS_PLACEHOLDER", district_labels_json)
-# 替換所有的 MAP_ID_PLACEHOLDER (包括 JavaScript 中的)
 fixed_html = fixed_html.replace("MAP_ID_PLACEHOLDER", actual_map_id)
 fixed_html = fixed_html.replace("L.geoJson(null,", f"L.geoJson({geojson_json},")
-
-# 將人口資料加入到 JavaScript 中
 fixed_html = fixed_html.replace(
     "document.addEventListener('DOMContentLoaded', function() {",
     f"// 人口資料\nvar populationData = {population_data_json};\n\ndocument.addEventListener('DOMContentLoaded', function() {{"
@@ -651,7 +579,6 @@ fixed_html = fixed_html.replace(
 # 保存完整的HTML文件
 with open(str(MAP_HTML), "w", encoding="utf-8") as f:
     f.write(fixed_html)
-print("GeoJSON數據修復完成！")
 
-print("地圖HTML和JavaScript已成功生成！")
-m
+print(f"✓ 地圖生成完成！包含 {len(district_names)} 個行政區")
+print(f"✓ 輸出文件: {MAP_HTML}")
