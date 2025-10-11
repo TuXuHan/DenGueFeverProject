@@ -3,49 +3,37 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('=== 簡化版script.js已載入 ===');
     
-    // 預測資料（按嚴重程度排序）
-    var forecastData = [
-        {name: '新營區', pred_cases: 1160, rank: 1, color: 'purple', week_start: '2024-01-08'},
-        {name: '仁德區', pred_cases: 298, rank: 2, color: 'red', week_start: '2024-01-08'},
-        {name: '南化區', pred_cases: 189, rank: 3, color: 'yellow', week_start: '2024-01-08'},
-        {name: '佳里區', pred_cases: 170, rank: 4, color: 'normal', week_start: '2024-01-08'},
-        {name: '白河區', pred_cases: 48, rank: 5, color: 'normal', week_start: '2024-01-08'},
-        {name: '東山區', pred_cases: 31, rank: 6, color: 'normal', week_start: '2024-01-08'},
-        {name: '七股區', pred_cases: 23, rank: 7, color: 'normal', week_start: '2024-01-08'},
-        {name: '楠西區', pred_cases: 7, rank: 8, color: 'normal', week_start: '2024-01-08'},
-        {name: '大內區', pred_cases: 0, rank: 9, color: 'normal', week_start: '2024-01-01'},
-        {name: '新化區', pred_cases: 0, rank: 10, color: 'normal', week_start: '2024-01-01'},
-        {name: '北門區', pred_cases: 0, rank: 11, color: 'normal', week_start: '2024-01-01'},
-        {name: '將軍區', pred_cases: 0, rank: 12, color: 'normal', week_start: '2024-01-01'},
-        {name: '西港區', pred_cases: 0, rank: 13, color: 'normal', week_start: '2024-01-01'},
-        {name: '學甲區', pred_cases: 0, rank: 14, color: 'normal', week_start: '2024-01-08'},
-        {name: '下營區', pred_cases: 0, rank: 15, color: 'normal', week_start: '2024-01-01'},
-        {name: '官田區', pred_cases: 0, rank: 16, color: 'normal', week_start: '2024-01-01'},
-        {name: '六甲區', pred_cases: 0, rank: 17, color: 'normal', week_start: '2024-01-01'},
-        {name: '新市區', pred_cases: 0, rank: 18, color: 'normal', week_start: '2024-01-01'},
-        {name: '麻豆區', pred_cases: 0, rank: 19, color: 'normal', week_start: '2024-01-01'},
-        {name: '後壁區', pred_cases: 0, rank: 20, color: 'normal', week_start: '2024-01-01'},
-        {name: '柳營區', pred_cases: 0, rank: 21, color: 'normal', week_start: '2024-01-01'},
-        {name: '鹽水區', pred_cases: 0, rank: 22, color: 'normal', week_start: '2024-01-01'},
-        {name: '安平區', pred_cases: 0, rank: 23, color: 'normal', week_start: '2024-01-01'},
-        {name: '安定區', pred_cases: 0, rank: 24, color: 'normal', week_start: '2024-01-01'},
-        {name: '善化區', pred_cases: 0, rank: 25, color: 'normal', week_start: '2024-01-01'},
-        {name: '玉井區', pred_cases: 0, rank: 26, color: 'normal', week_start: '2024-01-01'},
-        {name: '安南區', pred_cases: 0, rank: 27, color: 'normal', week_start: '2024-01-01'},
-        {name: '北區', pred_cases: 0, rank: 28, color: 'normal', week_start: '2024-01-01'},
-        {name: '南區', pred_cases: 0, rank: 29, color: 'normal', week_start: '2024-01-01'},
-        {name: '東區', pred_cases: 0, rank: 30, color: 'normal', week_start: '2024-01-01'},
-        {name: '永康區', pred_cases: 0, rank: 31, color: 'normal', week_start: '2024-01-01'},
-        {name: '山上區', pred_cases: 0, rank: 32, color: 'normal', week_start: '2024-01-01'},
-        {name: '龍崎區', pred_cases: 0, rank: 33, color: 'normal', week_start: '2024-01-01'},
-        {name: '關廟區', pred_cases: 0, rank: 34, color: 'normal', week_start: '2024-01-01'},
-        {name: '歸仁區', pred_cases: 0, rank: 35, color: 'normal', week_start: '2024-01-01'},
-        {name: '左鎮區', pred_cases: 0, rank: 36, color: 'normal', week_start: '2024-01-01'},
-        {name: '中西區', pred_cases: 0, rank: 37, color: 'normal', week_start: '2024-01-01'}
-    ];
+    // 從全局變量獲取預測資料
+    if (typeof window.forecastData === 'undefined') {
+        console.error('forecastData 全局變量未找到');
+        return;
+    }
+    
+    // 將全局 forecastData 轉換為列表格式
+    var forecastDataList = [];
+    if (window.forecastData && window.forecastData.district_data) {
+        var districts = Object.values(window.forecastData.district_data);
+        // 按預測病例排序
+        districts.sort(function(a, b) {
+            return b.total_pred_cases - a.total_pred_cases;
+        });
+        
+        // 轉換為列表格式
+        forecastDataList = districts.map(function(district, index) {
+            return {
+                name: district.district_name,
+                pred_cases: district.total_pred_cases,
+                rank: index + 1,
+                color: index < 3 ? (index === 0 ? 'purple' : index === 1 ? 'red' : 'yellow') : 'normal',
+                week_start: window.forecastData.latest_week
+            };
+        });
+    }
+    
+    console.log('處理後的預測資料:', forecastDataList.slice(0, 5));
 
     // 區域名稱列表（按嚴重程度排序）
-    var districtNames = forecastData.map(item => item.name);
+    var districtNames = forecastDataList.map(item => item.name);
     
     // 重置所有地圖區域樣式
     function resetMapDistrictStyles() {
@@ -155,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (title) title.textContent = districtName;
         
         // 查找預測資料
-        var forecast = forecastData.find(item => item.name === districtName);
+        var forecast = forecastDataList.find(item => item.name === districtName);
         if (forecast) {
             // 顯示人口資料
             var popData = populationData && populationData[districtName];
@@ -220,12 +208,12 @@ document.addEventListener('DOMContentLoaded', function() {
         districtListDiv.innerHTML = '';
         
         // 為每個區域創建列表項
-        forecastData.forEach(function(data, index) {
+        forecastDataList.forEach(function(data, index) {
             var districtItem = document.createElement('div');
             districtItem.className = 'district-item';
             
             // 根據排名設定顏色
-            var itemStyle = 'padding: 10px 15px; cursor: pointer; border-bottom: 1px solid #e0e0e0; transition: background-color 0.2s; position: relative;';
+            var itemStyle = 'padding: 10px 15px; cursor: pointer; border-bottom: 1px solid #e0e0e0; transition: background-color 0.2s; position: relative; font-size: 16px;';
             
             if (data.rank <= 3) {
                 if (data.rank === 1) {
@@ -242,11 +230,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // 創建內容 HTML
             var contentHtml = '';
             if (data.rank <= 3) {
-                contentHtml += '<span style="font-weight: bold; font-size: 14px;">#' + data.rank + '</span> ';
+                contentHtml += '<span style="font-weight: bold; font-size: 16px;">#' + data.rank + '</span> ';
             }
             contentHtml += '<span style="font-weight: 600;">' + data.name + '</span>';
             if (data.pred_cases > 0) {
-                contentHtml += '<br><span style="font-size: 12px; color: #666;">預測病例: ' + data.pred_cases + '</span>';
+                contentHtml += '<br><span style="font-size: 14px; color: #666;">預測病例: ' + data.pred_cases + '</span>';
             }
             
             districtItem.innerHTML = contentHtml;

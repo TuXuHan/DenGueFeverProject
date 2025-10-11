@@ -171,32 +171,37 @@ COLOR_THEME = {
 
 # 版面配置
 LAYOUT_CONFIG = {
+    # 左側統一容器
+    "left_container": {
+        "position": "absolute",
+        "left": "10px",
+        "top": "10px",
+        "bottom": "10px",
+        "width": "320px",
+        "z_index": 1000,
+    },
+    
     # 標題區域
     "header": {
-        "position": "absolute",
-        "top": "10px",
-        "left": "10px",
-        "z_index": 1000,
-        "background": "rgba(255, 255, 255, 0.9)",
-        "padding": "15px",
-        "border_radius": "8px",
+        "width": "100%",
+        "background": "rgba(255, 255, 255, 0.95)",
+        "padding": "15px 20px",
+        "border_radius": "8px 8px 0 0",
         "box_shadow": "0 2px 10px rgba(0,0,0,0.3)",
+        "border_left": "4px solid #1f78b4",
+        "margin_bottom": "0",
     },
     
     # 側邊欄
     "sidebar": {
-        "position": "absolute",
-        "left": "10px",
-        "top": "80px",
-        "bottom": "10px",
-        "width": "300px",
+        "width": "100%",
         "background": "rgba(255, 255, 255, 0.98)",
-        "padding": "20px",
         "box_shadow": "0 4px 20px rgba(0,0,0,0.15)",
         "overflow_y": "auto",
-        "border_radius": "12px",
-        "z_index": 1000,
+        "border_radius": "0 0 12px 12px",
         "border": "1px solid rgba(102, 126, 234, 0.1)",
+        "border_top": "none",
+        "flex": "1",
     },
     
     # 資訊面板
