@@ -134,12 +134,25 @@ DengueFeverProject/
 ├── config.py                        # 設定檔
 ├── data/                           # 資料處理
 │   ├── process_map.py              # 地圖生成
+│   ├── prepare_forecast_data.py    # 預測資料處理
+│   ├── convert_village_data.py     # 村里資料轉換
 │   ├── dengue_data.json            # 登革熱病例資料
 │   ├── weather_data.json           # 氣象資訊
-│   └── district_boundaries.geojson # 地理邊界
+│   ├── population.json             # 人口統計資料
+│   ├── bucket.json                 # 誘卵桶資料
+│   ├── district_boundaries.geojson # 行政區邊界
+│   ├── village.geojson             # 村里邊界資料
+│   ├── forecast_data_processed.json # 處理後的預測資料
+│   └── result/                     # 預測結果資料
+│       ├── forecast_T2_wide.csv    # 村里級預測資料（寬格式）
+│       ├── forecast_T2_long.csv    # 村里級預測資料（長格式）
+│       ├── forecast_T2_wide_district.csv # 行政區預測資料（寬格式）
+│       ├── forecast_T2_long_district.csv # 行政區預測資料（長格式）
+│       └── village_ids_tainan.csv  # 村里ID對照表
 ├── template/                       # 網頁模板
 │   ├── map.html                    # 主地圖介面
-│   └── map_temp.html               # 模板檔案
+│   ├── map_temp.html               # 模板檔案
+│   └── script.js                   # 前端JavaScript
 └── web/                           # 靜態網頁資源
     └── style.css                  # CSS 樣式
 ```
@@ -152,12 +165,86 @@ DengueFeverProject/
 - **MAP_CONFIG**：地圖顯示設定（中心座標、縮放等級）
 - **DATA_SOURCES**：API 端點和資料來源
 
-## 📊 資料來源
+## 📊 資料來源與結構
 
+### 資料來源
 - **政府 API**：臺南市登革熱病例資料
 - **氣象資料**：用於風險評估的氣象資訊
 - **地理資料**：行政區邊界和管理區域
 - **誘卵桶資料**：誘卵桶監測結果
+- **預測模型**：機器學習預測結果
+
+### 核心資料檔案
+
+#### 預測資料（data/result/）
+- **forecast_T2_wide.csv**：村里級預測資料（寬格式）
+  - 格式：week_start, village_id_1, village_id_2, ...
+  - 用途：最新預測數據的主要來源
+- **forecast_T2_long.csv**：村里級預測資料（長格式）
+  - 格式：week_start, VillageID, pred_cases
+  - 用途：歷史預測數據分析
+- **forecast_T2_wide_district.csv**：行政區預測資料（寬格式）
+- **forecast_T2_long_district.csv**：行政區預測資料（長格式）
+- **village_ids_tainan.csv**：村里ID對照表
+  - 格式：DistrictCode, DistrictName, VillageID, VillageName
+  - 用途：村里ID與名稱的對照關係
+
+#### 地理資料
+- **district_boundaries.geojson**：37個行政區邊界
+- **village.geojson**：752個村里邊界（轉換自Shapefile）
+- **population.json**：各區域人口統計資料
+
+#### 處理後的資料
+- **forecast_data_processed.json**：整合後的預測資料
+  - 結構：
+    ```json
+    {
+      "latest_week": "2024-01-08",
+      "district_data": {
+        "6700100": {
+          "district_code": "6700100",
+          "district_name": "新營區",
+          "total_pred_cases": 0,
+          "villages": [...]
+        }
+      },
+      "district_name_to_code": {...},
+      "summary": {...}
+    }
+    ```
+
+#### 其他資料
+- **dengue_data.json**：歷史登革熱病例資料
+- **weather_data.json**：氣象監測資料
+- **bucket.json**：誘卵桶監測結果
+
+### 資料處理流程
+
+#### 1. 資料準備階段
+```bash
+# 轉換村里Shapefile為GeoJSON
+python data/convert_village_data.py
+
+# 處理預測資料，整合村里和行政區數據
+python data/prepare_forecast_data.py
+```
+
+#### 2. 地圖生成階段
+```bash
+# 生成互動式地圖HTML
+python data/process_map.py
+```
+
+#### 3. 系統啟動階段
+```bash
+# 啟動FastAPI服務器（自動更新資料）
+python main.py
+```
+
+### 資料更新機制
+- **自動更新**：每次訪問主頁時自動執行資料處理流程
+- **手動更新**：透過 `/api/update-map` API端點
+- **資料一致性**：確保行政區和村里資料使用相同週次
 
 ## 🛠️ 使用技術
 
@@ -166,6 +253,28 @@ DengueFeverProject/
 - **地圖**：Folium、Leaflet、GeoJSON
 - **資料處理**：Pandas、NumPy、GeoPandas
 - **網頁爬蟲**：Selenium、Requests
+
+## 🔌 API 端點
+
+### 主要端點
+- **GET /**：主頁面，顯示互動式地圖
+- **GET /api/update-map**：手動更新資料和地圖
+- **GET /api/forecast-data**：獲取預測資料
+- **GET /api/villages**：獲取所有村里資料
+- **GET /api/villages/{district_name}**：獲取指定區域的村里資料
+
+### API 回應範例
+```json
+{
+  "status": "success",
+  "latest_week": "2024-01-08",
+  "district_count": 37,
+  "data": {
+    "district_data": {...},
+    "district_name_to_code": {...}
+  }
+}
+```
 
 ## 📞 技術支援
 
