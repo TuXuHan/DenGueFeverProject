@@ -57,6 +57,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // 清除村里圖層和標籤
+    function clearVillageDisplay() {
+        console.log('清除村里顯示...');
+        
+        // 查找地圖實例
+        var map = null;
+        for (var prop in window) {
+            if (prop.startsWith('map_') && window[prop] && typeof window[prop].removeLayer === 'function') {
+                map = window[prop];
+                break;
+            }
+        }
+        
+        if (map) {
+            // 清除村里圖層
+            if (typeof villageLayer !== 'undefined' && villageLayer) {
+                map.removeLayer(villageLayer);
+                villageLayer = null;
+                console.log('村里圖層已清除');
+            }
+            
+            // 清除村里標籤圖層
+            if (window.villageLabelsLayer) {
+                map.removeLayer(window.villageLabelsLayer);
+                window.villageLabelsLayer = null;
+                console.log('村里標籤已清除');
+            }
+        }
+    }
+    
+    // 重置村里高亮樣式
+    function resetVillageStyles() {
+        // 重置村里圖層樣式
+        if (typeof villageLayer !== 'undefined' && villageLayer && typeof villageLayer.eachLayer === 'function') {
+            villageLayer.eachLayer(function(layer) {
+                layer.setStyle({
+                    color: '#1f78b4',
+                    weight: 2,
+                    fillColor: '#1f78b4',
+                    fillOpacity: 0.1,
+                    opacity: 1
+                });
+            });
+        }
+    }
+    
     // 高亮指定地圖區域
     function highlightMapDistrict(districtName) {
         console.log('嘗試高亮區域:', districtName);
@@ -185,15 +231,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // 處理左側導覽列點擊
+    // 處理左側導覽列點擊（只顯示詳細資訊，不進入村里視圖）
     function handleDistrictClick(item) {
         // 從 data 屬性獲取區域名稱
         var districtName = item.getAttribute('data-district-name');
         console.log('點擊的區域:', districtName);
-        showDistrictInfo(districtName, false);
+        
+        // 只顯示詳細資訊，不進入村里視圖
+        showDistrictInfo(districtName, true);
     }
     
-    // 處理地圖區域點擊
+    // 處理地圖區域點擊（只顯示詳細資訊，不進入村里視圖）
     function handleMapDistrictClick(districtName) {
         console.log('地圖點擊區域:', districtName);
         showDistrictInfo(districtName, true);
@@ -296,6 +344,12 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // 重置地圖樣式
             resetMapDistrictStyles();
+            
+            // 清除村里圖層和標籤
+            clearVillageDisplay();
+            
+            // 重置村里高亮樣式
+            resetVillageStyles();
         });
     }
     

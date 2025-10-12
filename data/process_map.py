@@ -326,18 +326,18 @@ full_html = """<!DOCTYPE html>
 <body>
     
     
-    <!-- 左側統一容器 -->
-    <div id="left-container" style="position: absolute; left: 0px; top: 0px; width: 320px; height: 100vh; z-index: 1000; display: flex; flex-direction: column;">
-        
-        <!-- 上方標題和中控區 -->
-        <div id="header" style="width: 100%; background: rgba(255, 255, 255, 0.95); padding: 15px 20px; border-radius: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.3); border-left: 4px solid #1f78b4; margin-bottom: 0; position: relative; z-index: 1001;">
-            <h2 style="margin: 0 0 8px 0; font-size: 26px; color: #1f78b4; font-weight: bold;">台南市登革熱疫情資料</h2>
-            <div id="week-info" style="display: flex; align-items: center; padding: 6px 10px; background: #f0f7ff; border-radius: 4px; border: 1px solid #b3d9ff;">
-                <i class="fas fa-calendar-alt" style="margin-right: 8px; color: #1f78b4; font-size: 14px;"></i>
-                <span style="font-size: 15px; color: #666; font-weight: 600;">預測週次：</span>
-                <span id="current-week" style="margin-left: 5px; font-size: 16px; color: #1f78b4; font-weight: bold;">載入中...</span>
+        <!-- 左側統一容器 -->
+        <div id="left-container" style="position: absolute; left: 0px; top: 0px; width: 320px; height: 100vh; z-index: 1000; display: flex; flex-direction: column;">
+            
+            <!-- 上方標題和中控區 -->
+            <div id="header" style="width: 100%; background: rgba(255, 255, 255, 0.95); padding: 15px 20px; border-radius: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.3); border-left: 4px solid #1f78b4; margin-bottom: 0; position: relative; z-index: 1001;">
+                <h2 style="margin: 0 0 8px 0; font-size: 26px; color: #1f78b4; font-weight: bold;">台南市登革熱疫情資料</h2>
+                <div id="week-info" style="display: flex; align-items: center; padding: 6px 10px; background: #f0f7ff; border-radius: 4px; border: 1px solid #b3d9ff;">
+                    <i class="fas fa-calendar-alt" style="margin-right: 8px; color: #1f78b4; font-size: 14px;"></i>
+                    <span style="font-size: 15px; color: #666; font-weight: 600;">預測週次：</span>
+                    <span id="current-week" style="margin-left: 5px; font-size: 16px; color: #1f78b4; font-weight: bold;">載入中...</span>
+                </div>
             </div>
-        </div>
 
         <!-- 左側導航欄 -->
         <div id="sidebar" style="width: 100%; background: rgba(255, 255, 255, 0.98); box-shadow: 0 4px 20px rgba(0,0,0,0.15); overflow-y: auto; border-radius: 0 0 12px 12px; border: 1px solid rgba(102, 126, 234, 0.1); border-top: none; flex: 1; margin-top: 0; min-height: 0; position: relative;">
@@ -475,17 +475,192 @@ function updateBreadcrumb(view, districtName, villageName) {
     }
 }
 
+// 高亮指定地圖區域
+function highlightMapDistrict(districtName) {
+    console.log('嘗試高亮區域:', districtName);
+    
+    // 首先重置所有地圖區域的樣式
+    resetMapDistrictStyles();
+    
+    var found = false;
+    
+    // 查找原始GeoJSON圖層
+    var originalGeoJsonLayer = null;
+    for (var prop in window) {
+        if (prop.startsWith('geo_json_') && !prop.includes('_onEachFeature') && !prop.includes('_styler') && window[prop] && typeof window[prop].eachLayer === 'function') {
+            originalGeoJsonLayer = window[prop];
+            console.log('找到原始圖層:', prop);
+            break;
+        }
+    }
+    
+    if (!originalGeoJsonLayer) {
+        console.log('錯誤：找不到原始GeoJSON圖層');
+        return;
+    }
+    
+    var layerCount = 0;
+    originalGeoJsonLayer.eachLayer(function(layer) {
+        var layerName = layer.feature && layer.feature.properties && layer.feature.properties.name;
+        if (layerName === districtName) {
+            console.log('找到匹配的區域:', layerName, '索引:', layerCount);
+            layer.setStyle({
+                color: '#ffc107',
+                weight: 3,
+                opacity: 1,
+                fillColor: '#ffc107',
+                fillOpacity: 0.3,
+                stroke: true
+            });
+            found = true;
+        }
+        layerCount++;
+    });
+    
+    console.log('總共檢查了', layerCount, '個圖層');
+    
+    if (!found) {
+        console.log('警告: 未找到匹配的區域:', districtName);
+    }
+}
+
+// 重置所有地圖區域樣式
+function resetMapDistrictStyles() {
+    var originalGeoJsonLayer = null;
+    for (var prop in window) {
+        if (prop.startsWith('geo_json_') && !prop.includes('_onEachFeature') && !prop.includes('_styler') && window[prop] && typeof window[prop].eachLayer === 'function') {
+            originalGeoJsonLayer = window[prop];
+            break;
+        }
+    }
+    
+    if (originalGeoJsonLayer) {
+        originalGeoJsonLayer.setStyle({
+            color: '#1f78b4',
+            weight: 2,
+            opacity: 1,
+            fillColor: 'transparent',
+            fillOpacity: 0,
+            stroke: true
+        });
+    }
+}
+
+// 只顯示行政區詳細資訊，不進入村里視圖
+function showDistrictDetailsOnly(districtName) {
+    console.log('顯示行政區詳細資訊:', districtName);
+    
+    // 高亮地圖區域
+    highlightMapDistrict(districtName);
+    
+    // 顯示詳細資料面板
+    var infoPanel = document.getElementById('info-panel');
+    console.log('找到info-panel元素:', infoPanel);
+    
+    if (!infoPanel) {
+        console.error('找不到info-panel元素！');
+        return;
+    }
+    
+    var title = document.getElementById('district-title');
+    var population = document.getElementById('population');
+    var dengueCases = document.getElementById('dengue-cases');
+    var ratePer10k = document.getElementById('rate-per-10k');
+    var riskLevel = document.getElementById('risk-level');
+    var lastUpdate = document.getElementById('last-update');
+    var detailData = document.getElementById('detail-data');
+    
+    console.log('找到的元素:', {
+        title: title,
+        population: population,
+        dengueCases: dengueCases,
+        ratePer10k: ratePer10k,
+        riskLevel: riskLevel,
+        lastUpdate: lastUpdate
+    });
+    
+    if (title) title.textContent = districtName;
+    
+    // 查找預測資料
+    var forecastData = window.forecastData;
+    if (forecastData && forecastData.district_data) {
+        var districtData = Object.values(forecastData.district_data).find(d => d.district_name === districtName);
+        if (districtData) {
+            console.log('找到區域資料:', districtData);
+            
+            // 顯示人口資料
+            var popData = window.populationData && window.populationData[districtName];
+            if (population && popData) {
+                population.textContent = popData.population.toLocaleString() + ' 人';
+            }
+            
+            if (dengueCases) dengueCases.textContent = districtData.total_pred_cases + ' 病例';
+            
+            // 計算每萬人病例率
+            if (ratePer10k && popData && popData.population > 0) {
+                var rate = (districtData.total_pred_cases / popData.population) * 10000;
+                ratePer10k.textContent = rate.toFixed(2) + ' /萬人';
+            }
+            
+            if (riskLevel) {
+                var riskText = '';
+                if (districtData.total_pred_cases >= 1000) riskText = '極高風險';
+                else if (districtData.total_pred_cases >= 100) riskText = '高風險';
+                else if (districtData.total_pred_cases >= 10) riskText = '中風險';
+                else riskText = '低風險';
+                riskLevel.textContent = riskText;
+            }
+            
+            if (lastUpdate) lastUpdate.textContent = forecastData.latest_week;
+        } else {
+            console.log('未找到區域資料:', districtName);
+        }
+    } else {
+        console.log('未找到預測資料或district_data');
+    }
+    
+    // 強制顯示面板
+    infoPanel.style.display = 'block';
+    console.log('行政區詳細資訊面板已顯示，當前display:', infoPanel.style.display);
+}
+
+// 處理地圖上的行政區點擊（展開村里視圖）
+function handleMapDistrictClick(districtName) {
+    console.log('地圖點擊行政區:', districtName, '（展開村里視圖）');
+    
+    // 展開村里視圖
+    showVillageList(districtName);
+    
+    // 同時在地圖上顯示該區域的村里邊界
+    var mapId = 'MAP_ID_PLACEHOLDER';
+    var map = window[mapId];
+    if (map) {
+        setTimeout(function() {
+            showVillagesForDistrict(districtName, map);
+        }, 100); // 稍微延遲以確保村里列表已載入
+    }
+}
+
 // 導航函數
 function navigateToCity() {
     if (currentView === 'district') return; // 已經在城市級別
     
-    // 清除村里圖層
+    // 清除村里圖層和標籤
     var mapId = 'MAP_ID_PLACEHOLDER';
     var map = window[mapId];
     if (map && villageLayer) {
         map.removeLayer(villageLayer);
         villageLayer = null;
-        // 重置地圖視圖到初始狀態，使用動畫效果
+    }
+    
+    // 清除村里標籤圖層
+    if (window.villageLabelsLayer) {
+        map.removeLayer(window.villageLabelsLayer);
+        window.villageLabelsLayer = null;
+    }
+    
+    // 重置地圖視圖到初始狀態，使用動畫效果
+    if (map) {
         map.setView(initialMapCenter, initialZoomLevel, {
             animate: true,
             duration: 0.8
@@ -500,13 +675,22 @@ function navigateToCity() {
 
 function navigateToDistrict() {
     if (currentView === 'village' && currentDistrict) {
-        // 清除村里圖層
+        // 清除村里圖層和標籤
         var mapId = 'MAP_ID_PLACEHOLDER';
         var map = window[mapId];
         if (map && villageLayer) {
             map.removeLayer(villageLayer);
             villageLayer = null;
-            // 重置地圖視圖到初始狀態，使用動畫效果
+        }
+        
+        // 清除村里標籤圖層
+        if (window.villageLabelsLayer) {
+            map.removeLayer(window.villageLabelsLayer);
+            window.villageLabelsLayer = null;
+        }
+        
+        // 重置地圖視圖到初始狀態，使用動畫效果
+        if (map) {
             map.setView(initialMapCenter, initialZoomLevel, {
                 animate: true,
                 duration: 0.8
@@ -619,19 +803,12 @@ function showDistrictList(districtNames) {
             }
         });
         
-        // 點擊事件監聽
+        // 點擊事件監聽（只顯示詳細資訊，不進入村里視圖）
         districtItem.addEventListener('click', function() {
-            console.log('點擊了側邊欄區域:', district.name);
-            showVillageList(district.name);
+            console.log('點擊了側邊欄區域:', district.name, '（只顯示詳細資訊）');
             
-            // 同時在地圖上顯示該區域的村里邊界
-            var mapId = 'MAP_ID_PLACEHOLDER';
-            var map = window[mapId];
-            if (map) {
-                setTimeout(function() {
-                    showVillagesForDistrict(district.name, map);
-                }, 100); // 稍微延遲以確保村里列表已載入
-            }
+            // 只顯示詳細資訊，不進入村里視圖
+            showDistrictDetailsOnly(district.name);
         });
         
         districtListDiv.appendChild(districtItem);
@@ -759,10 +936,16 @@ function showVillagesForDistrict(districtName, map) {
         return;
     }
     
-    // 清除舊的村里圖層
+    // 清除舊的村里圖層和標籤
     if (villageLayer) {
         map.removeLayer(villageLayer);
         villageLayer = null;
+    }
+    
+    // 清除村里標籤圖層
+    if (window.villageLabelsLayer) {
+        map.removeLayer(window.villageLabelsLayer);
+        window.villageLabelsLayer = null;
     }
     
     // 過濾出該區域的所有村里
@@ -777,14 +960,17 @@ function showVillagesForDistrict(districtName, map) {
         return;
     }
     
+    // 創建村里標籤圖層組
+    window.villageLabelsLayer = L.layerGroup();
+    
     // 創建村里圖層
     villageLayer = L.geoJSON(districtVillages, {
         style: function(feature) {
             return {
-                color: '#4CAF50',
+                color: '#1f78b4',
                 weight: 2,
-                fillColor: '#81C784',
-                fillOpacity: 0.3,
+                fillColor: '#1f78b4',
+                fillOpacity: 0.1,
                 opacity: 1
             };
         },
@@ -793,7 +979,7 @@ function showVillagesForDistrict(districtName, map) {
             
             // 創建彈出窗口內容
             var popupContent = '<div style="min-width: 220px;">';
-            popupContent += '<h4 style="margin: 0 0 10px 0; color: #4CAF50;">' + props.full_name + '</h4>';
+            popupContent += '<h4 style="margin: 0 0 10px 0; color: #1f78b4;">' + props.full_name + '</h4>';
             popupContent += '<table style="width: 100%; font-size: 13px;">';
             popupContent += '<tr><td><strong>區域:</strong></td><td>' + props.district_name + '</td></tr>';
             popupContent += '<tr><td><strong>村里:</strong></td><td>' + props.village_name + '</td></tr>';
@@ -805,26 +991,72 @@ function showVillagesForDistrict(districtName, map) {
             
             layer.bindPopup(popupContent);
             
+            // 添加村里标签（只显示村里名称，不显示区名）
+            var center = turf.centroid(feature);
+            var label = L.marker([center.geometry.coordinates[1], center.geometry.coordinates[0]], {
+                icon: L.divIcon({
+                    className: 'village-label',
+                    html: '<div style="background: rgba(255, 255, 255, 0.9); border: 1px solid #1f78b4; border-radius: 4px; padding: 2px 6px; font-size: 12px; font-weight: 600; color: #1f78b4; text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.3);">' + props.village_name + '</div>',
+                    iconSize: [60, 20],
+                    iconAnchor: [30, 10]
+                })
+            });
+            window.villageLabelsLayer.addLayer(label);
+            
             // 滑鼠懸停效果
             layer.on('mouseover', function(e) {
                 this.setStyle({
-                    fillOpacity: 0.6,
-                    weight: 3
+                    fillOpacity: 0.3,
+                    weight: 3,
+                    color: '#ff6b6b'
                 });
             });
             
             layer.on('mouseout', function(e) {
                 this.setStyle({
-                    fillOpacity: 0.3,
-                    weight: 2
+                    fillOpacity: 0.1,
+                    weight: 2,
+                    color: '#1f78b4'
                 });
+            });
+            
+            // 点击高光效果（只显示详细资讯，不进入其他视图）
+            layer.on('click', function(e) {
+                // 重置所有村里样式
+                villageLayer.eachLayer(function(layer) {
+                    layer.setStyle({
+                        color: '#1f78b4',
+                        weight: 2,
+                        fillColor: '#1f78b4',
+                        fillOpacity: 0.1,
+                        opacity: 1
+                    });
+                });
+                
+                // 高光当前选中的村里
+                this.setStyle({
+                    color: '#ffa500',
+                    weight: 3,
+                    fillColor: '#ffa500',
+                    fillOpacity: 0.4,
+                    opacity: 1
+                });
+                
+                // 显示村里详细资讯
+                showDistrictInfo(props.village_name, true);
             });
         }
     }).addTo(map);
     
+    // 添加標籤圖層到地圖
+    window.villageLabelsLayer.addTo(map);
+    
     // 自動縮放到村里邊界並居中顯示
     var bounds = villageLayer.getBounds();
     var center = bounds.getCenter();
+    
+    // 調整中心點，往左偏移一點
+    var adjustedCenter = [center.lat, center.lng - 0.005]; // 經度減去0.005度，往左偏移
     
     // 計算適當的縮放級別和中心點
     var zoomLevel = map.getBoundsZoom(bounds, true);
@@ -832,7 +1064,7 @@ function showVillagesForDistrict(districtName, map) {
     zoomLevel = Math.max(zoomLevel, 10); // 限制最小縮放級別
     
     // 使用 setView 來更精確地控制地圖視圖
-    map.setView(center, zoomLevel, {
+    map.setView(adjustedCenter, zoomLevel, {
         animate: true,
         duration: 0.8
     });
