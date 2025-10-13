@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Question1 地圖展示系統</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    
+    <!-- Leaflet MarkerCluster CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: 'Arial', 'Microsoft JhengHei', sans-serif;
+        }
+        
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
+        
+        /* 左上角标题 */
+        .top-left-title {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 1000;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 15px 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.9);
+        }
+        
+        .top-left-title h1 {
+            font-size: 20px;
+            color: white;
+            margin: 0 0 15px 0;
+            text-align: left;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        /* 数据源切换开关样式 */
+        .data-switch-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        .switch-label {
+            color: white;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 30px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            transition: .4s;
+            border-radius: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 22px;
+            width: 22px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        input:checked + .slider {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(30px);
+        }
+        
+        
+        
+        /* 資訊面板 */
+        .info-panel {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 350px;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: none;
+        }
+        
+        .info-panel-header {
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px 10px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .info-panel-header h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background 0.3s;
+        }
+        
+        .close-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .info-panel-body {
+            padding: 20px;
+        }
+        
+        .info-row {
+            margin-bottom: 15px;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .info-value {
+            color: #333;
+            font-size: 16px;
+        }
+        
+        /* 自定義標記樣式 */
+        .custom-marker {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: 2px solid white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+        }
+        
+        .custom-marker i {
+            color: white;
+            font-size: 10px;
+        }
+        
+        /* 图例样式 */
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            z-index: 1000;
+            font-family: Arial, 'Microsoft JhengHei', sans-serif;
+        }
+        
+        .legend h4 {
+            margin: 0 0 10px 0;
+            font-size: 16px;
+            color: #333;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 5px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 13px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        /* Loading 样式 */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            font-family: Arial, 'Microsoft JhengHei', sans-serif;
+        }
+        
+        .loading-content {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            text-align: center;
+            min-width: 200px;
+        }
+        
+        .loading-text {
+            font-size: 18px;
+            color: #333;
+            margin-top: 15px;
+            font-weight: 500;
+        }
+        
+        .loading-dots {
+            display: inline-block;
+            animation: loading-dots 1.5s infinite;
+        }
+        
+        @keyframes loading-dots {
+            0%, 20% {
+                content: '';
+            }
+            40% {
+                content: '.';
+            }
+            60% {
+                content: '..';
+            }
+            80%, 100% {
+                content: '...';
+            }
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <!-- 左上角标题 -->
+    <div class="top-left-title">
+        <h1><i class="fas fa-virus"></i> 台南登革熱資料預測</h1>
+        <!-- 数据源切换开关 -->
+        <div class="data-switch-container">
+            <span class="switch-label">桶子位置</span>
+            <label class="switch">
+                <input type="checkbox" id="dataSourceSwitch">
+                <span class="slider"></span>
+            </label>
+            <span class="switch-label">統計數據</span>
+        </div>
+    </div>
+    
+    
+    <!-- 地圖容器 -->
+    <div id="map"></div>
+    
+    <!-- 图例 -->
+    <div class="legend" id="legend">
+        <h4><i class="fas fa-info-circle"></i> <span id="legend-title">卵數等級</span></h4>
+        <div id="legend-content">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #4CAF50;"></div>
+                <span>無卵 (0)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #FFC107;"></div>
+                <span>少量 (1-10)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #FF9800;"></div>
+                <span>中量 (11-50)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #F44336;"></div>
+                <span>大量 (>50)</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 資訊面板 -->
+    <div class="info-panel" id="info-panel">
+        <div class="info-panel-header">
+            <h3 id="panel-title">位置詳情</h3>
+            <button class="close-btn" id="close-panel">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="info-panel-body">
+            <div class="info-row">
+                <div class="info-label"><i class="fas fa-map-marker-alt"></i> 誘卵桶名稱</div>
+                <div class="info-value" id="info-name">-</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label"><i class="fas fa-map-pin"></i> 區域/里別</div>
+                <div class="info-value" id="info-type">-</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label"><i class="fas fa-barcode"></i> 編號</div>
+                <div class="info-value" id="info-address">-</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label"><i class="fas fa-globe"></i> 經緯度</div>
+                <div class="info-value" id="info-coordinates">-</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label"><i class="fas fa-bug"></i> 監測數據</div>
+                <div class="info-value" id="info-description">-</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Loading 覆盖层 -->
+    <div class="loading-overlay" id="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">
+                載入統計數據<span class="loading-dots"></span>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Leaflet JS -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    
+    <!-- Leaflet MarkerCluster JS -->
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- 地圖腳本 -->
+    <script>
+        // 初始化地圖（中心設定在台南市）
+        var map = L.map('map').setView([22.9908, 120.2133], 11);
+        
+        // 添加地圖圖層
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 18
+        }).addTo(map);
+        
+        console.log('地图初始化完成');
+        
+        // 儲存所有標記
+        var markers = {};
+        var currentSelectedMarker = null;
+        var markerCluster = L.markerClusterGroup({
+            maxClusterRadius: 50,
+            spiderfyOnMaxZoom: true,
+            showCoverageOnHover: false,
+            zoomToBoundsOnClick: true
+        });
+        
+        // 数据源状态
+        var currentDataSource = 'bucket'; // 'bucket' 或 'stat'
+        
+        // 取得類型對應的顏色
+        function getTypeColor(type) {
+            const colors = {
+                '监测点': '#667eea',
+                '監測點': '#667eea',
+                '交通': '#4CAF50',
+                '景點': '#2196F3',
+                '美食': '#FF9800',
+                '學校': '#9C27B0',
+                '文創': '#E91E63'
+            };
+            return colors[type] || '#667eea';
+        }
+        
+        // 取得類型對應的圖標
+        function getTypeIcon(type) {
+            const icons = {
+                '监测点': 'fa-database',
+                '監測點': 'fa-database',
+                '交通': 'fa-train',
+                '景點': 'fa-landmark',
+                '美食': 'fa-utensils',
+                '學校': 'fa-graduation-cap',
+                '文創': 'fa-palette'
+            };
+            return icons[type] || 'fa-database';
+        }
+        
+        // 創建自定義標記
+        function createCustomMarker(location) {
+            var color = getTypeColor(location.type);
+            var iconClass = getTypeIcon(location.type);
+            
+            var customIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: `<div class="custom-marker" style="background-color: ${color};">
+                         <i class="fas ${iconClass}"></i>
+                       </div>`,
+                iconSize: [30, 30],
+                iconAnchor: [15, 15]
+            });
+            
+            return customIcon;
+        }
+        
+        // 顯示位置詳情
+        function showLocationInfo(location) {
+            document.getElementById('info-name').textContent = location.OVINAME || '未命名';
+            document.getElementById('info-type').textContent = `${location.DIST} ${location.VILL}`;
+            
+            // 根据数据源显示不同的编号
+            if (currentDataSource === 'stat') {
+                document.getElementById('info-address').textContent = location.OVITRAPINFO_SERIAL || '-';
+                document.getElementById('info-description').textContent = 
+                    `卵數: ${location.OVUM_NUM}, 孑孓數: ${location.WIGGLER_NUM}, 週次: ${location.WeekName}`;
+            } else {
+                document.getElementById('info-address').textContent = location.SERIAL || '-';
+                document.getElementById('info-description').textContent = 
+                    `桶子位置資料 - 無卵數統計`;
+            }
+            
+            document.getElementById('info-coordinates').textContent = 
+                `${location.lat}, ${location.lon}`;
+            
+            document.getElementById('info-panel').style.display = 'block';
+        }
+        
+        // 飛到指定位置
+        function flyToLocation(location) {
+            map.flyTo([location.lat, location.lon], 16, {
+                duration: 1.5
+            });
+            
+            // 高亮標記
+            if (currentSelectedMarker) {
+                currentSelectedMarker.setOpacity(1);
+            }
+            
+            var marker = markers[location.ID];
+            if (marker) {
+                marker.setOpacity(1);
+                setTimeout(() => {
+                    marker.openPopup();
+                }, 1500);
+                currentSelectedMarker = marker;
+            }
+            
+            showLocationInfo(location);
+        }
+        
+        // 更新图例
+        function updateLegend(dataSource) {
+            var legendTitle = document.getElementById('legend-title');
+            var legendContent = document.getElementById('legend-content');
+            
+            if (dataSource === 'stat') {
+                legendTitle.textContent = '卵數等級';
+                legendContent.innerHTML = `
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #4CAF50;"></div>
+                        <span>無卵 (0)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #FFC107;"></div>
+                        <span>少量 (1-10)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #FF9800;"></div>
+                        <span>中量 (11-50)</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #F44336;"></div>
+                        <span>大量 (>50)</span>
+                    </div>`;
+            } else {
+                legendTitle.textContent = '桶子位置';
+                legendContent.innerHTML = `
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #2196F3;"></div>
+                        <span>桶子位置</span>
+                    </div>`;
+            }
+        }
+        
+        // 显示/隐藏Loading
+        function showLoading() {
+            document.getElementById('loading-overlay').style.display = 'flex';
+        }
+        
+        function hideLoading() {
+            document.getElementById('loading-overlay').style.display = 'none';
+        }
+        
+        // 載入位置資料的函數
+        function loadLocationData(dataSource) {
+            // 统计数据需要显示loading
+            if (dataSource === 'stat') {
+                showLoading();
+            }
+            
+            // 清除現有標記
+            if (markerCluster) {
+                map.removeLayer(markerCluster);
+                markerCluster.clearLayers();
+            }
+            
+            // 清除直接添加到地图的标记
+            Object.values(markers).forEach(marker => {
+                map.removeLayer(marker);
+            });
+            
+            // 重新创建聚类层
+            markerCluster = L.markerClusterGroup({
+                maxClusterRadius: 50,
+                spiderfyOnMaxZoom: true,
+                showCoverageOnHover: false,
+                zoomToBoundsOnClick: true
+            });
+            
+            markers = {};
+            
+            // 更新图例
+            updateLegend(dataSource);
+            
+            console.log(`載入數據源: ${dataSource}`);
+            
+            fetch(`/api/locations?data_type=${dataSource}`)
+                .then(response => response.json())
+                .then(result => {
+                console.log('API响应:', result);
+                if (result.status === 'success') {
+                    var allLocations = result.data;
+                    console.log(`总共 ${allLocations.length} 条记录`);
+                    
+                    // 数据过滤：根据数据源类型进行不同处理
+                    var locations;
+                    if (dataSource === 'stat') {
+                        // 统计数据：只保留每个监测点的最新记录
+                        var latestByTrap = {};
+                        allLocations.forEach(location => {
+                            var trapKey = `${location.OVITRAPINFO_ID}`;
+                            if (!latestByTrap[trapKey] || new Date(location.DATETIME) > new Date(latestByTrap[trapKey].DATETIME)) {
+                                latestByTrap[trapKey] = location;
+                            }
+                        });
+                        locations = Object.values(latestByTrap);
+                        console.log(`统计数据过滤后剩余 ${locations.length} 个独立监测点（每个点的最新记录）`);
+                    } else {
+                        // 桶子位置数据：直接使用所有数据（已经是去重的桶子位置）
+                        locations = allLocations;
+                        console.log(`桶子位置数据：${locations.length} 个监测点`);
+                    }
+                    console.log(`开始添加监测点到地图...`);
+                    
+                    // 添加每個位置到地圖
+                    console.log(`开始处理 ${locations.length} 个位置点`);
+                    var validCount = 0;
+                    var invalidCount = 0;
+                    
+                    locations.forEach((location, index) => {
+                        try {
+                            // 验证坐标
+                            if (!location.lat || !location.lon) {
+                                console.warn(`跳过无效坐标的监测点 ${index}:`, location);
+                                invalidCount++;
+                                return;
+                            }
+                            
+                            validCount++;
+                            
+                            // 设置监测点类型和颜色
+                            location.type = '監測點';
+                            
+                            // 根据数据源和卵数设置不同的颜色
+                            let markerColor;
+                            if (dataSource === 'stat' && location.OVUM_NUM !== undefined) {
+                                // 统计数据：根据卵数设置颜色
+                                markerColor = '#4CAF50'; // 绿色 - 无卵
+                                if (location.OVUM_NUM > 0 && location.OVUM_NUM <= 10) {
+                                    markerColor = '#FFC107'; // 黄色 - 少量
+                                } else if (location.OVUM_NUM > 10 && location.OVUM_NUM <= 50) {
+                                    markerColor = '#FF9800'; // 橙色 - 中量
+                                } else if (location.OVUM_NUM > 50) {
+                                    markerColor = '#F44336'; // 红色 - 大量
+                                }
+                            } else {
+                                // 桶子位置数据：统一使用蓝色
+                                markerColor = '#2196F3'; // 蓝色 - 桶子位置
+                            }
+                            
+                            // 创建自定义图标
+                            var customIcon = L.divIcon({
+                                className: 'custom-div-icon',
+                                html: `<div class="custom-marker" style="background: ${markerColor};">
+                                         <i class="fas fa-bug"></i>
+                                       </div>`,
+                                iconSize: [20, 20],
+                                iconAnchor: [10, 10]
+                            });
+                            
+                            var marker = L.marker(
+                                [location.lat, location.lon],
+                                { icon: customIcon }
+                            );
+                            
+                            // 添加彈出視窗
+                            var popupContent = `
+                                <div style="font-family: Arial, 'Microsoft JhengHei', sans-serif; min-width: 200px;">
+                                    <h6 style="margin: 0 0 10px 0; color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 5px;">
+                                        <i class="fas fa-${dataSource === 'stat' ? 'bug' : 'map-marker-alt'}"></i> 
+                                        ${location.OVINAME || '監測點'}
+                                    </h6>
+                                    <p style="margin: 5px 0; font-size: 12px;">
+                                        <strong><i class="fas fa-map-marker-alt"></i> 區域：</strong>${location.DIST} ${location.VILL}
+                                    </p>
+                                    <p style="margin: 5px 0; font-size: 12px;">
+                                        <strong><i class="fas fa-barcode"></i> 編號：</strong>${dataSource === 'stat' ? location.OVITRAPINFO_SERIAL : location.SERIAL}
+                                    </p>`;
+                            
+                            if (dataSource === 'stat') {
+                                popupContent += `
+                                    <p style="margin: 5px 0; font-size: 12px;">
+                                        <strong><i class="fas fa-egg"></i> 卵數：</strong><span style="color: ${markerColor}; font-weight: bold;">${location.OVUM_NUM}</span>
+                                    </p>
+                                    <p style="margin: 5px 0; font-size: 12px;">
+                                        <strong><i class="fas fa-water"></i> 孑孓數：</strong>${location.WIGGLER_NUM}
+                                    </p>
+                                    <p style="margin: 5px 0; font-size: 12px;">
+                                        <strong><i class="fas fa-calendar"></i> 週次：</strong>${location.WeekName}
+                                    </p>
+                                    <p style="margin: 5px 0; font-size: 11px; color: #666;">
+                                        <strong><i class="fas fa-clock"></i> 時間：</strong>${new Date(location.DATETIME).toLocaleString('zh-TW')}
+                                    </p>`;
+                            } else {
+                                popupContent += `
+                                    <p style="margin: 5px 0; font-size: 12px; color: #2196F3;">
+                                        <strong><i class="fas fa-info-circle"></i> 類型：</strong>桶子位置資料
+                                    </p>`;
+                            }
+                            
+                            popupContent += `
+                                </div>`;
+                            
+                            marker.bindPopup(popupContent);
+                            
+                            // 點擊標記時顯示詳情
+                            marker.on('click', function() {
+                                showLocationInfo(location);
+                            });
+                            
+                            markers[location.ID] = marker;
+                            
+                            // 对于桶子位置数据，直接添加到地图；统计数据使用聚类
+                            if (dataSource === 'bucket') {
+                                marker.addTo(map);
+                            } else {
+                                markerCluster.addLayer(marker);
+                            }
+                            
+                            // 每100个点打印一次进度
+                            if ((index + 1) % 100 === 0) {
+                                console.log(`已添加 ${index + 1}/${locations.length} 个监测点`);
+                            }
+                        } catch (error) {
+                            console.error(`添加监测点 ${index} 时发生错误:`, error);
+                        }
+                    });
+                    
+                    // 将聚类层添加到地图（仅统计数据需要）
+                    if (dataSource === 'stat') {
+                        map.addLayer(markerCluster);
+                        console.log(`✓ 成功添加 ${validCount} 个有效监测点到地图（使用聚类显示）`);
+                        console.log(`聚类层标记数量: ${markerCluster.getLayers().length}`);
+                    } else {
+                        console.log(`✓ 成功添加 ${validCount} 个有效监测点到地图（直接显示）`);
+                    }
+                    console.log(`无效坐标: ${invalidCount} 个`);
+                } else {
+                    console.error('API返回错误:', result);
+                }
+            })
+                .catch(error => {
+                    console.error('載入位置資料時發生錯誤:', error);
+                })
+                .finally(() => {
+                    // 隐藏loading
+                    hideLoading();
+                });
+        }
+        
+        // 初始化載入桶子位置數據
+        console.log('开始初始化地图数据...');
+        loadLocationData(currentDataSource);
+        
+        // 監聽切換開關
+        document.getElementById('dataSourceSwitch').addEventListener('change', function() {
+            if (this.checked) {
+                currentDataSource = 'stat';
+                console.log('切換到統計數據');
+            } else {
+                currentDataSource = 'bucket';
+                console.log('切換到桶子位置');
+            }
+            
+            // 重新載入數據
+            loadLocationData(currentDataSource);
+        });
+        
+        // 關閉資訊面板
+        document.getElementById('close-panel').addEventListener('click', function() {
+            document.getElementById('info-panel').style.display = 'none';
+            if (currentSelectedMarker) {
+                currentSelectedMarker.setOpacity(1);
+                currentSelectedMarker = null;
+            }
+        });
+    </script>
+</body>
+</html>
+
