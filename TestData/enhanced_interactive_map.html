@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台南市行政區相似度分析 - 完整互動式地圖</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        
+        #map {
+            height: 100vh;
+            width: 100%;
+        }
+        
+        #info-panel {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            width: 450px;
+            max-height: 85vh;
+            background: white;
+            border: 2px solid #007bff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            z-index: 1000;
+            overflow-y: auto;
+            display: none;
+        }
+        
+        #search-panel {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            min-width: 250px;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+            font-weight: bold;
+        }
+        
+        .close-btn:hover {
+            color: #333;
+        }
+        
+        .section-title {
+            color: #007bff;
+            margin: 20px 0 15px 0;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 5px;
+        }
+        
+        .ranking-item {
+            margin: 8px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+            transition: all 0.3s ease;
+        }
+        
+        .ranking-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .medal {
+            font-size: 20px;
+            margin-right: 8px;
+        }
+        
+        .similarity-score {
+            color: #666;
+            font-size: 13px;
+            float: right;
+            background: #e9ecef;
+            padding: 2px 8px;
+            border-radius: 12px;
+        }
+        
+        .basic-info {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #90caf9;
+        }
+        
+        .comprehensive-section {
+            background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #a5d6a7;
+        }
+        
+        .spatial-section {
+            background: linear-gradient(135deg, #e6f7ff 0%, #b3e5fc 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #81d4fa;
+        }
+        
+        .weather-section {
+            background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ffd54f;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        
+        .search-btn {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: transform 0.2s ease;
+        }
+        
+        .search-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .district-list {
+            max-height: 300px;
+            overflow-y: auto;
+            margin-top: 15px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+        }
+        
+        .district-item {
+            padding: 10px 15px;
+            cursor: pointer;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.2s ease;
+        }
+        
+        .district-item:hover {
+            background: #f8f9fa;
+        }
+        
+        .district-item:last-child {
+            border-bottom: none;
+        }
+        
+        .rank-badge {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .similarity-level {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+        
+        .high-similarity { background: #28a745; color: white; }
+        .medium-similarity { background: #ffc107; color: #333; }
+        .low-similarity { background: #dc3545; color: white; }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .stat-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 18px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div id="search-panel">
+        <h4 style="margin: 0 0 15px 0; color: #333; text-align: center;">🔍 搜索行政區</h4>
+        <input type="text" id="district-search" class="search-input" placeholder="輸入區域名稱...">
+        <button onclick="searchDistrict()" class="search-btn">搜索</button>
+        <div id="district-list" class="district-list"></div>
+    </div>
+    
+    <div id="info-panel">
+        <button class="close-btn" onclick="closeInfoPanel()">×</button>
+        <h3 style="margin: 0 0 20px 0; color: #007bff; text-align: center; font-size: 20px;">行政區相似度分析</h3>
+        <div id="info-content"></div>
+    </div>
+
+    <script>
+        // 初始化地圖
+        const map = L.map('map').setView([23.0, 120.2], 10);
+        
+        // 添加地圖圖層
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 載入完整排名數據
+        let completeRankings = {};
+        
+        fetch('complete_rankings_data_corrected.json')
+            .then(response => response.json())
+            .then(data => {
+                completeRankings = data;
+                console.log('排名數據載入完成（已修正空間距離計算）');
+            })
+            .catch(error => {
+                console.error('載入排名數據失敗:', error);
+                document.getElementById('info-content').innerHTML = 
+                    '<div class="error">載入數據失敗，請檢查文件是否存在</div>';
+            });
+
+        // 載入GeoJSON數據
+        fetch('data/district_boundaries.geojson')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    style: {
+                        fillColor: 'lightblue',
+                        weight: 2,
+                        opacity: 1,
+                        color: 'black',
+                        fillOpacity: 0.3
+                    },
+                    onEachFeature: function(feature, layer) {
+                        const districtName = feature.properties.name;
+                        layer.bindPopup(`<b>${districtName}</b><br>點擊查看詳細相似度分析`);
+                        
+                        layer.on('click', function() {
+                            showDistrictInfo(districtName);
+                        });
+                        
+                        // 添加懸停效果
+                        layer.on('mouseover', function() {
+                            this.setStyle({
+                                fillOpacity: 0.6,
+                                weight: 3
+                            });
+                        });
+                        
+                        layer.on('mouseout', function() {
+                            this.setStyle({
+                                fillOpacity: 0.3,
+                                weight: 2
+                            });
+                        });
+                    }
+                }).addTo(map);
+            })
+            .catch(error => {
+                console.error('載入地理數據失敗:', error);
+            });
+
+        // 顯示區域名稱列表
+        function showDistrictList() {
+            const districtList = document.getElementById('district-list');
+            const districts = Object.keys(completeRankings).sort();
+            
+            districtList.innerHTML = '';
+            districts.forEach(district => {
+                const item = document.createElement('div');
+                item.className = 'district-item';
+                
+                const ranking = completeRankings[district];
+                const level = getSimilarityLevel(ranking.avg_similarity);
+                const levelClass = level === '高相似度' ? 'high-similarity' : 
+                                 level === '中等相似度' ? 'medium-similarity' : 'low-similarity';
+                
+                item.innerHTML = `
+                    <span class="rank-badge">#${ranking.rank}</span>
+                    <strong>${district}</strong>
+                    <span class="similarity-level ${levelClass}">${level}</span>
+                `;
+                
+                item.onclick = () => showDistrictInfo(district);
+                districtList.appendChild(item);
+            });
+        }
+
+        // 搜索功能
+        function searchDistrict() {
+            const searchTerm = document.getElementById('district-search').value.trim();
+            if (searchTerm && completeRankings[searchTerm]) {
+                showDistrictInfo(searchTerm);
+            } else {
+                alert('未找到該行政區，請檢查名稱是否正確');
+            }
+        }
+
+        // 關閉信息面板
+        function closeInfoPanel() {
+            document.getElementById('info-panel').style.display = 'none';
+        }
+
+        // 獲取相似度等級
+        function getSimilarityLevel(avgSimilarity) {
+            if (avgSimilarity >= 0.7) return '高相似度';
+            if (avgSimilarity >= 0.5) return '中等相似度';
+            return '低相似度';
+        }
+
+        // 顯示區域名稱信息
+        function showDistrictInfo(districtName) {
+            const ranking = completeRankings[districtName];
+            const infoPanel = document.getElementById('info-panel');
+            const infoContent = document.getElementById('info-content');
+            
+            if (!ranking) {
+                infoContent.innerHTML = '<div class="error">未找到該行政區的數據</div>';
+                infoPanel.style.display = 'block';
+                return;
+            }
+            
+            const level = getSimilarityLevel(ranking.avg_similarity);
+            const levelClass = level === '高相似度' ? 'high-similarity' : 
+                             level === '中等相似度' ? 'medium-similarity' : 'low-similarity';
+            
+            // 基本信息
+            infoContent.innerHTML = `
+                <div class="basic-info">
+                    <h4 style="margin: 0 0 15px 0; color: #333; font-size: 18px;">📍 ${districtName}</h4>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">#${ranking.rank}</div>
+                            <div class="stat-label">綜合排名</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${ranking.avg_similarity.toFixed(4)}</div>
+                            <div class="stat-label">平均相似度</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${ranking.max_similarity.toFixed(4)}</div>
+                            <div class="stat-label">最高相似度</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">${ranking.min_similarity.toFixed(4)}</div>
+                            <div class="stat-label">最低相似度</div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 10px;">
+                        <span class="similarity-level ${levelClass}">${level}</span>
+                    </div>
+                </div>
+                
+                <div class="section-title">🏆 綜合相似度前三名</div>
+                <div class="comprehensive-section">
+                    ${ranking.top_similar.map((item, index) => {
+                        const medal = ['🥇', '🥈', '🥉'][index];
+                        return `<div class="ranking-item">
+                            <span class="medal">${medal}</span>
+                            <strong>${item.district}</strong>
+                            <span class="similarity-score">${item.similarity.toFixed(4)}</span>
+                        </div>`;
+                    }).join('')}
+                </div>
+                
+                <div class="section-title">🗺️ 空間距離最近前五名</div>
+                <div class="spatial-section">
+                    ${ranking.spatial_rankings.map((item, index) => {
+                        const number = index + 1;
+                        return `<div class="ranking-item">
+                            <span class="medal">${number}.</span>
+                            <strong>${item.district}</strong>
+                            <span class="similarity-score">${item.similarity.toFixed(4)}</span>
+                        </div>`;
+                    }).join('')}
+                </div>
+                
+                <div class="section-title">🌤️ 天氣相似度前五名</div>
+                <div class="weather-section">
+                    ${ranking.weather_rankings.map((item, index) => {
+                        const number = index + 1;
+                        return `<div class="ranking-item">
+                            <span class="medal">${number}.</span>
+                            <strong>${item.district}</strong>
+                            <span class="similarity-score">${item.similarity.toFixed(4)}</span>
+                        </div>`;
+                    }).join('')}
+                </div>
+            `;
+            
+            infoPanel.style.display = 'block';
+        }
+
+        // 初始化
+        setTimeout(() => {
+            if (Object.keys(completeRankings).length > 0) {
+                showDistrictList();
+            }
+        }, 1000);
+        
+        // 添加鍵盤事件
+        document.getElementById('district-search').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchDistrict();
+            }
+        });
+    </script>
+</body>
+</html>

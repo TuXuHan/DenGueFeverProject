@@ -39,39 +39,39 @@ def update_data():
     except Exception as e:
         print(f"執行 prepare_forecast_data.py 時發生錯誤: {e}")
 
-def update_map():
+def update_map(language="zh"):
     """執行 process_map.py 來更新地圖（包含村里顯示功能）"""
     try:
-        print("正在更新地圖（包含 752 個村里資料）...")
+        print(f"正在更新地圖（包含 752 個村里資料，語言: {language}）...")
+        env = os.environ.copy()
+        env['LANGUAGE'] = language
         result = subprocess.run(
             ["python", str(PROCESS_MAP_SCRIPT)],
             cwd=str(DATA_DIR),
             capture_output=True,
-            text=True
+            text=True,
+            env=env
         )
         if result.returncode == 0:
             print("✓ 地圖更新成功！")
-            print("  - 37 個行政區")
-            print("  - 752 個村里（點擊行政區可顯示）")
-            print("  - 最新預測數據已載入")
         else:
             print(f"✗ 地圖更新失敗: {result.stderr}")
     except Exception as e:
         print(f"執行 process_map.py 時發生錯誤: {e}")
 
 @app.get("/", response_class=HTMLResponse)
-async def read_map(request: Request):
+async def read_map(request: Request, lang: str = "zh"):
     # 每次訪問首頁時更新數據和地圖
     update_data()  # 先更新預測數據
-    update_map()   # 再更新地圖
-    return templates.TemplateResponse("map.html", {"request": request})
+    update_map(lang)   # 再更新地圖，使用指定的語言
+    return templates.TemplateResponse("map.html", {"request": request, "language": lang})
 
 @app.get("/api/update-map")
-async def api_update_map():
+async def api_update_map(lang: str = "zh"):
     """手動更新數據和地圖的 API"""
     update_data()  # 先更新預測數據
-    update_map()   # 再更新地圖
-    return {"status": "success", "message": "數據和地圖已更新"}
+    update_map(lang)   # 再更新地圖，使用指定的語言
+    return {"status": "success", "message": f"數據和地圖已更新（語言: {lang}）"}
 
 @app.get("/api/villages")
 async def get_villages():

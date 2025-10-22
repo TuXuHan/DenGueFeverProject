@@ -23,6 +23,9 @@ app = FastAPI(
 if WEB_DIR.exists():
     app.mount("/web", StaticFiles(directory=str(WEB_DIR)), name="web")
 
+# 掛載數據檔案目錄
+app.mount("/data", StaticFiles(directory=str(DATA_DIR)), name="data")
+
 templates = Jinja2Templates(directory=str(TEMPLATE_DIR))
 
 # 缓存相关变量

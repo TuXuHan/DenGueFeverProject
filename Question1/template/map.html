@@ -6,7 +6,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>Question1 地圖展示系統</title>
+    <title data-zh="Question1 地圖展示系統" data-en="Question1 Map Display System">Question1 地圖展示系統</title>
     
     <!-- Leaflet CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
@@ -42,6 +42,43 @@
             left: 0;
         }
         
+        /* 語言切換開關 */
+        .language-switch {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 10px 15px;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .language-switch .lang-option {
+            padding: 5px 10px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: #666;
+        }
+        
+        .language-switch .lang-option.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+        
+        .language-switch .lang-option:hover:not(.active) {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+        }
+        
         /* 左上角标题 */
         .top-left-title {
             position: absolute;
@@ -70,6 +107,7 @@
             align-items: center;
             gap: 10px;
             font-size: 14px;
+            margin-bottom: 15px;
         }
         
         .switch-label {
@@ -123,6 +161,54 @@
         
         input:checked + .slider:before {
             transform: translateX(30px);
+        }
+        
+        /* 第二個選項條樣式 */
+        .overlay-options-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+        
+        .overlay-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            padding: 5px 8px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .overlay-option:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+        
+        .overlay-option.active {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #667eea;
+            border-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .overlay-option input[type="radio"] {
+            margin: 0;
+            cursor: pointer;
+        }
+        
+        .overlay-option-label {
+            color: white;
+            font-weight: 500;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .overlay-option.active .overlay-option-label {
+            color: #667eea;
+            text-shadow: none;
         }
         
         
@@ -320,17 +406,44 @@
     </style>
 </head>
 <body>
+    <!-- 語言切換開關 -->
+    <div class="language-switch">
+        <div class="lang-option active" data-lang="zh" onclick="switchLanguage('zh')">
+            <i class="fas fa-globe-asia"></i> 中文
+        </div>
+        <div class="lang-option" data-lang="en" onclick="switchLanguage('en')">
+            <i class="fas fa-globe-americas"></i> English
+        </div>
+    </div>
+    
     <!-- 左上角标题 -->
     <div class="top-left-title">
-        <h1><i class="fas fa-virus"></i> 台南登革熱資料預測</h1>
+        <h1 data-zh="台南登革熱資料預測" data-en="Tainan Dengue Fever Data Prediction">
+            <i class="fas fa-virus"></i> <span class="translatable">台南登革熱資料預測</span>
+        </h1>
         <!-- 数据源切换开关 -->
         <div class="data-switch-container">
-            <span class="switch-label">桶子位置</span>
+            <span class="switch-label translatable" data-zh="桶子位置" data-en="Bucket Locations">桶子位置</span>
             <label class="switch">
                 <input type="checkbox" id="dataSourceSwitch">
                 <span class="slider"></span>
             </label>
-            <span class="switch-label">統計數據</span>
+            <span class="switch-label translatable" data-zh="統計數據" data-en="Statistics">統計數據</span>
+        </div>
+        <!-- 第二個選項條：覆蓋層選項 -->
+        <div class="overlay-options-container">
+            <div class="overlay-option active" data-option="none">
+                <input type="radio" name="overlayOption" value="none" id="overlay-none" checked>
+                <label for="overlay-none" class="overlay-option-label translatable" data-zh="關閉" data-en="Off">關閉</label>
+            </div>
+            <div class="overlay-option" data-option="grid">
+                <input type="radio" name="overlayOption" value="grid" id="overlay-grid">
+                <label for="overlay-grid" class="overlay-option-label translatable" data-zh="格線" data-en="Grid">格線</label>
+            </div>
+            <div class="overlay-option" data-option="district">
+                <input type="radio" name="overlayOption" value="district" id="overlay-district">
+                <label for="overlay-district" class="overlay-option-label translatable" data-zh="行政區" data-en="Districts">行政區</label>
+            </div>
         </div>
     </div>
     
@@ -340,23 +453,23 @@
     
     <!-- 图例 -->
     <div class="legend" id="legend">
-        <h4><i class="fas fa-info-circle"></i> <span id="legend-title">卵數等級</span></h4>
+        <h4><i class="fas fa-info-circle"></i> <span id="legend-title" class="translatable" data-zh="卵數等級" data-en="Egg Count Level">卵數等級</span></h4>
         <div id="legend-content">
             <div class="legend-item">
                 <div class="legend-color" style="background: #4CAF50;"></div>
-                <span>無卵 (0)</span>
+                <span class="translatable" data-zh="無卵 (0)" data-en="No Eggs (0)">無卵 (0)</span>
             </div>
             <div class="legend-item">
                 <div class="legend-color" style="background: #FFC107;"></div>
-                <span>少量 (1-10)</span>
+                <span class="translatable" data-zh="少量 (1-10)" data-en="Low (1-10)">少量 (1-10)</span>
             </div>
             <div class="legend-item">
                 <div class="legend-color" style="background: #FF9800;"></div>
-                <span>中量 (11-50)</span>
+                <span class="translatable" data-zh="中量 (11-50)" data-en="Medium (11-50)">中量 (11-50)</span>
             </div>
             <div class="legend-item">
                 <div class="legend-color" style="background: #F44336;"></div>
-                <span>大量 (>50)</span>
+                <span class="translatable" data-zh="大量 (>50)" data-en="High (>50)">大量 (>50)</span>
             </div>
         </div>
     </div>
@@ -415,6 +528,194 @@
     
     <!-- 地圖腳本 -->
     <script>
+        // 語言切換功能
+        let currentLanguage = 'zh';
+        
+        // 翻譯對照表
+        const translations = {
+            zh: {
+                '台南登革熱資料預測': '台南登革熱資料預測',
+                '桶子位置': '桶子位置',
+                '統計數據': '統計數據',
+                '關閉': '關閉',
+                '格線': '格線',
+                '行政區': '行政區',
+                '卵數等級': '卵數等級',
+                '無卵 (0)': '無卵 (0)',
+                '少量 (1-10)': '少量 (1-10)',
+                '中量 (11-50)': '中量 (11-50)',
+                '大量 (>50)': '大量 (>50)',
+                '區': '區',
+                '里': '里',
+                '桶數': '桶數',
+                '個桶': '個桶',
+                '地圖初始化完成': '地圖初始化完成',
+                '載入中...': '載入中...',
+                '無資料': '無資料',
+                '經度': '經度',
+                '緯度': '緯度',
+                'ID': 'ID',
+                '序列號': '序列號',
+                '誘卵桶': '誘卵桶',
+                '點擊查看詳情': '點擊查看詳情',
+                '台南市': '台南市',
+                '總計': '總計',
+                '個監測點': '個監測點'
+            },
+            en: {
+                '台南登革熱資料預測': 'Tainan Dengue Fever Data Prediction',
+                '桶子位置': 'Bucket Locations',
+                '統計數據': 'Statistics',
+                '關閉': 'Off',
+                '格線': 'Grid',
+                '行政區': 'Districts',
+                '卵數等級': 'Egg Count Level',
+                '無卵 (0)': 'No Eggs (0)',
+                '少量 (1-10)': 'Low (1-10)',
+                '中量 (11-50)': 'Medium (11-50)',
+                '大量 (>50)': 'High (>50)',
+                '區': 'Dist.',
+                '里': 'Village',
+                '桶數': 'Buckets',
+                '個桶': ' Buckets',
+                '地圖初始化完成': 'Map initialization completed',
+                '載入中...': 'Loading...',
+                '無資料': 'No Data',
+                '經度': 'Longitude',
+                '緯度': 'Latitude',
+                'ID': 'ID',
+                '序列號': 'Serial Number',
+                '誘卵桶': 'Ovitrap',
+                '點擊查看詳情': 'Click for details',
+                '台南市': 'Tainan City',
+                '總計': 'Total',
+                '個監測點': ' Monitoring Points'
+            }
+        };
+        
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            
+            // 更新語言切換按鈕狀態
+            document.querySelectorAll('.lang-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+            
+            // 更新所有可翻譯的元素
+            document.querySelectorAll('.translatable').forEach(element => {
+                const text = element.textContent.trim();
+                if (translations[lang] && translations[lang][text]) {
+                    element.textContent = translations[lang][text];
+                } else if (element.dataset[lang]) {
+                    element.textContent = element.dataset[lang];
+                }
+            });
+            
+            // 更新title
+            const title = document.querySelector('title');
+            if (title.dataset[lang]) {
+                title.textContent = title.dataset[lang];
+            }
+            
+            // 重新渲染地圖標籤
+            updateMapLabels();
+            
+            // 更新所有現有標記的彈出窗口
+            updateAllPopupContent();
+        }
+        
+        function updateMapLabels() {
+            // 更新地圖上的標籤文字
+            if (window.districtLabels) {
+                window.districtLabels.forEach(label => {
+                    const districtName = label.getLatLng().districtName;
+                    const villageName = label.getLatLng().villageName;
+                    const bucketCount = label.getLatLng().bucketCount;
+                    
+                    let displayText;
+                    if (currentLanguage === 'en') {
+                        displayText = `${districtName} Dist.<br/>${villageName}<br/>${bucketCount} Buckets`;
+                    } else {
+                        displayText = `${districtName}區<br/>${villageName}<br/>${bucketCount}個桶`;
+                    }
+                    
+                    label.setContent(displayText);
+                });
+            }
+        }
+        
+        function getTranslatedText(key) {
+            return translations[currentLanguage][key] || key;
+        }
+        
+        function createPopupContent(location, dataSource) {
+            const isZh = currentLanguage === 'zh';
+            const markerColor = dataSource === 'stat' ? 
+                (location.OVUM_NUM === 0 ? '#4CAF50' : 
+                 location.OVUM_NUM <= 10 ? '#FFC107' : 
+                 location.OVUM_NUM <= 50 ? '#FF9800' : '#F44336') : '#2196F3';
+            
+            let popupContent = `
+                <div style="font-family: Arial, 'Microsoft JhengHei', sans-serif; min-width: 200px;">
+                    <h6 style="margin: 0 0 10px 0; color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 5px;">
+                        <i class="fas fa-${dataSource === 'stat' ? 'bug' : 'map-marker-alt'}"></i> 
+                        ${location.OVINAME || (isZh ? '監測點' : 'Monitoring Point')}
+                    </h6>
+                    <p style="margin: 5px 0; font-size: 12px;">
+                        <strong><i class="fas fa-map-marker-alt"></i> ${isZh ? '區域：' : 'Area: '}</strong>${location.DIST} ${location.VILL}
+                    </p>
+                    <p style="margin: 5px 0; font-size: 12px;">
+                        <strong><i class="fas fa-barcode"></i> ${isZh ? '編號：' : 'ID: '}</strong>${dataSource === 'stat' ? location.OVITRAPINFO_SERIAL : location.SERIAL}
+                    </p>`;
+            
+            if (dataSource === 'stat') {
+                popupContent += `
+                    <p style="margin: 5px 0; font-size: 12px;">
+                        <strong><i class="fas fa-egg"></i> ${isZh ? '卵數：' : 'Egg Count: '}</strong><span style="color: ${markerColor}; font-weight: bold;">${location.OVUM_NUM}</span>
+                    </p>
+                    <p style="margin: 5px 0; font-size: 12px;">
+                        <strong><i class="fas fa-water"></i> ${isZh ? '孑孓數：' : 'Larva Count: '}</strong>${location.WIGGLER_NUM}
+                    </p>
+                    <p style="margin: 5px 0; font-size: 12px;">
+                        <strong><i class="fas fa-calendar"></i> ${isZh ? '週次：' : 'Week: '}</strong>${location.WeekName}
+                    </p>
+                    <p style="margin: 5px 0; font-size: 11px; color: #666;">
+                        <strong><i class="fas fa-clock"></i> ${isZh ? '時間：' : 'Time: '}</strong>${new Date(location.DATETIME).toLocaleString(isZh ? 'zh-TW' : 'en-US')}
+                    </p>`;
+            } else {
+                popupContent += `
+                    <p style="margin: 5px 0; font-size: 12px; color: #2196F3;">
+                        <strong><i class="fas fa-info-circle"></i> ${isZh ? '類型：' : 'Type: '}</strong>${isZh ? '桶子位置資料' : 'Bucket Location Data'}
+                    </p>`;
+            }
+            
+            popupContent += `</div>`;
+            return popupContent;
+        }
+        
+        function updateAllPopupContent() {
+            // 更新所有現有標記的彈出窗口內容
+            Object.values(markers).forEach(marker => {
+                if (marker.locationData) {
+                    const newContent = createPopupContent(marker.locationData, marker.dataSource);
+                    marker.setPopupContent(newContent);
+                }
+            });
+            
+            // 更新行政區邊界的彈出窗口
+            if (districtLayer) {
+                districtLayer.eachLayer(function(layer) {
+                    if (layer.feature && layer.feature.properties && layer.feature.properties.name) {
+                        const districtName = layer.feature.properties.name;
+                        const isZh = currentLanguage === 'zh';
+                        const popupContent = `<strong>${districtName}${isZh ? '區' : ' Dist.'}</strong>`;
+                        layer.setPopupContent(popupContent);
+                    }
+                });
+            }
+        }
+        
         // 初始化地圖（中心設定在台南市）
         var map = L.map('map').setView([22.9908, 120.2133], 11);
         
@@ -424,7 +725,7 @@
             maxZoom: 18
         }).addTo(map);
         
-        console.log('地图初始化完成');
+        console.log(currentLanguage === 'zh' ? '地圖初始化完成' : 'Map initialization completed');
         
         // 儲存所有標記
         var markers = {};
@@ -438,6 +739,11 @@
         
         // 数据源状态
         var currentDataSource = 'bucket'; // 'bucket' 或 'stat'
+        
+        // 覆蓋層狀態
+        var currentOverlay = 'none'; // 'none', 'grid', 'district'
+        var gridLayer = null;
+        var districtLayer = null;
         
         // 取得類型對應的顏色
         function getTypeColor(type) {
@@ -684,44 +990,12 @@
                                 { icon: customIcon }
                             );
                             
+                            // 保存位置數據以便後續更新
+                            marker.locationData = location;
+                            marker.dataSource = dataSource;
+                            
                             // 添加彈出視窗
-                            var popupContent = `
-                                <div style="font-family: Arial, 'Microsoft JhengHei', sans-serif; min-width: 200px;">
-                                    <h6 style="margin: 0 0 10px 0; color: #667eea; border-bottom: 2px solid #667eea; padding-bottom: 5px;">
-                                        <i class="fas fa-${dataSource === 'stat' ? 'bug' : 'map-marker-alt'}"></i> 
-                                        ${location.OVINAME || '監測點'}
-                                    </h6>
-                                    <p style="margin: 5px 0; font-size: 12px;">
-                                        <strong><i class="fas fa-map-marker-alt"></i> 區域：</strong>${location.DIST} ${location.VILL}
-                                    </p>
-                                    <p style="margin: 5px 0; font-size: 12px;">
-                                        <strong><i class="fas fa-barcode"></i> 編號：</strong>${dataSource === 'stat' ? location.OVITRAPINFO_SERIAL : location.SERIAL}
-                                    </p>`;
-                            
-                            if (dataSource === 'stat') {
-                                popupContent += `
-                                    <p style="margin: 5px 0; font-size: 12px;">
-                                        <strong><i class="fas fa-egg"></i> 卵數：</strong><span style="color: ${markerColor}; font-weight: bold;">${location.OVUM_NUM}</span>
-                                    </p>
-                                    <p style="margin: 5px 0; font-size: 12px;">
-                                        <strong><i class="fas fa-water"></i> 孑孓數：</strong>${location.WIGGLER_NUM}
-                                    </p>
-                                    <p style="margin: 5px 0; font-size: 12px;">
-                                        <strong><i class="fas fa-calendar"></i> 週次：</strong>${location.WeekName}
-                                    </p>
-                                    <p style="margin: 5px 0; font-size: 11px; color: #666;">
-                                        <strong><i class="fas fa-clock"></i> 時間：</strong>${new Date(location.DATETIME).toLocaleString('zh-TW')}
-                                    </p>`;
-                            } else {
-                                popupContent += `
-                                    <p style="margin: 5px 0; font-size: 12px; color: #2196F3;">
-                                        <strong><i class="fas fa-info-circle"></i> 類型：</strong>桶子位置資料
-                                    </p>`;
-                            }
-                            
-                            popupContent += `
-                                </div>`;
-                            
+                            var popupContent = createPopupContent(location, dataSource);
                             marker.bindPopup(popupContent);
                             
                             // 點擊標記時顯示詳情
@@ -793,6 +1067,157 @@
             if (currentSelectedMarker) {
                 currentSelectedMarker.setOpacity(1);
                 currentSelectedMarker = null;
+            }
+        });
+        
+        // 創建格線覆蓋層
+        function createGridLayer() {
+            if (gridLayer) {
+                map.removeLayer(gridLayer);
+            }
+            
+            gridLayer = L.layerGroup();
+            
+            // 獲取地圖邊界
+            var bounds = map.getBounds();
+            var southWest = bounds.getSouthWest();
+            var northEast = bounds.getNorthEast();
+            
+            // 計算格線間距（1公里轉換為經緯度）
+            // 在台南地區（約北緯23度），使用更精確的計算：
+            // 1度緯度 = 111公里，所以1公里 = 0.009度緯度
+            // 1度經度 = 111 * cos(23°) ≈ 102公里，所以1公里 ≈ 0.0098度經度
+            var latGridSize = 0.009; // 緯度間距（1公里）
+            var lngGridSize = 0.0098; // 經度間距（1公里）
+            
+            // 創建垂直線（經度線）
+            for (var lng = Math.floor(southWest.lng / lngGridSize) * lngGridSize; lng <= northEast.lng; lng += lngGridSize) {
+                var line = L.polyline([
+                    [southWest.lat, lng],
+                    [northEast.lat, lng]
+                ], {
+                    color: '#667eea',
+                    weight: 1,
+                    opacity: 0.6,
+                    dashArray: '5, 5'
+                });
+                gridLayer.addLayer(line);
+            }
+            
+            // 創建水平線（緯度線）
+            for (var lat = Math.floor(southWest.lat / latGridSize) * latGridSize; lat <= northEast.lat; lat += latGridSize) {
+                var line = L.polyline([
+                    [lat, southWest.lng],
+                    [lat, northEast.lng]
+                ], {
+                    color: '#667eea',
+                    weight: 1,
+                    opacity: 0.6,
+                    dashArray: '5, 5'
+                });
+                gridLayer.addLayer(line);
+            }
+            
+            return gridLayer;
+        }
+        
+        // 載入行政區邊界
+        function loadDistrictBoundaries() {
+            if (districtLayer) {
+                map.removeLayer(districtLayer);
+            }
+            
+            districtLayer = L.layerGroup();
+            
+            fetch('/data/district_boundaries.geojson')
+                .then(response => response.json())
+                .then(data => {
+                    L.geoJSON(data, {
+                        style: function(feature) {
+                            return {
+                                color: '#2196F3',
+                                weight: 3,
+                                opacity: 0.9,
+                                fillColor: '#2196F3',
+                                fillOpacity: 0.05
+                            };
+                        },
+                        onEachFeature: function(feature, layer) {
+                            if (feature.properties && feature.properties.name) {
+                                const districtName = feature.properties.name;
+                                const isZh = currentLanguage === 'zh';
+                                const popupContent = `<strong>${districtName}${isZh ? '區' : ' Dist.'}</strong>`;
+                                layer.bindPopup(popupContent);
+                            }
+                        }
+                    }).addTo(districtLayer);
+                })
+                .catch(error => {
+                    console.error('載入行政區邊界時發生錯誤:', error);
+                });
+            
+            return districtLayer;
+        }
+        
+        // 更新覆蓋層
+        function updateOverlay(overlayType) {
+            // 移除現有覆蓋層
+            if (gridLayer) {
+                map.removeLayer(gridLayer);
+            }
+            if (districtLayer) {
+                map.removeLayer(districtLayer);
+            }
+            
+            currentOverlay = overlayType;
+            
+            switch (overlayType) {
+                case 'grid':
+                    gridLayer = createGridLayer();
+                    map.addLayer(gridLayer);
+                    console.log('顯示格線覆蓋層');
+                    break;
+                case 'district':
+                    districtLayer = loadDistrictBoundaries();
+                    map.addLayer(districtLayer);
+                    console.log('顯示行政區邊界');
+                    break;
+                case 'none':
+                default:
+                    console.log('關閉覆蓋層');
+                    break;
+            }
+        }
+        
+        // 監聽覆蓋層選項變化
+        document.querySelectorAll('input[name="overlayOption"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                if (this.checked) {
+                    var overlayType = this.value;
+                    
+                    // 更新選項樣式
+                    document.querySelectorAll('.overlay-option').forEach(function(option) {
+                        option.classList.remove('active');
+                    });
+                    this.closest('.overlay-option').classList.add('active');
+                    
+                    // 更新覆蓋層
+                    updateOverlay(overlayType);
+                }
+            });
+        });
+        
+        // 監聽地圖縮放事件，重新創建格線
+        map.on('zoomend', function() {
+            if (currentOverlay === 'grid' && gridLayer) {
+                updateOverlay('grid');
+            }
+        });
+        
+        // 監聽地圖移動事件，重新創建格線
+        map.on('moveend', function() {
+            if (currentOverlay === 'grid' && gridLayer) {
+                updateOverlay('grid');
             }
         });
     </script>

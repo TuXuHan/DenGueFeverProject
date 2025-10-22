@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>語言切換調試測試</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; border-radius: 5px; }
+        .lang-option { display: inline-block; margin: 5px; padding: 10px 15px; background: #f0f0f0; cursor: pointer; border-radius: 5px; }
+        .lang-option.active { background: #007bff; color: white; }
+        .test-element { margin: 10px 0; padding: 10px; background: #f9f9f9; border-radius: 3px; }
+        .debug-info { background: #e9ecef; padding: 10px; border-radius: 5px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>語言切換調試測試</h1>
+    
+    <div class="test-section">
+        <h3>語言切換按鈕</h3>
+        <div class="lang-option active" data-lang="zh" onclick="switchLanguage('zh')">中文</div>
+        <div class="lang-option" data-lang="en" onclick="switchLanguage('en')">English</div>
+    </div>
+    
+    <div class="test-section">
+        <h3>調試信息</h3>
+        <div class="debug-info">
+            <div>當前語言: <span id="current-lang-debug">zh</span></div>
+            <div>window.currentLanguage: <span id="window-lang-debug">zh</span></div>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h3>行政區標籤測試</h3>
+        <div id="district-label-test" class="test-element">南區</div>
+        <button onclick="testDistrictLabel()">測試行政區標籤</button>
+    </div>
+    
+    <div class="test-section">
+        <h3>村里標籤測試</h3>
+        <div id="village-label-test" class="test-element">村里標籤</div>
+        <button onclick="testVillageLabel()">測試村里標籤</button>
+    </div>
+
+    <script>
+        // 初始化語言變量
+        var currentLanguage = 'zh';
+        window.currentLanguage = 'zh';
+        
+        function updateDebugInfo() {
+            document.getElementById('current-lang-debug').textContent = currentLanguage;
+            document.getElementById('window-lang-debug').textContent = window.currentLanguage;
+        }
+        
+        function testDistrictLabel() {
+            var labelName = '南';
+            var displayName = labelName;
+            if (currentLanguage === 'zh') {
+                displayName = labelName + '區';
+            } else {
+                displayName = labelName + ' Dist.';
+            }
+            document.getElementById('district-label-test').textContent = displayName;
+        }
+        
+        function testVillageLabel() {
+            var villageName = '村里名稱';
+            var displayName = villageName;
+            if (currentLanguage === 'zh') {
+                displayName = villageName + ' (中文)';
+            } else {
+                displayName = villageName + ' (English)';
+            }
+            document.getElementById('village-label-test').textContent = displayName;
+        }
+        
+        function switchLanguage(lang) {
+            console.log('切換語言至:', lang);
+            
+            // 更新全局語言變量
+            currentLanguage = lang;
+            window.currentLanguage = lang;
+            
+            // 更新語言切換按鈕狀態
+            document.querySelectorAll('.lang-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+            
+            // 更新調試信息
+            updateDebugInfo();
+            
+            // 測試標籤
+            testDistrictLabel();
+            testVillageLabel();
+            
+            console.log('語言切換完成:', lang);
+        }
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('調試頁面已載入');
+            updateDebugInfo();
+            testDistrictLabel();
+            testVillageLabel();
+        });
+    </script>
+</body>
+</html>

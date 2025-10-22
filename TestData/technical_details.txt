@@ -1,0 +1,42 @@
+
+## 技術細節與參數記錄
+
+### 數據處理
+- 缺值處理方法: 按區分組的前向填充(ffill) + 後向填充(bfill)
+- 數據標準化: Z-score標準化 (StandardScaler)
+- 時間序列排序: 按區和週開始時間排序
+
+### 特徵提取
+- 基本統計量: 均值、標準差、最小值、最大值、四分位數
+- 變動率: 週間變化百分比
+- 自相關: ACF前3個滯後期
+- 趨勢: 線性回歸斜率
+- 季節性: STL分解（數據點≥24時）
+
+### 分群方法
+- KMeans: 
+  * 參數選擇: 肘部法則 + 輪廓係數
+  * K值範圍: 2-7
+  * 初始化: random_state=42, n_init=10
+  * 最終K值: 2
+- 層次分群:
+  * 距離計算: 歐幾里得距離
+  * 連結方法: Ward
+  * 分群數: 3
+
+### 可視化參數
+- 圖表解析度: 300 DPI
+- 字體: Arial Unicode MS, SimHei, DejaVu Sans
+- 色彩方案: viridis, coolwarm
+- 圖表尺寸: 根據內容自動調整
+
+### 輸出文件
+- 相關性熱力圖: correlation_heatmap.png
+- 時序圖表: temporal_*.png
+- 綜合時序圖: comprehensive_temporal.png
+- 參數選擇圖: kmeans_parameter_selection.png
+- 樹狀圖: hierarchical_clustering_dendrogram.png
+- 分群結果: *_clustering_pca.png
+- 特徵表: temporal_features.csv
+- 分析結論: temporal_analysis_insights.txt
+    
