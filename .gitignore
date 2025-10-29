@@ -64,6 +64,7 @@ config.py
 *.model
 
 # 資料檔案
+*.json
 *.xlsx
 *.xls
 
