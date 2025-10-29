@@ -1,0 +1,3184 @@
+{
+  "七股區": {
+    "rank": 1,
+    "avg_similarity": 0.7794781240713113,
+    "top_similar": [
+      {
+        "district": "西港區",
+        "similarity": 0.999840332249286
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.9994429813459472
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9991791570916904
+      }
+    ],
+    "max_similarity": 0.999840332249286,
+    "min_similarity": 0.1881938578180425,
+    "spatial_rankings": [
+      {
+        "district": "南化區",
+        "similarity": 0.4450853731369246
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.4253285928606052
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.4216875821009708
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.3785575223571708
+      },
+      {
+        "district": "玉井區",
+        "similarity": 0.3619178488079894
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "將軍區",
+        "similarity": 0.2432894537991489
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.2429391227943748
+      },
+      {
+        "district": "安南區",
+        "similarity": 0.2426622658035523
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.2365161771964724
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.2166619121375516
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "山上區",
+        "similarity": 0.9999328777837164
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9995608280570096
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.9991314735225182
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.99821760267224
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.997520418425348
+      }
+    ]
+  },
+  "下營區": {
+    "rank": 2,
+    "avg_similarity": 0.7845033374343283,
+    "top_similar": [
+      {
+        "district": "學甲區",
+        "similarity": 0.9993855262753858
+      },
+      {
+        "district": "官田區",
+        "similarity": 0.9993738887853848
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9988183856086752
+      }
+    ],
+    "max_similarity": 0.9993855262753858,
+    "min_similarity": 0.2543231524212548,
+    "spatial_rankings": [
+      {
+        "district": "南化區",
+        "similarity": 0.3025073754435586
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.3020086252967269
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.2905886968259924
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.2856983604827428
+      },
+      {
+        "district": "南區",
+        "similarity": 0.285139090383791
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "麻豆區",
+        "similarity": 0.2661304235862032
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.2565233592524035
+      },
+      {
+        "district": "新營區",
+        "similarity": 0.2519333349391739
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.2477061294870208
+      },
+      {
+        "district": "官田區",
+        "similarity": 0.2419879836803728
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "柳營區",
+        "similarity": 0.9998725776857732
+      },
+      {
+        "district": "官田區",
+        "similarity": 0.9998061419181956
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.9996179439521582
+      },
+      {
+        "district": "六甲區",
+        "similarity": 0.9995091046153318
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.9994364482739384
+      }
+    ]
+  },
+  "中西區": {
+    "rank": 3,
+    "avg_similarity": 0.5593257796055041,
+    "top_similar": [
+      {
+        "district": "安平區",
+        "similarity": 0.9813663594013914
+      },
+      {
+        "district": "北區",
+        "similarity": 0.9785236213372202
+      },
+      {
+        "district": "南區",
+        "similarity": 0.9566096337358396
+      }
+    ],
+    "max_similarity": 0.9813663594013914,
+    "min_similarity": 0.2137535871056556,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.4434208615902586
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.3979010818196927
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.3780766330668716
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.3719735125915217
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.3704982350767288
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "北區",
+        "similarity": 0.28790172928777
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.2812968204449519
+      },
+      {
+        "district": "東區",
+        "similarity": 0.2767080435287413
+      },
+      {
+        "district": "南區",
+        "similarity": 0.2751832973074298
+      },
+      {
+        "district": "安南區",
+        "similarity": 0.257659083167278
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "安平區",
+        "similarity": 0.9851016848013556
+      },
+      {
+        "district": "北區",
+        "similarity": 0.9805656394007748
+      },
+      {
+        "district": "南區",
+        "similarity": 0.9687425260820546
+      },
+      {
+        "district": "東區",
+        "similarity": 0.9553497628245105
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.9482598599659592
+      }
+    ]
+  },
+  "仁德區": {
+    "rank": 4,
+    "avg_similarity": 0.6737637998548477,
+    "top_similar": [
+      {
+        "district": "歸仁區",
+        "similarity": 0.9796267948468018
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.921122807699418
+      },
+      {
+        "district": "新營區",
+        "similarity": 0.914789401134367
+      }
+    ],
+    "max_similarity": 0.9796267948468018,
+    "min_similarity": 0.2170111931518244,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.463386550644703
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.4336963818878324
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.3930370127929621
+      },
+      {
+        "district": "新營區",
+        "similarity": 0.3639239346425026
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.3635527355761528
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "東區",
+        "similarity": 0.273162448331343
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.2676648314778382
+      },
+      {
+        "district": "南區",
+        "similarity": 0.2661534361672658
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.2545786394280698
+      },
+      {
+        "district": "北區",
+        "similarity": 0.2512725101571031
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "安南區",
+        "similarity": 0.9759207916124186
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.959808473564986
+      },
+      {
+        "district": "南區",
+        "similarity": 0.9448953104258686
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.9439713864674256
+      },
+      {
+        "district": "北區",
+        "similarity": 0.9152493641992308
+      }
+    ]
+  },
+  "佳里區": {
+    "rank": 5,
+    "avg_similarity": 0.8135767259201345,
+    "top_similar": [
+      {
+        "district": "麻豆區",
+        "similarity": 0.997100711897086
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.9931644905578596
+      },
+      {
+        "district": "善化區",
+        "similarity": 0.9922498908770068
+      }
+    ],
+    "max_similarity": 0.997100711897086,
+    "min_similarity": 0.3447441288394355,
+    "spatial_rankings": [
+      {
+        "district": "南化區",
+        "similarity": 0.3693340237571805
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.3387975641545832
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.3346811179445586
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.2973909717574297
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.2881454065071993
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "西港區",
+        "similarity": 0.2702883270042933
+      },
+      {
+        "district": "麻豆區",
+        "similarity": 0.2594579148421069
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.2588135762470389
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.2467442241175128
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.2462562314256351
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "善化區",
+        "similarity": 0.9965659970723988
+      },
+      {
+        "district": "麻豆區",
+        "similarity": 0.992712869716406
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.9926727679225588
+      },
+      {
+        "district": "新市區",
+        "similarity": 0.989694551253512
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.9880600579251284
+      }
+    ]
+  },
+  "六甲區": {
+    "rank": 6,
+    "avg_similarity": 0.7892068548116331,
+    "top_similar": [
+      {
+        "district": "鹽水區",
+        "similarity": 0.999120426869395
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.9962269524934328
+      },
+      {
+        "district": "官田區",
+        "similarity": 0.9864514516894748
+      }
+    ],
+    "max_similarity": 0.999120426869395,
+    "min_similarity": 0.3899646441192952,
+    "spatial_rankings": [
+      {
+        "district": "南區",
+        "similarity": 0.3312550612885643
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.3208786504766571
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.3175069152648149
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.2995658372416618
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.2975732480318233
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "官田區",
+        "similarity": 0.2696603544417066
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.2693787393615135
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.2484132243455025
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.2468758784190673
+      },
+      {
+        "district": "新營區",
+        "similarity": 0.2291587265205356
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "官田區",
+        "similarity": 0.9997908628562162
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.9996386102254142
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.999585495608167
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.9995091046153318
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.9993168356479436
+      }
+    ]
+  },
+  "北區": {
+    "rank": 7,
+    "avg_similarity": 0.5826899609061449,
+    "top_similar": [
+      {
+        "district": "東區",
+        "similarity": 0.9861402491897552
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.9856532416726164
+      },
+      {
+        "district": "南區",
+        "similarity": 0.9847224878753316
+      }
+    ],
+    "max_similarity": 0.9861402491897552,
+    "min_similarity": 0.2560332402769989,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.424185901262789
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.3794829682197553
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.3588273879912744
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.3542350078695817
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.354044371976764
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "中西區",
+        "similarity": 0.28790172928777
+      },
+      {
+        "district": "東區",
+        "similarity": 0.2773879707138529
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.2709223184447745
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.2677202497418868
+      },
+      {
+        "district": "南區",
+        "similarity": 0.2645215642784417
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "東區",
+        "similarity": 0.9923551614985092
+      },
+      {
+        "district": "南區",
+        "similarity": 0.986163000831165
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.9805957515500424
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.9805656394007748
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.9443241801899838
+      }
+    ]
+  },
+  "北門區": {
+    "rank": 8,
+    "avg_similarity": 0.2960466678875684,
+    "top_similar": [
+      {
+        "district": "白河區",
+        "similarity": 0.9999116872944748
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.9295259574218796
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.587366736358896
+      }
+    ],
+    "max_similarity": 0.9999116872944748,
+    "min_similarity": 0.0007417926336545,
+    "spatial_rankings": [
+      {
+        "district": "南化區",
+        "similarity": 0.4484873334592986
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.4150480691197659
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.4031791110391008
+      },
+      {
+        "district": "關廟區",
+        "similarity": 0.3833655277269501
+      },
+      {
+        "district": "左鎮區",
+        "similarity": 0.3811201675825603
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "學甲區",
+        "similarity": 0.2601923648991778
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.2563967999127163
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.2230353621072893
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.2220451265509577
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.2081683494924416
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "後壁區",
+        "similarity": 0.999980495780525
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.9999701629324664
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.999790659518268
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.9996733290517468
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.9994895118800972
+      }
+    ]
+  },
+  "南化區": {
+    "rank": 9,
+    "avg_similarity": 0.7520515071172983,
+    "top_similar": [
+      {
+        "district": "大內區",
+        "similarity": 0.9997045923181682
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.995996644601049
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.9958080320733624
+      }
+    ],
+    "max_similarity": 0.9997045923181682,
+    "min_similarity": 0.0885664320591439,
+    "spatial_rankings": [
+      {
+        "district": "北門區",
+        "similarity": 0.4484873334592986
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.4450853731369246
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.4268246670293144
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.4000152319230267
+      },
+      {
+        "district": "安南區",
+        "similarity": 0.3971533179150491
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "楠西區",
+        "similarity": 0.2564904060244674
+      },
+      {
+        "district": "玉井區",
+        "similarity": 0.247749331181124
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.2068860418902004
+      },
+      {
+        "district": "左鎮區",
+        "similarity": 0.2000998592853805
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.1906593633571727
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "楠西區",
+        "similarity": 0.9991696297179004
+      },
+      {
+        "district": "官田區",
+        "similarity": 0.9974896843965866
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.9971016971883904
+      },
+      {
+        "district": "六甲區",
+        "similarity": 0.9959258593504892
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.99579709258828
+      }
+    ]
+  },
+  "南區": {
+    "rank": 10,
+    "avg_similarity": 0.5237134840371628,
+    "top_similar": [
+      {
+        "district": "北區",
+        "similarity": 0.9847224878753316
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.9772812835937812
+      },
+      {
+        "district": "東區",
+        "similarity": 0.9743682750850788
+      }
+    ],
+    "max_similarity": 0.9847224878753316,
+    "min_similarity": 0.2272269452318738,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.4776307606197961
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.4357226320261097
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.4106111472404754
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.3958994513478199
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.3883582171487479
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "中西區",
+        "similarity": 0.2751832973074298
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.2734454297600577
+      },
+      {
+        "district": "東區",
+        "similarity": 0.2709754602868653
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.2661534361672658
+      },
+      {
+        "district": "北區",
+        "similarity": 0.2645215642784417
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "北區",
+        "similarity": 0.986163000831165
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.9687425260820546
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.9685875644222262
+      },
+      {
+        "district": "東區",
+        "similarity": 0.9653805153344772
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.9448953104258686
+      }
+    ]
+  },
+  "善化區": {
+    "rank": 11,
+    "avg_similarity": 0.8012207402664485,
+    "top_similar": [
+      {
+        "district": "新市區",
+        "similarity": 0.9969066961734682
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.9965767331283952
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.9949148250901304
+      }
+    ],
+    "max_similarity": 0.9969066961734682,
+    "min_similarity": 0.2609137240559478,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.2640715096721377
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.2465002426386016
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.2268201124966799
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.2214855120427295
+      },
+      {
+        "district": "北門區",
+        "similarity": 0.2207334504482937
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "新市區",
+        "similarity": 0.2639105640099358
+      },
+      {
+        "district": "官田區",
+        "similarity": 0.255739656944328
+      },
+      {
+        "district": "麻豆區",
+        "similarity": 0.2550389192867424
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.2495043769030395
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.2470985121998322
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "佳里區",
+        "similarity": 0.9965659970723988
+      },
+      {
+        "district": "麻豆區",
+        "similarity": 0.9962644086552804
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.989543035339195
+      },
+      {
+        "district": "新市區",
+        "similarity": 0.98702055760015
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.9845259683547636
+      }
+    ]
+  },
+  "大內區": {
+    "rank": 12,
+    "avg_similarity": 0.7561000765740529,
+    "top_similar": [
+      {
+        "district": "南化區",
+        "similarity": 0.9997045923181682
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.9965342622813546
+      },
+      {
+        "district": "左鎮區",
+        "similarity": 0.996337635662547
+      }
+    ],
+    "max_similarity": 0.9997045923181682,
+    "min_similarity": 0.0925642758150173,
+    "spatial_rankings": [
+      {
+        "district": "北門區",
+        "similarity": 0.3033805326456031
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.3006099614666677
+      },
+      {
+        "district": "南區",
+        "similarity": 0.2817737980269152
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.2813403730057408
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.2786151434332752
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "山上區",
+        "similarity": 0.265097230280412
+      },
+      {
+        "district": "官田區",
+        "similarity": 0.2568326961446197
+      },
+      {
+        "district": "玉井區",
+        "similarity": 0.2567091334075389
+      },
+      {
+        "district": "六甲區",
+        "similarity": 0.2468758784190673
+      },
+      {
+        "district": "善化區",
+        "similarity": 0.2371424735636048
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "將軍區",
+        "similarity": 0.9992714866057654
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.9991314735225182
+      },
+      {
+        "district": "新市區",
+        "similarity": 0.9990393108700026
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.9989592593284012
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.9988910160609842
+      }
+    ]
+  },
+  "學甲區": {
+    "rank": 13,
+    "avg_similarity": 0.7905913453047873,
+    "top_similar": [
+      {
+        "district": "官田區",
+        "similarity": 0.9996495160291532
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.9993855262753858
+      },
+      {
+        "district": "新市區",
+        "similarity": 0.9980822832332924
+      }
+    ],
+    "max_similarity": 0.9996495160291532,
+    "min_similarity": 0.2836994422144067,
+    "spatial_rankings": [
+      {
+        "district": "南化區",
+        "similarity": 0.3851751322581958
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.3599670387475551
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.340827019760069
+      },
+      {
+        "district": "關廟區",
+        "similarity": 0.3323278030190027
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.3243854104404656
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "北門區",
+        "similarity": 0.2601923648991778
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.2549888590469732
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.2503091997288565
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.2477061294870208
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.2462562314256351
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "鹽水區",
+        "similarity": 0.9997480891243296
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.999512072711033
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.9994364482739384
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.9993902973540556
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.9992130147807508
+      }
+    ]
+  },
+  "安南區": {
+    "rank": 14,
+    "avg_similarity": 0.4959793439872069,
+    "top_similar": [
+      {
+        "district": "南區",
+        "similarity": 0.938976158890176
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.912765128805757
+      },
+      {
+        "district": "北區",
+        "similarity": 0.8861916383715415
+      }
+    ],
+    "max_similarity": 0.938976158890176,
+    "min_similarity": 0.2883820559731448,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.4297962822099131
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.3971533179150491
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.3870167638651258
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.3711552976585685
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.3692635727764
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "安平區",
+        "similarity": 0.2620949665450878
+      },
+      {
+        "district": "北區",
+        "similarity": 0.2586663460744217
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.257659083167278
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.2435633667255182
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.2426622658035523
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "仁德區",
+        "similarity": 0.9759207916124186
+      },
+      {
+        "district": "南區",
+        "similarity": 0.9410817669421342
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.9217273331520526
+      },
+      {
+        "district": "北區",
+        "similarity": 0.8905283108986005
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.8651705939715124
+      }
+    ]
+  },
+  "安定區": {
+    "rank": 15,
+    "avg_similarity": 0.7923979082705357,
+    "top_similar": [
+      {
+        "district": "新市區",
+        "similarity": 0.9997628259618117
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9992809717969736
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.9987282086184894
+      }
+    ],
+    "max_similarity": 0.9997628259618117,
+    "min_similarity": 0.2271255264885912,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.3397789257751746
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.3147859408447214
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.2980848232097474
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.2879093119010402
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.2792557610134462
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "西港區",
+        "similarity": 0.2754748841383004
+      },
+      {
+        "district": "新市區",
+        "similarity": 0.2591348199212172
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.2521328314620182
+      },
+      {
+        "district": "善化區",
+        "similarity": 0.2495043769030395
+      },
+      {
+        "district": "麻豆區",
+        "similarity": 0.2473128595043323
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "新市區",
+        "similarity": 0.9997359941717876
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.9994229340831664
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.997906617579035
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.9950537989585738
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9947117387497796
+      }
+    ]
+  },
+  "安平區": {
+    "rank": 16,
+    "avg_similarity": 0.5696291647557835,
+    "top_similar": [
+      {
+        "district": "中西區",
+        "similarity": 0.9813663594013914
+      },
+      {
+        "district": "北區",
+        "similarity": 0.930167948041154
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.921122807699418
+      }
+    ],
+    "max_similarity": 0.9813663594013914,
+    "min_similarity": 0.2218997706933335,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.465834467420911
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.4152528164285508
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.402119252753862
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.4003105698948657
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.4000152319230267
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "中西區",
+        "similarity": 0.2812968204449519
+      },
+      {
+        "district": "南區",
+        "similarity": 0.2734454297600577
+      },
+      {
+        "district": "北區",
+        "similarity": 0.2709223184447745
+      },
+      {
+        "district": "安南區",
+        "similarity": 0.2620949665450878
+      },
+      {
+        "district": "東區",
+        "similarity": 0.2596279227260798
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "中西區",
+        "similarity": 0.9851016848013556
+      },
+      {
+        "district": "北區",
+        "similarity": 0.9443241801899838
+      },
+      {
+        "district": "南區",
+        "similarity": 0.9336357567283023
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.9297953562438546
+      },
+      {
+        "district": "東區",
+        "similarity": 0.9050373670470556
+      }
+    ]
+  },
+  "官田區": {
+    "rank": 17,
+    "avg_similarity": 0.7869940986778865,
+    "top_similar": [
+      {
+        "district": "學甲區",
+        "similarity": 0.9996495160291532
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.9993738887853848
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9968778939245366
+      }
+    ],
+    "max_similarity": 0.9996495160291532,
+    "min_similarity": 0.2865159575358852,
+    "spatial_rankings": [
+      {
+        "district": "南區",
+        "similarity": 0.2832957495016469
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.2725814961221869
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.2712790196694263
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.2580349233700618
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.2503652440344728
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "六甲區",
+        "similarity": 0.2696603544417066
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.2568326961446197
+      },
+      {
+        "district": "善化區",
+        "similarity": 0.255739656944328
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.2508915588443973
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.2419879836803728
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "下營區",
+        "similarity": 0.9998061419181956
+      },
+      {
+        "district": "六甲區",
+        "similarity": 0.9997908628562162
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.9996313938574012
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.9993845262267286
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.9993520219454208
+      }
+    ]
+  },
+  "將軍區": {
+    "rank": 18,
+    "avg_similarity": 0.7867249188921759,
+    "top_similar": [
+      {
+        "district": "新市區",
+        "similarity": 0.9993663278797368
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.9992809717969736
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.9991791570916904
+      }
+    ],
+    "max_similarity": 0.9993663278797368,
+    "min_similarity": 0.2256694512608653,
+    "spatial_rankings": [
+      {
+        "district": "南化區",
+        "similarity": 0.4268246670293144
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.3905375598316828
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.3626364527781961
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.3597707002783007
+      },
+      {
+        "district": "玉井區",
+        "similarity": 0.3461951592749808
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "佳里區",
+        "similarity": 0.2588135762470389
+      },
+      {
+        "district": "北門區",
+        "similarity": 0.2563967999127163
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.2549888590469732
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.2432894537991489
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.2305496354325126
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "山上區",
+        "similarity": 0.9997189830496525
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.9995608280570096
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.9992714866057654
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.9978558933375732
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.9970917243172976
+      }
+    ]
+  },
+  "山上區": {
+    "rank": 19,
+    "avg_similarity": 0.7759129025984284,
+    "top_similar": [
+      {
+        "district": "七股區",
+        "similarity": 0.9994429813459472
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.9994085906067048
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9975762913732524
+      }
+    ],
+    "max_similarity": 0.9994429813459472,
+    "min_similarity": 0.1637409667825721,
+    "spatial_rankings": [
+      {
+        "district": "北門區",
+        "similarity": 0.3044554290966627
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.2731345362698089
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.2688933742440229
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.267746083559535
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.2658493725738961
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "大內區",
+        "similarity": 0.265097230280412
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.2547306002642414
+      },
+      {
+        "district": "新市區",
+        "similarity": 0.250109536634712
+      },
+      {
+        "district": "左鎮區",
+        "similarity": 0.2485354059668646
+      },
+      {
+        "district": "善化區",
+        "similarity": 0.2470985121998322
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "七股區",
+        "similarity": 0.9999328777837164
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9997189830496525
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.9988910160609842
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.9986916335163778
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.9977144075611066
+      }
+    ]
+  },
+  "左鎮區": {
+    "rank": 20,
+    "avg_similarity": 0.7378525055777359,
+    "top_similar": [
+      {
+        "district": "龍崎區",
+        "similarity": 0.9989449058940896
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.996337635662547
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.9955914184646858
+      }
+    ],
+    "max_similarity": 0.9989449058940896,
+    "min_similarity": 0.0133127388670016,
+    "spatial_rankings": [
+      {
+        "district": "北門區",
+        "similarity": 0.3811201675825603
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.3416608131949583
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.3380947386402388
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.3284171423397888
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.3278069238923244
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "龍崎區",
+        "similarity": 0.2524844454087555
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.2516379582679662
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.2485354059668646
+      },
+      {
+        "district": "玉井區",
+        "similarity": 0.2364245625379986
+      },
+      {
+        "district": "關廟區",
+        "similarity": 0.233992815963525
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "中西區",
+        "similarity": 0.8497192135801206
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.8439154037770329
+      },
+      {
+        "district": "東區",
+        "similarity": 0.8063638167953207
+      },
+      {
+        "district": "北區",
+        "similarity": 0.8014047055570763
+      },
+      {
+        "district": "玉井區",
+        "similarity": 0.7908544334019311
+      }
+    ]
+  },
+  "後壁區": {
+    "rank": 21,
+    "avg_similarity": 0.5545008808481287,
+    "top_similar": [
+      {
+        "district": "北門區",
+        "similarity": 0.9295259574218796
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.9293388950242192
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.8441435645860906
+      }
+    ],
+    "max_similarity": 0.9295259574218796,
+    "min_similarity": 0.3523067419242061,
+    "spatial_rankings": [
+      {
+        "district": "南區",
+        "similarity": 0.4357226320261097
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.4336963818878324
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.4186702641613953
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.4152528164285508
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.4086841885062917
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "新營區",
+        "similarity": 0.2492745956181602
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.2415931615513706
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.2310568012414451
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.2256834101509032
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.2202195275479792
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "北門區",
+        "similarity": 0.999980495780525
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.9999124468251446
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.9998088778662476
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.999787288883479
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.999511507614796
+      }
+    ]
+  },
+  "新化區": {
+    "rank": 22,
+    "avg_similarity": 0.8055896357067728,
+    "top_similar": [
+      {
+        "district": "善化區",
+        "similarity": 0.9949148250901304
+      },
+      {
+        "district": "麻豆區",
+        "similarity": 0.9946577816507696
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.9931644905578596
+      }
+    ],
+    "max_similarity": 0.9949148250901304,
+    "min_similarity": 0.2632219614337833,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.3400199951445847
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.3280019026532619
+      },
+      {
+        "district": "北門區",
+        "similarity": 0.3215185173358881
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.2783843210667843
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.2715596093694354
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "新市區",
+        "similarity": 0.2589130209518058
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.2547306002642414
+      },
+      {
+        "district": "左鎮區",
+        "similarity": 0.2516379582679662
+      },
+      {
+        "district": "關廟區",
+        "similarity": 0.2508881107899569
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.2486390719422629
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "麻豆區",
+        "similarity": 0.9937219921778516
+      },
+      {
+        "district": "善化區",
+        "similarity": 0.9803578545424844
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.977098226658294
+      },
+      {
+        "district": "玉井區",
+        "similarity": 0.9579805804013974
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.946386216491332
+      }
+    ]
+  },
+  "新市區": {
+    "rank": 23,
+    "avg_similarity": 0.7936909122470591,
+    "top_similar": [
+      {
+        "district": "安定區",
+        "similarity": 0.9997628259618117
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9993663278797368
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.9980822832332924
+      }
+    ],
+    "max_similarity": 0.9997628259618117,
+    "min_similarity": 0.2449798067059213,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.314800078750064
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.2839875833163777
+      },
+      {
+        "district": "北門區",
+        "similarity": 0.256106076126149
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.2533923551352384
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.2469247993146339
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "善化區",
+        "similarity": 0.2639105640099358
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.2591348199212172
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.2589130209518058
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.2573342851649728
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.250109536634712
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "西港區",
+        "similarity": 0.9998820391762856
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.9997359941717876
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.9990393108700026
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.9970691903839344
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9966622476905332
+      }
+    ]
+  },
+  "新營區": {
+    "rank": 24,
+    "avg_similarity": 0.5098976257593235,
+    "top_similar": [
+      {
+        "district": "歸仁區",
+        "similarity": 0.9493618562936428
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.914789401134367
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.8392988919669057
+      }
+    ],
+    "max_similarity": 0.9493618562936428,
+    "min_similarity": 0.2700205629943302,
+    "spatial_rankings": [
+      {
+        "district": "仁德區",
+        "similarity": 0.3639239346425026
+      },
+      {
+        "district": "南區",
+        "similarity": 0.3610850874206101
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.3585765285612866
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.3546570359197967
+      },
+      {
+        "district": "關廟區",
+        "similarity": 0.3478457412250939
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "鹽水區",
+        "similarity": 0.2709036375489433
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.2573389366435962
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.2519333349391739
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.2492745956181602
+      },
+      {
+        "district": "六甲區",
+        "similarity": 0.2291587265205356
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "歸仁區",
+        "similarity": 0.9023570846097496
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.8844570668902604
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.8837125640272355
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.8835480621099735
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.8832386256307038
+      }
+    ]
+  },
+  "東區": {
+    "rank": 25,
+    "avg_similarity": 0.5267704020471337,
+    "top_similar": [
+      {
+        "district": "北區",
+        "similarity": 0.9861402491897552
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.9827186006768528
+      },
+      {
+        "district": "南區",
+        "similarity": 0.9743682750850788
+      }
+    ],
+    "max_similarity": 0.9861402491897552,
+    "min_similarity": 0.2855441065482951,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.4350359460038508
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.3984914718832989
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.3668181021420897
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.3496895017574284
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.3429387900961125
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "北區",
+        "similarity": 0.2773879707138529
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.2767080435287413
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.273162448331343
+      },
+      {
+        "district": "南區",
+        "similarity": 0.2709754602868653
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.267077730428474
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "北區",
+        "similarity": 0.9923551614985092
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.9712989925336536
+      },
+      {
+        "district": "南區",
+        "similarity": 0.9653805153344772
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.9553497628245105
+      },
+      {
+        "district": "關廟區",
+        "similarity": 0.9208050128496972
+      }
+    ]
+  },
+  "東山區": {
+    "rank": 26,
+    "avg_similarity": 0.7752745722139621,
+    "top_similar": [
+      {
+        "district": "六甲區",
+        "similarity": 0.9844611312520124
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.9834652275537624
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.9670019841754728
+      }
+    ],
+    "max_similarity": 0.9844611312520124,
+    "min_similarity": 0.4161827687147313,
+    "spatial_rankings": [
+      {
+        "district": "南區",
+        "similarity": 0.4106111472404754
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.402119252753862
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.3930370127929621
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.3785575223571708
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.3780766330668716
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.2533137783587368
+      },
+      {
+        "district": "六甲區",
+        "similarity": 0.2484132243455025
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.2433043375070785
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.2226313095397201
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.2202195275479792
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "柳營區",
+        "similarity": 0.9999317224690922
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.9998407476443314
+      },
+      {
+        "district": "北門區",
+        "similarity": 0.999790659518268
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.999787288883479
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.9996515723195728
+      }
+    ]
+  },
+  "柳營區": {
+    "rank": 27,
+    "avg_similarity": 0.7937961489892735,
+    "top_similar": [
+      {
+        "district": "官田區",
+        "similarity": 0.9966795866453938
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.9966066163527988
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.9963900570545776
+      }
+    ],
+    "max_similarity": 0.9966795866453938,
+    "min_similarity": 0.3627884804369569,
+    "spatial_rankings": [
+      {
+        "district": "南區",
+        "similarity": 0.3536501700141771
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.346398447041615
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.3379364644478427
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.3279859255212685
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.3174866763210282
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "六甲區",
+        "similarity": 0.2693787393615135
+      },
+      {
+        "district": "新營區",
+        "similarity": 0.2573389366435962
+      },
+      {
+        "district": "官田區",
+        "similarity": 0.2508915588443973
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.2433043375070785
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.2415931615513706
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "東山區",
+        "similarity": 0.9999317224690922
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.9998725776857732
+      },
+      {
+        "district": "六甲區",
+        "similarity": 0.9996386102254142
+      },
+      {
+        "district": "官田區",
+        "similarity": 0.9996313938574012
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.9995664212944304
+      }
+    ]
+  },
+  "楠西區": {
+    "rank": 28,
+    "avg_similarity": 0.7838467536717061,
+    "top_similar": [
+      {
+        "district": "下營區",
+        "similarity": 0.9977464697509364
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9972946394806962
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.9970049879647732
+      }
+    ],
+    "max_similarity": 0.9977464697509364,
+    "min_similarity": 0.2326051092991747,
+    "spatial_rankings": [
+      {
+        "district": "七股區",
+        "similarity": 0.4216875821009708
+      },
+      {
+        "district": "北門區",
+        "similarity": 0.4031791110391008
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.4003105698948657
+      },
+      {
+        "district": "南區",
+        "similarity": 0.3958994513478199
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.3905375598316828
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "南化區",
+        "similarity": 0.2564904060244674
+      },
+      {
+        "district": "玉井區",
+        "similarity": 0.2465367385600144
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.2227856639486755
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.2226313095397201
+      },
+      {
+        "district": "六甲區",
+        "similarity": 0.2086133353307708
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "官田區",
+        "similarity": 0.9993845262267286
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.9991696297179004
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.9988393070734664
+      },
+      {
+        "district": "六甲區",
+        "similarity": 0.9986525897632926
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.9981452341542478
+      }
+    ]
+  },
+  "歸仁區": {
+    "rank": 29,
+    "avg_similarity": 0.66266772988624,
+    "top_similar": [
+      {
+        "district": "仁德區",
+        "similarity": 0.9796267948468018
+      },
+      {
+        "district": "新營區",
+        "similarity": 0.9493618562936428
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.9046496869734022
+      }
+    ],
+    "max_similarity": 0.9796267948468018,
+    "min_similarity": 0.2181499112833881,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.436855043421948
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.4186702641613953
+      },
+      {
+        "district": "北門區",
+        "similarity": 0.3707165019633069
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.3643722090474784
+      },
+      {
+        "district": "新營區",
+        "similarity": 0.3546570359197967
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "關廟區",
+        "similarity": 0.273502331969062
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.2676648314778382
+      },
+      {
+        "district": "東區",
+        "similarity": 0.2536814890608315
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.2438547791455401
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.240822752739809
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "永康區",
+        "similarity": 0.9610937897403892
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.9439713864674256
+      },
+      {
+        "district": "新營區",
+        "similarity": 0.9023570846097496
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.9005100596621616
+      },
+      {
+        "district": "北區",
+        "similarity": 0.8945258011409984
+      }
+    ]
+  },
+  "永康區": {
+    "rank": 30,
+    "avg_similarity": 0.5800354873539898,
+    "top_similar": [
+      {
+        "district": "北區",
+        "similarity": 0.9856532416726164
+      },
+      {
+        "district": "東區",
+        "similarity": 0.9827186006768528
+      },
+      {
+        "district": "南區",
+        "similarity": 0.9772812835937812
+      }
+    ],
+    "max_similarity": 0.9856532416726164,
+    "min_similarity": 0.3692310702609758,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.382656449278737
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.3474550487352403
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.3147633805132825
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.3033758457982341
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.3028915253517035
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "北區",
+        "similarity": 0.2677202497418868
+      },
+      {
+        "district": "東區",
+        "similarity": 0.267077730428474
+      },
+      {
+        "district": "新市區",
+        "similarity": 0.2573342851649728
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.2568896720176302
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.2521328314620182
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "北區",
+        "similarity": 0.9805957515500424
+      },
+      {
+        "district": "東區",
+        "similarity": 0.9712989925336536
+      },
+      {
+        "district": "南區",
+        "similarity": 0.9685875644222262
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.9610937897403892
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.959808473564986
+      }
+    ]
+  },
+  "玉井區": {
+    "rank": 31,
+    "avg_similarity": 0.7617467594210416,
+    "top_similar": [
+      {
+        "district": "麻豆區",
+        "similarity": 0.9464071284473012
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.9428938362108285
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.9285121606021092
+      }
+    ],
+    "max_similarity": 0.9464071284473012,
+    "min_similarity": 0.3934655589990402,
+    "spatial_rankings": [
+      {
+        "district": "北門區",
+        "similarity": 0.3723038144723534
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.3619178488079894
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.3461951592749808
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.3219924181720925
+      },
+      {
+        "district": "安南區",
+        "similarity": 0.3153880772389274
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "大內區",
+        "similarity": 0.2567091334075389
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.247749331181124
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.2465367385600144
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.2423903481206722
+      },
+      {
+        "district": "左鎮區",
+        "similarity": 0.2364245625379986
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "新化區",
+        "similarity": 0.9579805804013974
+      },
+      {
+        "district": "麻豆區",
+        "similarity": 0.9436236729655976
+      },
+      {
+        "district": "善化區",
+        "similarity": 0.9234145612246876
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.89757743245104
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.8596836316111748
+      }
+    ]
+  },
+  "白河區": {
+    "rank": 32,
+    "avg_similarity": 0.2942481226794544,
+    "top_similar": [
+      {
+        "district": "北門區",
+        "similarity": 0.9999116872944748
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.9293388950242192
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.5874538819869121
+      }
+    ],
+    "max_similarity": 0.9999116872944748,
+    "min_similarity": 0.0006500170452968,
+    "spatial_rankings": [
+      {
+        "district": "南區",
+        "similarity": 0.4776307606197961
+      },
+      {
+        "district": "安平區",
+        "similarity": 0.465834467420911
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.463386550644703
+      },
+      {
+        "district": "中西區",
+        "similarity": 0.4434208615902586
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.436855043421948
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "東山區",
+        "similarity": 0.2533137783587368
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.2310568012414451
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.2169912283060214
+      },
+      {
+        "district": "六甲區",
+        "similarity": 0.2079831166989287
+      },
+      {
+        "district": "新營區",
+        "similarity": 0.1929415586369829
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "北門區",
+        "similarity": 0.9999701629324664
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.9999124468251446
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.9998407476443314
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.9995664212944304
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.999520290080968
+      }
+    ]
+  },
+  "西港區": {
+    "rank": 33,
+    "avg_similarity": 0.7817810914374442,
+    "top_similar": [
+      {
+        "district": "七股區",
+        "similarity": 0.999840332249286
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.9994085906067048
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.9990385417183388
+      }
+    ],
+    "max_similarity": 0.999840332249286,
+    "min_similarity": 0.1854902846251305,
+    "spatial_rankings": [
+      {
+        "district": "南化區",
+        "similarity": 0.3441120372761164
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.3429599860863455
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.3214413560506386
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.2882385840801759
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.2794107415390756
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "安定區",
+        "similarity": 0.2754748841383004
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.2702883270042933
+      },
+      {
+        "district": "麻豆區",
+        "similarity": 0.2556072263574548
+      },
+      {
+        "district": "安南區",
+        "similarity": 0.2435633667255182
+      },
+      {
+        "district": "善化區",
+        "similarity": 0.2372093884813739
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "新市區",
+        "similarity": 0.9998820391762856
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.9994229340831664
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.9989592593284012
+      },
+      {
+        "district": "七股區",
+        "similarity": 0.997520418425348
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.9967528550780836
+      }
+    ]
+  },
+  "關廟區": {
+    "rank": 34,
+    "avg_similarity": 0.7880186519335679,
+    "top_similar": [
+      {
+        "district": "新化區",
+        "similarity": 0.9750479533736378
+      },
+      {
+        "district": "麻豆區",
+        "similarity": 0.9717725975020214
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.9693272581629938
+      }
+    ],
+    "max_similarity": 0.9750479533736378,
+    "min_similarity": 0.1691262399272446,
+    "spatial_rankings": [
+      {
+        "district": "白河區",
+        "similarity": 0.4143952540096507
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.4061813533440093
+      },
+      {
+        "district": "北門區",
+        "similarity": 0.3833655277269501
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.3531025465859184
+      },
+      {
+        "district": "新營區",
+        "similarity": 0.3478457412250939
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "歸仁區",
+        "similarity": 0.273502331969062
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.2669176653539046
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.2508881107899569
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.2412571448227291
+      },
+      {
+        "district": "左鎮區",
+        "similarity": 0.233992815963525
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "東區",
+        "similarity": 0.9208050128496972
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.8823994331950693
+      },
+      {
+        "district": "北區",
+        "similarity": 0.8735863620798934
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.8390094922676521
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.8172720379723024
+      }
+    ]
+  },
+  "鹽水區": {
+    "rank": 35,
+    "avg_similarity": 0.7949942394148394,
+    "top_similar": [
+      {
+        "district": "六甲區",
+        "similarity": 0.999120426869395
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.9966066163527988
+      },
+      {
+        "district": "官田區",
+        "similarity": 0.9867955389856036
+      }
+    ],
+    "max_similarity": 0.999120426869395,
+    "min_similarity": 0.4060072182849661,
+    "spatial_rankings": [
+      {
+        "district": "龍崎區",
+        "similarity": 0.3703034084686382
+      },
+      {
+        "district": "仁德區",
+        "similarity": 0.3570642896515942
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.3544035492428917
+      },
+      {
+        "district": "關廟區",
+        "similarity": 0.3531025465859184
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.3477333464803138
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "新營區",
+        "similarity": 0.2709036375489433
+      },
+      {
+        "district": "下營區",
+        "similarity": 0.2565233592524035
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.2503091997288565
+      },
+      {
+        "district": "柳營區",
+        "similarity": 0.2309764454973377
+      },
+      {
+        "district": "麻豆區",
+        "similarity": 0.2271199956859019
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "後壁區",
+        "similarity": 0.9998088778662476
+      },
+      {
+        "district": "學甲區",
+        "similarity": 0.9997480891243296
+      },
+      {
+        "district": "北門區",
+        "similarity": 0.9996733290517468
+      },
+      {
+        "district": "東山區",
+        "similarity": 0.9996515723195728
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.999520290080968
+      }
+    ]
+  },
+  "麻豆區": {
+    "rank": 36,
+    "avg_similarity": 0.8122543472372361,
+    "top_similar": [
+      {
+        "district": "佳里區",
+        "similarity": 0.997100711897086
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.9946577816507696
+      },
+      {
+        "district": "善化區",
+        "similarity": 0.9874097768041852
+      }
+    ],
+    "max_similarity": 0.997100711897086,
+    "min_similarity": 0.3306534938262197,
+    "spatial_rankings": [
+      {
+        "district": "南化區",
+        "similarity": 0.310452747538161
+      },
+      {
+        "district": "楠西區",
+        "similarity": 0.2759761835757484
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.2746601259408833
+      },
+      {
+        "district": "龍崎區",
+        "similarity": 0.2703905916562128
+      },
+      {
+        "district": "關廟區",
+        "similarity": 0.2451491540260598
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "下營區",
+        "similarity": 0.2661304235862032
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.2594579148421069
+      },
+      {
+        "district": "西港區",
+        "similarity": 0.2556072263574548
+      },
+      {
+        "district": "善化區",
+        "similarity": 0.2550389192867424
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.2473128595043323
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "善化區",
+        "similarity": 0.9962644086552804
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.9937219921778516
+      },
+      {
+        "district": "佳里區",
+        "similarity": 0.992712869716406
+      },
+      {
+        "district": "安定區",
+        "similarity": 0.975293560402148
+      },
+      {
+        "district": "新市區",
+        "similarity": 0.9708777225763906
+      }
+    ]
+  },
+  "龍崎區": {
+    "rank": 37,
+    "avg_similarity": 0.7311326848031157,
+    "top_similar": [
+      {
+        "district": "左鎮區",
+        "similarity": 0.9989449058940896
+      },
+      {
+        "district": "南化區",
+        "similarity": 0.9958080320733624
+      },
+      {
+        "district": "大內區",
+        "similarity": 0.9955082359744716
+      }
+    ],
+    "max_similarity": 0.9989449058940896,
+    "min_similarity": 0.0006500170452968,
+    "spatial_rankings": [
+      {
+        "district": "北門區",
+        "similarity": 0.4150480691197659
+      },
+      {
+        "district": "後壁區",
+        "similarity": 0.4086841885062917
+      },
+      {
+        "district": "白河區",
+        "similarity": 0.4027830891929239
+      },
+      {
+        "district": "鹽水區",
+        "similarity": 0.3703034084686382
+      },
+      {
+        "district": "將軍區",
+        "similarity": 0.3626364527781961
+      }
+    ],
+    "weather_rankings": [
+      {
+        "district": "關廟區",
+        "similarity": 0.2669176653539046
+      },
+      {
+        "district": "左鎮區",
+        "similarity": 0.2524844454087555
+      },
+      {
+        "district": "新化區",
+        "similarity": 0.2408293870308219
+      },
+      {
+        "district": "歸仁區",
+        "similarity": 0.240822752739809
+      },
+      {
+        "district": "山上區",
+        "similarity": 0.2102648920588586
+      }
+    ],
+    "comprehensive_rankings": [
+      {
+        "district": "關廟區",
+        "similarity": 0.8129572081385208
+      },
+      {
+        "district": "東區",
+        "similarity": 0.7854738579708902
+      },
+      {
+        "district": "北區",
+        "similarity": 0.7167683456668643
+      },
+      {
+        "district": "南區",
+        "similarity": 0.6734806546186389
+      },
+      {
+        "district": "永康區",
+        "similarity": 0.6445421282410175
+      }
+    ]
+  }
+}

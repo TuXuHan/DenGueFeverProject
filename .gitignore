@@ -64,13 +64,10 @@ config.py
 *.model
 
 # 資料檔案
-*.csv
-*.json
 *.xlsx
 *.xls
 
 # 地圖和地理資料檔案
-*.geojson
 *.shp
 *.shx
 *.dbf

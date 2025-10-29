@@ -1,0 +1,4063 @@
+{
+  "latest_week": "2024-01-08",
+  "district_data": {
+    "6700100": {
+      "district_code": "6700100",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6700100-001",
+          "village_name": "忠政里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-002",
+          "village_name": "民權里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-003",
+          "village_name": "三仙里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-004",
+          "village_name": "好平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-005",
+          "village_name": "延平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-006",
+          "village_name": "永生里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-007",
+          "village_name": "大宏里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-008",
+          "village_name": "王公里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-009",
+          "village_name": "中營里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-010",
+          "village_name": "土庫里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-011",
+          "village_name": "興安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-012",
+          "village_name": "南興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-013",
+          "village_name": "興業里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-014",
+          "village_name": "民生里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-015",
+          "village_name": "民榮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-016",
+          "village_name": "埤寮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-017",
+          "village_name": "護鎮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-018",
+          "village_name": "太南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-019",
+          "village_name": "太北里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-020",
+          "village_name": "南紙里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-021",
+          "village_name": "嘉芳里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-022",
+          "village_name": "舊廍里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-023",
+          "village_name": "角帶里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-024",
+          "village_name": "鐵線里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-025",
+          "village_name": "五興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-026",
+          "village_name": "姑爺里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-027",
+          "village_name": "新北里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-028",
+          "village_name": "新南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700100-029",
+          "village_name": "新東里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "新營區"
+    },
+    "6700200": {
+      "district_code": "6700200",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6700200-001",
+          "village_name": "水秀里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-002",
+          "village_name": "福得里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-003",
+          "village_name": "三生里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-004",
+          "village_name": "武廟里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-005",
+          "village_name": "中境里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-006",
+          "village_name": "水仙里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-007",
+          "village_name": "水正里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-008",
+          "village_name": "橋南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-009",
+          "village_name": "舊營里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-010",
+          "village_name": "汫水里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-011",
+          "village_name": "岸內里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-012",
+          "village_name": "義稠里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-013",
+          "village_name": "下中里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-014",
+          "village_name": "歡雅里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-015",
+          "village_name": "大莊里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-016",
+          "village_name": "桐寮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-017",
+          "village_name": "後宅里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-018",
+          "village_name": "孫厝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-019",
+          "village_name": "竹埔里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-020",
+          "village_name": "下林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-021",
+          "village_name": "田寮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-022",
+          "village_name": "大豐里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-023",
+          "village_name": "飯店里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-024",
+          "village_name": "河南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700200-025",
+          "village_name": "南港里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "鹽水區"
+    },
+    "6700300": {
+      "district_code": "6700300",
+      "total_pred_cases": 48,
+      "villages": [
+        {
+          "village_id": "6700300-001",
+          "village_name": "白河里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-002",
+          "village_name": "永安里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-003",
+          "village_name": "外角里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-004",
+          "village_name": "庄內里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-005",
+          "village_name": "秀祐里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-006",
+          "village_name": "河東里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-007",
+          "village_name": "虎山里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-008",
+          "village_name": "大林里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-009",
+          "village_name": "崁頭里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-010",
+          "village_name": "六溪里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-011",
+          "village_name": "仙草里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-012",
+          "village_name": "關嶺里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-013",
+          "village_name": "玉豐里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-014",
+          "village_name": "大竹里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-015",
+          "village_name": "詔安里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-016",
+          "village_name": "廣安里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-017",
+          "village_name": "蓮潭里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-018",
+          "village_name": "竹門里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-019",
+          "village_name": "崎內里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-020",
+          "village_name": "昇安里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-021",
+          "village_name": "汴頭里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-022",
+          "village_name": "內角里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-023",
+          "village_name": "草店里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700300-024",
+          "village_name": "甘宅里",
+          "pred_cases": 2
+        }
+      ],
+      "district_name": "白河區"
+    },
+    "6700400": {
+      "district_code": "6700400",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6700400-001",
+          "village_name": "士林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-002",
+          "village_name": "光福里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-003",
+          "village_name": "中埕里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-004",
+          "village_name": "東昇里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-005",
+          "village_name": "八翁里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-006",
+          "village_name": "人和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-007",
+          "village_name": "太康里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-008",
+          "village_name": "重溪里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-009",
+          "village_name": "篤農里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-010",
+          "village_name": "大農里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-011",
+          "village_name": "神農里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-012",
+          "village_name": "果毅里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700400-013",
+          "village_name": "旭山里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "柳營區"
+    },
+    "6700500": {
+      "district_code": "6700500",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6700500-001",
+          "village_name": "後壁里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-002",
+          "village_name": "侯伯里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-003",
+          "village_name": "嘉苳里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-004",
+          "village_name": "土溝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-005",
+          "village_name": "嘉田里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-006",
+          "village_name": "嘉民里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-007",
+          "village_name": "菁豊里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-008",
+          "village_name": "崁頂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-009",
+          "village_name": "仕安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-010",
+          "village_name": "竹新里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-011",
+          "village_name": "新東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-012",
+          "village_name": "頂安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-013",
+          "village_name": "長安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-014",
+          "village_name": "福安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-015",
+          "village_name": "烏樹里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-016",
+          "village_name": "後廍里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-017",
+          "village_name": "墨林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-018",
+          "village_name": "菁寮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-019",
+          "village_name": "新嘉里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-020",
+          "village_name": "頂長里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700500-021",
+          "village_name": "平安里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "後壁區"
+    },
+    "6700600": {
+      "district_code": "6700600",
+      "total_pred_cases": 31,
+      "villages": [
+        {
+          "village_id": "6700600-001",
+          "village_name": "東山里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-002",
+          "village_name": "東中里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-003",
+          "village_name": "東正里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-004",
+          "village_name": "三榮里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-005",
+          "village_name": "大客里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-006",
+          "village_name": "科里里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-007",
+          "village_name": "東河里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-008",
+          "village_name": "南溪里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-009",
+          "village_name": "水雲里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-010",
+          "village_name": "林安里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-011",
+          "village_name": "東原里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-012",
+          "village_name": "嶺南里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-013",
+          "village_name": "南勢里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-014",
+          "village_name": "青山里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-015",
+          "village_name": "高原里",
+          "pred_cases": 2
+        },
+        {
+          "village_id": "6700600-016",
+          "village_name": "聖賢里",
+          "pred_cases": 1
+        }
+      ],
+      "district_name": "東山區"
+    },
+    "6700700": {
+      "district_code": "6700700",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6700700-001",
+          "village_name": "穀興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-002",
+          "village_name": "保安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-003",
+          "village_name": "東角里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-004",
+          "village_name": "晋江里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-005",
+          "village_name": "巷口里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-006",
+          "village_name": "中興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-007",
+          "village_name": "興農里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-008",
+          "village_name": "新建里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-009",
+          "village_name": "油車里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-010",
+          "village_name": "北勢里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-011",
+          "village_name": "大埕里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-012",
+          "village_name": "總榮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-013",
+          "village_name": "龍泉里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-014",
+          "village_name": "南勢里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-015",
+          "village_name": "寮廍里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-016",
+          "village_name": "小埤里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-017",
+          "village_name": "埤頭里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-018",
+          "village_name": "大山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-019",
+          "village_name": "海埔里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-020",
+          "village_name": "莊禮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-021",
+          "village_name": "港尾里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-022",
+          "village_name": "麻口里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-023",
+          "village_name": "安東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-024",
+          "village_name": "安業里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-025",
+          "village_name": "安西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-026",
+          "village_name": "謝安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-027",
+          "village_name": "中民里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-028",
+          "village_name": "安正里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700700-029",
+          "village_name": "磚井里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "麻豆區"
+    },
+    "6700800": {
+      "district_code": "6700800",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6700800-001",
+          "village_name": "下營里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-002",
+          "village_name": "仁里里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-003",
+          "village_name": "宅內里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-004",
+          "village_name": "後街里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-005",
+          "village_name": "新興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-006",
+          "village_name": "營前里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-007",
+          "village_name": "大屯里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-008",
+          "village_name": "大埤里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-009",
+          "village_name": "茅港里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-010",
+          "village_name": "中營里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-011",
+          "village_name": "開化里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-012",
+          "village_name": "西連里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-013",
+          "village_name": "賀建里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-014",
+          "village_name": "甲中里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700800-015",
+          "village_name": "紅厝里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "下營區"
+    },
+    "6700900": {
+      "district_code": "6700900",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6700900-001",
+          "village_name": "六甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-002",
+          "village_name": "甲東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-003",
+          "village_name": "甲南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-004",
+          "village_name": "龍湖里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-005",
+          "village_name": "七甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-006",
+          "village_name": "二甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-007",
+          "village_name": "水林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-008",
+          "village_name": "中社里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-009",
+          "village_name": "龜港里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-010",
+          "village_name": "菁埔里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-011",
+          "village_name": "王爺里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6700900-012",
+          "village_name": "大丘里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "六甲區"
+    },
+    "6701000": {
+      "district_code": "6701000",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6701000-001",
+          "village_name": "官田里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-002",
+          "village_name": "二鎮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-003",
+          "village_name": "湖山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-004",
+          "village_name": "嘉南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-005",
+          "village_name": "大崎里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-006",
+          "village_name": "隆田里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-007",
+          "village_name": "隆本里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-008",
+          "village_name": "南廍里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-009",
+          "village_name": "東庄里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-010",
+          "village_name": "西庄里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-011",
+          "village_name": "拔林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-012",
+          "village_name": "渡頭里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701000-013",
+          "village_name": "社子里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "官田區"
+    },
+    "6701100": {
+      "district_code": "6701100",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6701100-001",
+          "village_name": "石湖里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701100-002",
+          "village_name": "石林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701100-003",
+          "village_name": "石城里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701100-004",
+          "village_name": "內江里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701100-005",
+          "village_name": "大內里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701100-006",
+          "village_name": "內郭里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701100-007",
+          "village_name": "頭社里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701100-008",
+          "village_name": "環湖里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701100-009",
+          "village_name": "二溪里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701100-010",
+          "village_name": "曲溪里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "大內區"
+    },
+    "6701200": {
+      "district_code": "6701200",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6701200-001",
+          "village_name": "東寧里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-002",
+          "village_name": "忠仁里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-003",
+          "village_name": "鎮山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-004",
+          "village_name": "建南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-005",
+          "village_name": "安西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-006",
+          "village_name": "六安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-007",
+          "village_name": "佳化里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-008",
+          "village_name": "禮化里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-009",
+          "village_name": "興化里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-010",
+          "village_name": "營頂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-011",
+          "village_name": "溪州里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-012",
+          "village_name": "海澄里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-013",
+          "village_name": "漳洲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-014",
+          "village_name": "頂廍里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-015",
+          "village_name": "嘉福里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-016",
+          "village_name": "通興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-017",
+          "village_name": "蚶寮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-018",
+          "village_name": "龍安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-019",
+          "village_name": "民安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-020",
+          "village_name": "子龍里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701200-021",
+          "village_name": "三協里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "佳里區"
+    },
+    "6701300": {
+      "district_code": "6701300",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6701300-001",
+          "village_name": "仁得里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-002",
+          "village_name": "新榮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-003",
+          "village_name": "光華里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-004",
+          "village_name": "宅港里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-005",
+          "village_name": "慈福里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-006",
+          "village_name": "秀昌里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-007",
+          "village_name": "明宜里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-008",
+          "village_name": "豐和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-009",
+          "village_name": "平和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-010",
+          "village_name": "新達里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-011",
+          "village_name": "大灣里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-012",
+          "village_name": "三慶里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701300-013",
+          "village_name": "中洲里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "學甲區"
+    },
+    "6701400": {
+      "district_code": "6701400",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6701400-001",
+          "village_name": "西港里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-002",
+          "village_name": "南海里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-003",
+          "village_name": "港東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-004",
+          "village_name": "檨林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-005",
+          "village_name": "後營里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-006",
+          "village_name": "營西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-007",
+          "village_name": "金砂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-008",
+          "village_name": "劉厝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-009",
+          "village_name": "竹林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-010",
+          "village_name": "永樂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-011",
+          "village_name": "新復里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701400-012",
+          "village_name": "慶安里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "西港區"
+    },
+    "6701500": {
+      "district_code": "6701500",
+      "total_pred_cases": 23,
+      "villages": [
+        {
+          "village_id": "6701500-001",
+          "village_name": "後港里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-002",
+          "village_name": "大潭里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-003",
+          "village_name": "城內里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-004",
+          "village_name": "篤加里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-005",
+          "village_name": "頂山里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-006",
+          "village_name": "西寮里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-007",
+          "village_name": "塩埕里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-008",
+          "village_name": "龍山里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-009",
+          "village_name": "溪南里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-010",
+          "village_name": "七股里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-011",
+          "village_name": "玉成里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-012",
+          "village_name": "大埕里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-013",
+          "village_name": "大寮里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-014",
+          "village_name": "看坪里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-015",
+          "village_name": "樹林里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-016",
+          "village_name": "竹港里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-017",
+          "village_name": "中寮里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-018",
+          "village_name": "竹橋里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-019",
+          "village_name": "義合里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-020",
+          "village_name": "槺榔里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-021",
+          "village_name": "永吉里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-022",
+          "village_name": "三股里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6701500-023",
+          "village_name": "十份里",
+          "pred_cases": 1
+        }
+      ],
+      "district_name": "七股區"
+    },
+    "6701600": {
+      "district_code": "6701600",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6701600-001",
+          "village_name": "長榮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-002",
+          "village_name": "西華里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-003",
+          "village_name": "西和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-004",
+          "village_name": "忠興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-005",
+          "village_name": "嘉昌里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-006",
+          "village_name": "保源里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-007",
+          "village_name": "苓和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-008",
+          "village_name": "仁和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-009",
+          "village_name": "北埔里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-010",
+          "village_name": "將富里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-011",
+          "village_name": "將貴里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-012",
+          "village_name": "三吉里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-013",
+          "village_name": "玉山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-014",
+          "village_name": "廣山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-015",
+          "village_name": "長沙里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-016",
+          "village_name": "平沙里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-017",
+          "village_name": "鯤鯓里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701600-018",
+          "village_name": "鯤溟里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "將軍區"
+    },
+    "6701700": {
+      "district_code": "6701700",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6701700-001",
+          "village_name": "保吉里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-002",
+          "village_name": "雙春里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-003",
+          "village_name": "東壁里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-004",
+          "village_name": "鯤江里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-005",
+          "village_name": "北門里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-006",
+          "village_name": "錦湖里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-007",
+          "village_name": "三光里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-008",
+          "village_name": "仁里里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-009",
+          "village_name": "玉港里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-010",
+          "village_name": "中樞里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-011",
+          "village_name": "慈安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-012",
+          "village_name": "永華里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701700-013",
+          "village_name": "永隆里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "北門區"
+    },
+    "6701800": {
+      "district_code": "6701800",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6701800-001",
+          "village_name": "武安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-002",
+          "village_name": "東榮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-003",
+          "village_name": "護國里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-004",
+          "village_name": "太平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-005",
+          "village_name": "中央里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-006",
+          "village_name": "觀音里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-007",
+          "village_name": "竹林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-008",
+          "village_name": "清水里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-009",
+          "village_name": "協興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-010",
+          "village_name": "唪口里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-011",
+          "village_name": "北勢里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-012",
+          "village_name": "豐榮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-013",
+          "village_name": "全興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-014",
+          "village_name": "崙頂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-015",
+          "village_name": "知義里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-016",
+          "village_name": "山脚里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-017",
+          "village_name": "大坑里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-018",
+          "village_name": "拔里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-019",
+          "village_name": "羊林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701800-020",
+          "village_name": "礁坑里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "新化區"
+    },
+    "6701900": {
+      "district_code": "6701900",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6701900-001",
+          "village_name": "東關里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-002",
+          "village_name": "坐駕里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-003",
+          "village_name": "光文里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-004",
+          "village_name": "文昌里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-005",
+          "village_name": "南關里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-006",
+          "village_name": "西關里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-007",
+          "village_name": "北關里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-008",
+          "village_name": "文正里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-009",
+          "village_name": "胡家里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-010",
+          "village_name": "胡厝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-011",
+          "village_name": "什乃里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-012",
+          "village_name": "溪美里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-013",
+          "village_name": "六分里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-014",
+          "village_name": "六德里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-015",
+          "village_name": "田寮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-016",
+          "village_name": "東隆里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-017",
+          "village_name": "東昌里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-018",
+          "village_name": "牛庄里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-019",
+          "village_name": "嘉北里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-020",
+          "village_name": "嘉南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6701900-021",
+          "village_name": "小新里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "善化區"
+    },
+    "6702000": {
+      "district_code": "6702000",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6702000-001",
+          "village_name": "新市里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702000-002",
+          "village_name": "新和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702000-003",
+          "village_name": "社內里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702000-004",
+          "village_name": "大洲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702000-005",
+          "village_name": "豐華里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702000-006",
+          "village_name": "三舍里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702000-007",
+          "village_name": "大營里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702000-008",
+          "village_name": "大社里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702000-009",
+          "village_name": "潭頂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702000-010",
+          "village_name": "港墘里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702000-011",
+          "village_name": "永就里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "新市區"
+    },
+    "6702100": {
+      "district_code": "6702100",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6702100-001",
+          "village_name": "蘇林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-002",
+          "village_name": "蘇厝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-003",
+          "village_name": "安定里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-004",
+          "village_name": "安加里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-005",
+          "village_name": "保西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-006",
+          "village_name": "港尾里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-007",
+          "village_name": "中榮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-008",
+          "village_name": "港口里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-009",
+          "village_name": "港南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-010",
+          "village_name": "大同里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-011",
+          "village_name": "六嘉里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-012",
+          "village_name": "中沙里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-013",
+          "village_name": "新吉里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-014",
+          "village_name": "海寮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-015",
+          "village_name": "管寮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702100-016",
+          "village_name": "南安里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "安定區"
+    },
+    "6702200": {
+      "district_code": "6702200",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6702200-001",
+          "village_name": "明和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702200-002",
+          "village_name": "南洲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702200-003",
+          "village_name": "山上里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702200-004",
+          "village_name": "新莊里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702200-005",
+          "village_name": "玉峯里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702200-006",
+          "village_name": "平陽里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702200-007",
+          "village_name": "豐德里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "山上區"
+    },
+    "6702300": {
+      "district_code": "6702300",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6702300-001",
+          "village_name": "玉井里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702300-002",
+          "village_name": "玉田里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702300-003",
+          "village_name": "中正里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702300-004",
+          "village_name": "竹圍里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702300-005",
+          "village_name": "沙田里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702300-006",
+          "village_name": "三埔里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702300-007",
+          "village_name": "三和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702300-008",
+          "village_name": "望明里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702300-009",
+          "village_name": "層林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702300-010",
+          "village_name": "豐里里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "玉井區"
+    },
+    "6702400": {
+      "district_code": "6702400",
+      "total_pred_cases": 7,
+      "villages": [
+        {
+          "village_id": "6702400-001",
+          "village_name": "楠西里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6702400-002",
+          "village_name": "灣丘里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6702400-003",
+          "village_name": "密枝里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6702400-004",
+          "village_name": "照興里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6702400-005",
+          "village_name": "鹿田里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6702400-006",
+          "village_name": "龜丹里",
+          "pred_cases": 1
+        },
+        {
+          "village_id": "6702400-007",
+          "village_name": "東勢里",
+          "pred_cases": 1
+        }
+      ],
+      "district_name": "楠西區"
+    },
+    "6702500": {
+      "district_code": "6702500",
+      "total_pred_cases": 189,
+      "villages": [
+        {
+          "village_id": "6702500-003",
+          "village_name": "中坑里",
+          "pred_cases": 23
+        },
+        {
+          "village_id": "6702500-001",
+          "village_name": "南化里",
+          "pred_cases": 21
+        },
+        {
+          "village_id": "6702500-002",
+          "village_name": "小崙里",
+          "pred_cases": 21
+        },
+        {
+          "village_id": "6702500-004",
+          "village_name": "北平里",
+          "pred_cases": 21
+        },
+        {
+          "village_id": "6702500-005",
+          "village_name": "東和里",
+          "pred_cases": 21
+        },
+        {
+          "village_id": "6702500-006",
+          "village_name": "西埔里",
+          "pred_cases": 21
+        },
+        {
+          "village_id": "6702500-007",
+          "village_name": "北寮里",
+          "pred_cases": 21
+        },
+        {
+          "village_id": "6702500-009",
+          "village_name": "關山里",
+          "pred_cases": 21
+        },
+        {
+          "village_id": "6702500-008",
+          "village_name": "玉山里",
+          "pred_cases": 19
+        }
+      ],
+      "district_name": "南化區"
+    },
+    "6702600": {
+      "district_code": "6702600",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6702600-001",
+          "village_name": "光和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702600-002",
+          "village_name": "榮和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702600-003",
+          "village_name": "左鎮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702600-004",
+          "village_name": "中正里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702600-005",
+          "village_name": "睦光里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702600-006",
+          "village_name": "內庄里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702600-007",
+          "village_name": "澄山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702600-008",
+          "village_name": "岡林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702600-009",
+          "village_name": "草山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702600-010",
+          "village_name": "二寮里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "左鎮區"
+    },
+    "6702700": {
+      "district_code": "6702700",
+      "total_pred_cases": 40,
+      "villages": [
+        {
+          "village_id": "6702700-005",
+          "village_name": "仁義里",
+          "pred_cases": 40
+        },
+        {
+          "village_id": "6702700-001",
+          "village_name": "太子里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-002",
+          "village_name": "土庫里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-003",
+          "village_name": "一甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-004",
+          "village_name": "仁德里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-006",
+          "village_name": "新田里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-007",
+          "village_name": "後壁里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-008",
+          "village_name": "上崙里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-009",
+          "village_name": "田厝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-010",
+          "village_name": "三甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-011",
+          "village_name": "保安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-012",
+          "village_name": "成功里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-013",
+          "village_name": "仁和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-014",
+          "village_name": "仁愛里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-015",
+          "village_name": "二行里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-016",
+          "village_name": "大甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-017",
+          "village_name": "中洲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702700-018",
+          "village_name": "中生里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "仁德區"
+    },
+    "6702800": {
+      "district_code": "6702800",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6702800-001",
+          "village_name": "南保里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-002",
+          "village_name": "六甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-003",
+          "village_name": "歸仁里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-004",
+          "village_name": "後市里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-005",
+          "village_name": "辜厝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-006",
+          "village_name": "許厝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-007",
+          "village_name": "看西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-008",
+          "village_name": "看東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-009",
+          "village_name": "崙頂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-010",
+          "village_name": "沙崙里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-011",
+          "village_name": "大潭里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-012",
+          "village_name": "武東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-013",
+          "village_name": "八甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-014",
+          "village_name": "七甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-015",
+          "village_name": "媽廟里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-016",
+          "village_name": "西埔里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-017",
+          "village_name": "大廟里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-018",
+          "village_name": "南興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-019",
+          "village_name": "新厝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-020",
+          "village_name": "歸南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702800-021",
+          "village_name": "文化里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "歸仁區"
+    },
+    "6702900": {
+      "district_code": "6702900",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6702900-001",
+          "village_name": "關廟里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-002",
+          "village_name": "山西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-003",
+          "village_name": "香洋里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-004",
+          "village_name": "北勢里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-005",
+          "village_name": "新埔里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-006",
+          "village_name": "新光里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-007",
+          "village_name": "五甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-008",
+          "village_name": "東勢里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-009",
+          "village_name": "松腳里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-010",
+          "village_name": "南花里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-011",
+          "village_name": "北花里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-012",
+          "village_name": "深坑里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-013",
+          "village_name": "布袋里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-014",
+          "village_name": "田中里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-016",
+          "village_name": "埤頭里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6702900-017",
+          "village_name": "下湖里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "關廟區"
+    },
+    "6703000": {
+      "district_code": "6703000",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6703000-001",
+          "village_name": "崎頂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703000-002",
+          "village_name": "土崎里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703000-003",
+          "village_name": "中坑里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703000-004",
+          "village_name": "楠坑里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703000-005",
+          "village_name": "牛埔里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703000-006",
+          "village_name": "大坪里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703000-007",
+          "village_name": "龍船里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703000-008",
+          "village_name": "石𥕢𥕢里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "龍崎區"
+    },
+    "6703100": {
+      "district_code": "6703100",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6703100-001",
+          "village_name": "五王里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-002",
+          "village_name": "網寮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-003",
+          "village_name": "永康里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-004",
+          "village_name": "埔園里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-005",
+          "village_name": "大橋里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-006",
+          "village_name": "王行里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-007",
+          "village_name": "烏竹里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-008",
+          "village_name": "蔦松里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-009",
+          "village_name": "三民里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-010",
+          "village_name": "塩行里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-011",
+          "village_name": "甲頂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-012",
+          "village_name": "大灣里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-013",
+          "village_name": "東灣里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-014",
+          "village_name": "西灣里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-015",
+          "village_name": "南灣里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-016",
+          "village_name": "崑山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-017",
+          "village_name": "北灣里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-018",
+          "village_name": "新樹里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-019",
+          "village_name": "復興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-020",
+          "village_name": "復國里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-021",
+          "village_name": "建國里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-022",
+          "village_name": "神洲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-023",
+          "village_name": "西勢里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-024",
+          "village_name": "成功里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-025",
+          "village_name": "中興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-026",
+          "village_name": "勝利里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-027",
+          "village_name": "龍潭里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-028",
+          "village_name": "光復里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-029",
+          "village_name": "塩洲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-030",
+          "village_name": "二王里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-031",
+          "village_name": "六合里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-032",
+          "village_name": "三合里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-033",
+          "village_name": "東橋里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-034",
+          "village_name": "安康里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-035",
+          "village_name": "西橋里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-036",
+          "village_name": "尚頂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-037",
+          "village_name": "復華里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-038",
+          "village_name": "正強里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703100-039",
+          "village_name": "中華里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "永康區"
+    },
+    "6703200": {
+      "district_code": "6703200",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6703200-001",
+          "village_name": "富裕里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-002",
+          "village_name": "裕農里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-003",
+          "village_name": "大智里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-004",
+          "village_name": "崇學里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-005",
+          "village_name": "泉南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-006",
+          "village_name": "仁和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-007",
+          "village_name": "後甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-008",
+          "village_name": "東光里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-009",
+          "village_name": "新東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-010",
+          "village_name": "中西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-011",
+          "village_name": "東安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-012",
+          "village_name": "崇明里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-013",
+          "village_name": "自強里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-014",
+          "village_name": "和平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-015",
+          "village_name": "路東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-016",
+          "village_name": "大德里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-017",
+          "village_name": "關聖里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-018",
+          "village_name": "衛國里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-019",
+          "village_name": "崇善里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-020",
+          "village_name": "富強里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-021",
+          "village_name": "圍下里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-022",
+          "village_name": "小東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-023",
+          "village_name": "大學里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-024",
+          "village_name": "龍山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-025",
+          "village_name": "虎尾里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-026",
+          "village_name": "德高里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-027",
+          "village_name": "莊敬里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-028",
+          "village_name": "大福里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-029",
+          "village_name": "忠孝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-030",
+          "village_name": "崇誨里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-031",
+          "village_name": "東明里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-032",
+          "village_name": "崇德里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-033",
+          "village_name": "東智里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-034",
+          "village_name": "東聖里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-035",
+          "village_name": "崇成里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-036",
+          "village_name": "東門里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-037",
+          "village_name": "成大里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-038",
+          "village_name": "大同里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-039",
+          "village_name": "德光里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-040",
+          "village_name": "崇信里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-041",
+          "village_name": "崇文里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-042",
+          "village_name": "復興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-043",
+          "village_name": "裕聖里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-044",
+          "village_name": "南聖里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703200-045",
+          "village_name": "文聖里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "東區"
+    },
+    "6703300": {
+      "district_code": "6703300",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6703300-001",
+          "village_name": "竹溪里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-002",
+          "village_name": "荔宅里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-003",
+          "village_name": "明德里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-004",
+          "village_name": "大成里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-005",
+          "village_name": "廣州里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-006",
+          "village_name": "新昌里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-007",
+          "village_name": "新興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-008",
+          "village_name": "田寮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-009",
+          "village_name": "國宅里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-010",
+          "village_name": "日新里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-011",
+          "village_name": "光明里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-012",
+          "village_name": "白雪里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-013",
+          "village_name": "明亮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-014",
+          "village_name": "喜東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-015",
+          "village_name": "喜北里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-016",
+          "village_name": "喜南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-017",
+          "village_name": "省躬里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-018",
+          "village_name": "興農里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-019",
+          "village_name": "同安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-020",
+          "village_name": "佛壇里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-021",
+          "village_name": "大林里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-022",
+          "village_name": "大忠里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-023",
+          "village_name": "大恩里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-024",
+          "village_name": "新生里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-025",
+          "village_name": "再興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-026",
+          "village_name": "明興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-027",
+          "village_name": "文華里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-028",
+          "village_name": "金華里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-029",
+          "village_name": "南都里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-030",
+          "village_name": "開南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-031",
+          "village_name": "彰南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-032",
+          "village_name": "建南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-033",
+          "village_name": "郡南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-034",
+          "village_name": "府南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-035",
+          "village_name": "文南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-036",
+          "village_name": "鯤鯓里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-037",
+          "village_name": "松安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-038",
+          "village_name": "永寧里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703300-039",
+          "village_name": "南華里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "南區"
+    },
+    "6703400": {
+      "district_code": "6703400",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6703400-001",
+          "village_name": "開元里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-002",
+          "village_name": "新勝里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-003",
+          "village_name": "勝安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-004",
+          "village_name": "東興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-005",
+          "village_name": "力行里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-006",
+          "village_name": "華興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-007",
+          "village_name": "振興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-008",
+          "village_name": "仁愛里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-009",
+          "village_name": "大仁里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-010",
+          "village_name": "大山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-011",
+          "village_name": "大道里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-012",
+          "village_name": "光武里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-013",
+          "village_name": "實踐里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-014",
+          "village_name": "小康里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-015",
+          "village_name": "正風里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-016",
+          "village_name": "延平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-017",
+          "village_name": "興北里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-018",
+          "village_name": "大豐里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-019",
+          "village_name": "重興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-020",
+          "village_name": "和順里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-021",
+          "village_name": "國姓里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-022",
+          "village_name": "六甲里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-023",
+          "village_name": "正覺里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-024",
+          "village_name": "成功里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-025",
+          "village_name": "文元里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-026",
+          "village_name": "大港里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-027",
+          "village_name": "國興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-028",
+          "village_name": "裕民里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-029",
+          "village_name": "安民里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-030",
+          "village_name": "興南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-031",
+          "village_name": "長榮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-032",
+          "village_name": "中樓里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-033",
+          "village_name": "公園里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-034",
+          "village_name": "玉皇里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-035",
+          "village_name": "長德里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-036",
+          "village_name": "三德里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-037",
+          "village_name": "五福里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-038",
+          "village_name": "元寶里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-039",
+          "village_name": "永祥里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-040",
+          "village_name": "成德里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-041",
+          "village_name": "文成里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-042",
+          "village_name": "大和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703400-043",
+          "village_name": "賢北里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "北區"
+    },
+    "6703500": {
+      "district_code": "6703500",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6703500-001",
+          "village_name": "東和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-002",
+          "village_name": "安順里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-003",
+          "village_name": "南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-004",
+          "village_name": "州南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-005",
+          "village_name": "州北里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-006",
+          "village_name": "安東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-007",
+          "village_name": "安西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-008",
+          "village_name": "頂安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-009",
+          "village_name": "安慶里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-010",
+          "village_name": "新順里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-011",
+          "village_name": "原佃里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-012",
+          "village_name": "總頭里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-013",
+          "village_name": "長安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-014",
+          "village_name": "公親里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-015",
+          "village_name": "海東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-016",
+          "village_name": "海西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-017",
+          "village_name": "海南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-018",
+          "village_name": "溪心里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-019",
+          "village_name": "塩田里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-020",
+          "village_name": "淵東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-021",
+          "village_name": "淵西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-022",
+          "village_name": "佃東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-023",
+          "village_name": "佃西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-024",
+          "village_name": "公里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-025",
+          "village_name": "南興里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-026",
+          "village_name": "學東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-027",
+          "village_name": "城東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-028",
+          "village_name": "城北里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-029",
+          "village_name": "城中里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-030",
+          "village_name": "城南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-031",
+          "village_name": "城西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-032",
+          "village_name": "青草里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-033",
+          "village_name": "砂崙里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-034",
+          "village_name": "顯宮里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-035",
+          "village_name": "鹿耳里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-036",
+          "village_name": "四草里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-037",
+          "village_name": "安和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-038",
+          "village_name": "溪北里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-039",
+          "village_name": "溪頂里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-040",
+          "village_name": "溪墘里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-041",
+          "village_name": "海佃里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-042",
+          "village_name": "幸福里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-043",
+          "village_name": "鳳凰里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-044",
+          "village_name": "梅花里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-045",
+          "village_name": "理想里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-046",
+          "village_name": "溪東里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-047",
+          "village_name": "淵中里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-048",
+          "village_name": "布袋里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-049",
+          "village_name": "國安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-050",
+          "village_name": "安富里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703500-051",
+          "village_name": "大安里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "安南區"
+    },
+    "6703600": {
+      "district_code": "6703600",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6703600-001",
+          "village_name": "西門里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-002",
+          "village_name": "金城里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-003",
+          "village_name": "石門里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-004",
+          "village_name": "漁光里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-005",
+          "village_name": "建平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-006",
+          "village_name": "怡平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-007",
+          "village_name": "華平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-008",
+          "village_name": "平通里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-009",
+          "village_name": "文平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-010",
+          "village_name": "國平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-011",
+          "village_name": "育平里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-012",
+          "village_name": "億載里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-013",
+          "village_name": "海頭里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-014",
+          "village_name": "港仔里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703600-015",
+          "village_name": "平安里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "安平區"
+    },
+    "6703700": {
+      "district_code": "6703700",
+      "total_pred_cases": 0,
+      "villages": [
+        {
+          "village_id": "6703700-001",
+          "village_name": "公正里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-002",
+          "village_name": "銀同里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-003",
+          "village_name": "小西里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-004",
+          "village_name": "仙草里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-005",
+          "village_name": "赤嵌里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-006",
+          "village_name": "五妃里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-007",
+          "village_name": "郡王里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-008",
+          "village_name": "福安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-009",
+          "village_name": "法華里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-010",
+          "village_name": "大南里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-011",
+          "village_name": "開山里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-012",
+          "village_name": "進學里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-013",
+          "village_name": "建國里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-014",
+          "village_name": "青年里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-015",
+          "village_name": "永福里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-016",
+          "village_name": "永華里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-017",
+          "village_name": "天后里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-018",
+          "village_name": "三民里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-019",
+          "village_name": "萬昌里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-020",
+          "village_name": "普濟里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-021",
+          "village_name": "水仙里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-022",
+          "village_name": "藥王里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-023",
+          "village_name": "協和里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-024",
+          "village_name": "文賢里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-025",
+          "village_name": "光賢里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-026",
+          "village_name": "元安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-027",
+          "village_name": "協進里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-028",
+          "village_name": "安海里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-029",
+          "village_name": "民生里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-030",
+          "village_name": "中正里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-031",
+          "village_name": "大涼里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-032",
+          "village_name": "民主里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-033",
+          "village_name": "西湖里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-034",
+          "village_name": "西賢里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-035",
+          "village_name": "三合里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-036",
+          "village_name": "民權里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-037",
+          "village_name": "保安里",
+          "pred_cases": 0
+        },
+        {
+          "village_id": "6703700-038",
+          "village_name": "郡西里",
+          "pred_cases": 0
+        }
+      ],
+      "district_name": "中西區"
+    }
+  },
+  "district_name_to_code": {
+    "新營區": "6700100",
+    "鹽水區": "6700200",
+    "白河區": "6700300",
+    "柳營區": "6700400",
+    "後壁區": "6700500",
+    "東山區": "6700600",
+    "麻豆區": "6700700",
+    "下營區": "6700800",
+    "六甲區": "6700900",
+    "官田區": "6701000",
+    "大內區": "6701100",
+    "佳里區": "6701200",
+    "學甲區": "6701300",
+    "西港區": "6701400",
+    "七股區": "6701500",
+    "將軍區": "6701600",
+    "北門區": "6701700",
+    "新化區": "6701800",
+    "善化區": "6701900",
+    "新市區": "6702000",
+    "安定區": "6702100",
+    "山上區": "6702200",
+    "玉井區": "6702300",
+    "楠西區": "6702400",
+    "南化區": "6702500",
+    "左鎮區": "6702600",
+    "仁德區": "6702700",
+    "歸仁區": "6702800",
+    "關廟區": "6702900",
+    "龍崎區": "6703000",
+    "永康區": "6703100",
+    "東區": "6703200",
+    "南區": "6703300",
+    "北區": "6703400",
+    "安南區": "6703500",
+    "安平區": "6703600",
+    "中西區": "6703700"
+  },
+  "summary": {
+    "total_districts": 37,
+    "total_villages": 751,
+    "total_pred_cases": 338
+  }
+}
