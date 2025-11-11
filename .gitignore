@@ -1,5 +1,7 @@
 # 大檔案和資料檔案
 bucket.json
+bucket_stat_converted.json
+bucket_stat.json
 
 # Python 相關
 __pycache__/
@@ -54,9 +56,6 @@ logs/
 # 暫存檔案
 *.tmp
 *.temp
-
-# 設定檔（如果包含敏感資訊）
-config.py
 
 # 機器學習模型檔案（通常很大）
 *.h5
