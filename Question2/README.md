@@ -1,289 +1,158 @@
-# 🦟 臺南市登革熱監測系統
+# 🦟 臺南市登革熱監測系統（Question 2）
 
-一個針對臺南市設計的綜合性登革熱監測與預測系統，具備互動式地圖、機器學習預測和即時資料視覺化功能。
+臺南市登革熱監測系統結合資料管線、互動式地圖與多語介面，協助即時檢視行政區與村里層級的疫情風險與預測結果。本專案為 Question 2 的最新版實作說明。
 
-## 📋 專案描述
+## 📋 概覽
 
-本專案是一個先進的登革熱監測系統，結合網頁爬蟲和互動式地圖技術，為臺南市提供即時登革熱風險評估。系統特色包括：
+- **即時資料流程**：訪問首頁時即自動觸發 `prepare_forecast_data.py` 與 `process_map.py`，同步更新預測資料與 Folium 地圖。
+- **多語介面**：支援繁體中文與英文顯示，可透過 `?lang=zh`／`?lang=en` 參數或 UI 切換。
+- ** 752 村里層級視覺化**：除了 37 個行政區界線，也整合村里層級資料與翻譯字典。
+- **FastAPI + Jinja2**：後端使用 FastAPI 與 Jinja2 範本，前端以 Leaflet、Bootstrap 與客製 `script.js` 呈現。
+- **可擴充設定**：所有地圖樣式、資料來源與風險閾值皆集中於 `config.py` 管理。
 
-- **互動式網頁介面**：基於FastAPI的現代化網頁應用程式
-- **即時資料更新**：從政府API自動收集資料
-- **互動式地圖**：基於Folium的地圖視覺化，包含行政區邊界
-- **風險評估**：多層級風險分類（低、中、高風險）
-- **資料管理**：完整的資料處理和儲存功能
+## 🚀 快速開始
 
-系統處理誘卵桶資料、氣象資訊和歷史登革熱病例，以監測臺南市各行政區的疫情狀況。
-
-## 🚀 如何執行
-
-### 系統需求
-- Python 3.8 或更高版本
-- Chrome 瀏覽器（用於網頁爬蟲功能）
-- 所需依賴套件（請參考 requirements.txt）
-
-### 安裝步驟
-
-1. **複製專案**
-   ```bash
-   git clone <repository-url>
-   cd DengueFeverProject
-   ```
-
-2. **安裝依賴套件**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **設定系統**
-   - 複製範例設定檔：
-     ```bash
-     cp config_example.py config.py
-     ```
-   - 編輯 `config.py` 以符合您的系統需求
-
-4. **執行主應用程式**
-   ```bash
-   uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-   ```
-
-5. **存取網頁介面**
-   - 開啟瀏覽器並導航至：`http://localhost:8000`
-   - 系統啟動時會自動更新地圖資料
-
-### 其他啟動方式
-
-**僅更新資料：**
+### 1. 取得原始碼
 ```bash
-python UpdateData.py
+git clone <repository-url>
+cd DengueFeverProject/Question2
 ```
 
-### 系統元件
-
-- **main.py**：FastAPI 網頁伺服器和主應用程式
-- **UpdateData.py**：資料收集和更新腳本
-- **data/**：資料處理和地圖生成腳本
-
-## 🧪 如何測試
-
-### 執行測試
-
-由於目前專案結構中沒有 `test_main.py` 檔案，以下是建議的測試方法：
-
-1. **手動測試**
-   ```bash
-   # 啟動主應用程式
-   uvicorn main:app --host 0.0.0.0 --port 8000 --reload
-   
-   # 在另一個終端機中測試 API 端點
-   curl http://localhost:8000/
-   curl http://localhost:8000/api/update-map
-   ```
-
-2. **資料驗證測試**
-   ```bash
-   # 測試資料更新功能
-   python test.py
-   ```
-
-3. **建立測試檔案**（建議）：
-   ```bash
-   # 建立簡單的測試檔案
-   cat > test_main.py << 'EOF'
-   import requests
-   import time
-   
-   def test_main_app():
-       """測試主 FastAPI 應用程式"""
-       base_url = "http://localhost:8000"
-       
-       # 測試主頁面
-       response = requests.get(base_url)
-       assert response.status_code == 200, "主頁面應該可以存取"
-       
-       # 測試 API 端點
-       api_response = requests.get(f"{base_url}/api/update-map")
-       assert api_response.status_code == 200, "API 應該成功回應"
-       
-       print("所有測試通過！")
-   
-   if __name__ == "__main__":
-       test_main_app()
-   EOF
-   
-   # 執行測試
-   python test_main.py
-   ```
-
-
-### 測試檢查清單
-
-- [ ] 網頁介面正確載入
-- [ ] 地圖正常顯示
-- [ ] 資料更新功能正常運作
-- [ ] API 端點正確回應
-- [ ] 檔案上傳功能（如適用）
-
-## 📁 專案結構
-
-```
-DengueFeverProject/
-├── main.py                          # FastAPI 主應用程式
-├── test.py                          # 基本資料更新測試
-├── UpdateData.py                    # 資料收集腳本
-├── requirements.txt                 # Python 依賴套件
-├── config.py                        # 設定檔
-├── data/                           # 資料處理
-│   ├── process_map.py              # 地圖生成
-│   ├── prepare_forecast_data.py    # 預測資料處理
-│   ├── convert_village_data.py     # 村里資料轉換
-│   ├── dengue_data.json            # 登革熱病例資料
-│   ├── weather_data.json           # 氣象資訊
-│   ├── population.json             # 人口統計資料
-│   ├── bucket.json                 # 誘卵桶資料
-│   ├── district_boundaries.geojson # 行政區邊界
-│   ├── village.geojson             # 村里邊界資料
-│   ├── forecast_data_processed.json # 處理後的預測資料
-│   └── result/                     # 預測結果資料
-│       ├── forecast_T2_wide.csv    # 村里級預測資料（寬格式）
-│       ├── forecast_T2_long.csv    # 村里級預測資料（長格式）
-│       ├── forecast_T2_wide_district.csv # 行政區預測資料（寬格式）
-│       ├── forecast_T2_long_district.csv # 行政區預測資料（長格式）
-│       └── village_ids_tainan.csv  # 村里ID對照表
-├── template/                       # 網頁模板
-│   ├── map.html                    # 主地圖介面
-│   ├── map_temp.html               # 模板檔案
-│   └── script.js                   # 前端JavaScript
-└── web/                           # 靜態網頁資源
-    └── style.css                  # CSS 樣式
-```
-
-## 🔧 設定
-
-`config.py` 中的主要設定選項：
-
-- **FASTAPI_CONFIG**：網頁伺服器設定（主機、埠號等）
-- **MAP_CONFIG**：地圖顯示設定（中心座標、縮放等級）
-- **DATA_SOURCES**：API 端點和資料來源
-
-## 📊 資料來源與結構
-
-### 資料來源
-- **政府 API**：臺南市登革熱病例資料
-- **氣象資料**：用於風險評估的氣象資訊
-- **地理資料**：行政區邊界和管理區域
-- **誘卵桶資料**：誘卵桶監測結果
-- **預測模型**：機器學習預測結果
-
-### 核心資料檔案
-
-#### 預測資料（data/result/）
-- **forecast_T2_wide.csv**：村里級預測資料（寬格式）
-  - 格式：week_start, village_id_1, village_id_2, ...
-  - 用途：最新預測數據的主要來源
-- **forecast_T2_long.csv**：村里級預測資料（長格式）
-  - 格式：week_start, VillageID, pred_cases
-  - 用途：歷史預測數據分析
-- **forecast_T2_wide_district.csv**：行政區預測資料（寬格式）
-- **forecast_T2_long_district.csv**：行政區預測資料（長格式）
-- **village_ids_tainan.csv**：村里ID對照表
-  - 格式：DistrictCode, DistrictName, VillageID, VillageName
-  - 用途：村里ID與名稱的對照關係
-
-#### 地理資料
-- **district_boundaries.geojson**：37個行政區邊界
-- **village.geojson**：752個村里邊界（轉換自Shapefile）
-- **population.json**：各區域人口統計資料
-
-#### 處理後的資料
-- **forecast_data_processed.json**：整合後的預測資料
-  - 結構：
-    ```json
-    {
-      "latest_week": "2024-01-08",
-      "district_data": {
-        "6700100": {
-          "district_code": "6700100",
-          "district_name": "新營區",
-          "total_pred_cases": 0,
-          "villages": [...]
-        }
-      },
-      "district_name_to_code": {...},
-      "summary": {...}
-    }
-    ```
-
-#### 其他資料
-- **dengue_data.json**：歷史登革熱病例資料
-- **weather_data.json**：氣象監測資料
-- **bucket.json**：誘卵桶監測結果
-
-### 資料處理流程
-
-#### 1. 資料準備階段
+### 2. 建立虛擬環境（建議）
 ```bash
-# 轉換村里Shapefile為GeoJSON
-python data/convert_village_data.py
-
-# 處理預測資料，整合村里和行政區數據
-python data/prepare_forecast_data.py
+python -m venv venv
+source venv/bin/activate      # macOS / Linux
+venv\Scripts\activate         # Windows PowerShell
 ```
 
-#### 2. 地圖生成階段
+### 3. 安裝依賴
+- 推薦執行一鍵安裝腳本：
+  ```bash
+  python install.py
+  ```
+- 或手動安裝：
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+### 4. 初始化設定
 ```bash
-# 生成互動式地圖HTML
-python data/process_map.py
+cp config_example.py config.py
+# 依需要編輯 config.py，自訂地圖樣式、資料來源等參數
 ```
 
-#### 3. 系統啟動階段
-```bash
-# 啟動FastAPI服務器（自動更新資料）
-python main.py
+### 5. 啟動服務
+- 自動檢查環境並啟動：
+  ```bash
+  python start_system.py
+  ```
+- 或直接啟動 FastAPI：
+  ```bash
+  uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+  ```
+- 也可使用提供的批次／腳本：
+  - macOS / Linux：`./start.sh`
+  - Windows：雙擊 `start.bat`
+
+瀏覽器開啟 `http://localhost:8000`，即可看到最新資料與互動地圖。
+
+## 🔄 資料流程與腳本
+
+| 階段 | 腳本 | 功能 |
+| ---- | ---- | ---- |
+| 地理資料轉換（必要時） | `data/convert_village_data.py` | 將村里 Shapefile 轉為 GeoJSON，並做欄位清理。 |
+| 預測資料整備 | `data/prepare_forecast_data.py` | 整合 `data/result/` 內的 CSV、人口與天氣資料，輸出 `forecast_data_processed.json`。 |
+| 地圖與前端產出 | `data/process_map.py` | 讀取 GeoJSON、預測資料與樣式設定，更新 `template/map.html` 與 `template/script.js`。 |
+| 多語字典 | `village_translation.py` | 清理並產生村里名稱翻譯，供地圖切換語系使用。 |
+
+> ✅ `main.py` 在接獲請求時會先呼叫 `prepare_forecast_data.py`（資料更新）再呼叫 `process_map.py`（地圖更新），確保頁面每次載入都是最新成果。
+
+## ⚙️ 設定重點（`config.py`）
+
+- `FASTAPI_CONFIG`：服務名稱、版本、說明與預設主機／埠號。
+- `STATIC_MOUNTS`：FastAPI 掛載的靜態路徑，例如 `/data`、`/template`。
+- `MAP_CONFIG`、`DISTRICT_STYLE`：地圖中心、縮放層級與行政區樣式。
+- `COORDINATE_SYSTEM`：資料投影（預設從 EPSG:3826 轉換到 WGS84）。
+- `DATA_SOURCES`、`RISK_THRESHOLDS`：資料更新頻率、外部 API 來源與風險分級閾值。
+- `CACHE_CONFIG`、`LOG_CONFIG`：快取與日誌設定，可視需求調整。
+
+詳細字段說明可參考 `CONFIG_README.md`。
+
+## 🗂️ 目錄結構
+
+```
+Question2/
+├── main.py                 # FastAPI 入口，處理頁面與 API 請求
+├── config.py               # 主設定檔（由 config_example.py 拷貝而來）
+├── config_example.py
+├── install.py              # 一鍵安裝依賴腳本
+├── start_system.py         # 啟動器（檢查環境並啟動 uvicorn）
+├── start.sh / start.bat    # 平台啟動腳本
+├── data/
+│   ├── prepare_forecast_data.py
+│   ├── process_map.py
+│   ├── convert_village_data.py
+│   ├── forecast_data_processed.json
+│   ├── district_boundaries.geojson
+│   ├── village.geojson
+│   ├── population.json
+│   ├── weather_data.json
+│   ├── village_list.csv
+│   ├── tainan_town.shp / .shx
+│   └── result/
+│       ├── forecast_T2_long.csv
+│       ├── forecast_T2_wide.csv
+│       ├── forecast_T2_long_district.csv
+│       ├── forecast_T2_wide_district.csv
+│       └── village_ids_tainan.csv
+├── template/
+│   ├── map.html
+│   ├── map_with_language_switch.html
+│   └── script.js
+├── web/
+│   └── style.css
+├── village_translation.py
+├── requirements.txt
+└── QUICK_START.md、INSTALLATION_GUIDE.md 等文件
 ```
 
-### 資料更新機制
-- **自動更新**：每次訪問主頁時自動執行資料處理流程
-- **手動更新**：透過 `/api/update-map` API端點
-- **資料一致性**：確保行政區和村里資料使用相同週次
+## 🔌 FastAPI 端點
 
-## 🛠️ 使用技術
+| 方法 | 路徑 | 描述 |
+| ---- | ---- | ---- |
+| GET | `/` | 產生並回傳最新地圖頁面，支援 `?lang=zh`／`?lang=en`。 |
+| GET | `/api/update-map` | 手動觸發資料與地圖更新，可帶 `lang` 參數。 |
+| GET | `/api/forecast-data` | 回傳 `forecast_data_processed.json` 的內容與摘要。 |
+| GET | `/api/villages` | 提供全部村里 GeoJSON。 |
+| GET | `/api/villages/{district_name}` | 以行政區名稱取得該區的所有村里資料。 |
 
-- **後端**：FastAPI、Python
-- **前端**：HTML5、CSS3、JavaScript、Bootstrap
-- **地圖**：Folium、Leaflet、GeoJSON
-- **資料處理**：Pandas、NumPy、GeoPandas
-- **網頁爬蟲**：Selenium、Requests
+所有成功回應皆包含 `status: "success"`，失敗時會回傳錯誤訊息字串。
 
-## 🔌 API 端點
+## 🧪 開發與測試建議
 
-### 主要端點
-- **GET /**：主頁面，顯示互動式地圖
-- **GET /api/update-map**：手動更新資料和地圖
-- **GET /api/forecast-data**：獲取預測資料
-- **GET /api/villages**：獲取所有村里資料
-- **GET /api/villages/{district_name}**：獲取指定區域的村里資料
+- 目前尚未納入自動化測試，可使用 `curl` 或 Postman 驗證 API，也可手動檢查地圖載入。
+- 若修改資料處理腳本，建議先在 `data/` 目錄單獨執行：
+  ```bash
+  python data/prepare_forecast_data.py
+  python data/process_map.py
+  ```
+- 地圖渲染依賴 GeoPandas／Folium，若遇到缺少驅動或影像庫，可重新執行 `install.py` 以補齊依賴。
 
-### API 回應範例
-```json
-{
-  "status": "success",
-  "latest_week": "2024-01-08",
-  "district_count": 37,
-  "data": {
-    "district_data": {...},
-    "district_name_to_code": {...}
-  }
-}
-```
+## 🌐 瀏覽介面使用技巧
 
-## 📞 技術支援
+- 左側側欄列出行政區摘要，點擊可高亮地圖並顯示詳細資訊。
+- 右上角語言切換按鈕可即時切換繁體中文／英文標籤。
+- 若需直接透過網址切換語言，可於連結後加上 `?lang=en`。
 
-如有問題或疑問：
-1. 查看現有的中文文件
-2. 檢查設定檔
-3. 確認所有依賴套件已安裝
-4. 檢查系統日誌中的錯誤訊息
+## 🆘 疑難排解
 
-## 📄 授權
+1. **無法啟動**：確認 Python ≥ 3.8、已安裝 requirements、並於專案根目錄執行命令。
+2. **地圖沒有更新**：檢查 `data/forecast_data_processed.json` 是否生成，或手動執行資料腳本。
+3. **Chrome 相依問題**：部分資料抓取功能仰賴 Chrome，若未安裝會跳出提醒。
+4. **語言切換未生效**：清除瀏覽器快取，並確認 `template/script.js` 已被更新。
 
-本專案是臺南市登革熱監測和預測學術研究計畫的一部分。
+更多設定、部署、翻譯細節可參考專案內附的 `INSTALLATION_GUIDE.md`、`QUICK_START.md` 與 `MULTILINGUAL_IMPROVEMENTS.md`。
+
+## 📄 授權與致謝
+
+本專案為臺南市登革熱監測與預測研究計畫的一部分。若需使用資料或程式碼於學術／研究用途，請保留來源並遵循專案授權規範。
