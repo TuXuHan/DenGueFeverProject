@@ -5,6 +5,7 @@ from fastapi.templating import Jinja2Templates
 import json
 import os
 import time
+import csv
 from pathlib import Path
 
 # 取得專案目錄
@@ -36,7 +37,7 @@ _cache_duration = 300  # 缓存5分钟（300秒）
 
 def load_stat_data(force_reload=False):
     """
-    載入 bucket_stat_converted.json 資料，带缓存机制
+    載入 bucket_converted.json 資料作為統計數據，带缓存机制
     
     Args:
         force_reload: 是否强制重新加载数据
@@ -55,8 +56,8 @@ def load_stat_data(force_reload=False):
     
     print("正在重新加载统计数据...")
     
-    # 加载统计数据
-    stat_file = DATA_DIR / "bucket_stat_converted.json"
+    # 加载统计数据（使用 bucket_converted.json）
+    stat_file = DATA_DIR / "bucket_converted.json"
     data = []
     
     if stat_file.exists():
@@ -66,6 +67,8 @@ def load_stat_data(force_reload=False):
             print(f"載入統計資料：{len(data)} 個監測點")
         except Exception as e:
             print(f"載入統計資料時發生錯誤: {e}")
+    else:
+        print(f"警告：統計數據文件不存在：{stat_file}")
     
     # 更新缓存
     _stat_cache = data
@@ -209,6 +212,47 @@ async def get_cache_info():
         "is_valid": is_valid,
         "bucket_data_count": len(_bucket_cache) if _bucket_cache else 0,
         "stat_data_count": len(_stat_cache) if _stat_cache else 0
+    }
+
+@app.get("/api/imputation")
+async def get_imputation_data():
+    """取得 imputation.csv 數據（沒有桶子的27區中心點預測數據）"""
+    imputation_file = DATA_DIR / "imputation.csv"
+    data = []
+    
+    if imputation_file.exists():
+        try:
+            with open(imputation_file, 'r', encoding='utf-8') as f:
+                reader = csv.DictReader(f)
+                for row in reader:
+                    # 轉換經緯度為浮點數
+                    lat = float(row['lat']) if row['lat'] else None
+                    lon = float(row['lon']) if row['lon'] else None
+                    
+                    # 處理預測值（可能為空字符串或數字）
+                    predicted_value = row['predicted_value'].strip() if row['predicted_value'] else None
+                    if predicted_value:
+                        try:
+                            predicted_value = float(predicted_value)
+                        except ValueError:
+                            predicted_value = None
+                    
+                    data.append({
+                        "district": row['district'],
+                        "lat": lat,
+                        "lon": lon,
+                        "predicted_value": predicted_value
+                    })
+            print(f"載入 imputation 資料：{len(data)} 個區")
+        except Exception as e:
+            print(f"載入 imputation 資料時發生錯誤: {e}")
+    else:
+        print(f"警告：imputation.csv 文件不存在：{imputation_file}")
+    
+    return {
+        "status": "success",
+        "total": len(data),
+        "data": data
     }
 
 if __name__ == "__main__":

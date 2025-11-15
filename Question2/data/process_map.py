@@ -666,6 +666,7 @@ function initializeLanguageLabels() {
 var currentView = 'district'; // 'district' or 'village'
 var currentDistrict = null;
 var currentVillage = null;
+var isReturningToDistrict = false; // 標誌：是否正在自動返回行政區視圖
 
 // 初始地圖中心坐標和縮放級別
 var initialMapCenter = INITIAL_MAP_CENTER_PLACEHOLDER;
@@ -931,6 +932,68 @@ function navigateToCity() {
     var districtNames = DISTRICT_NAMES_PLACEHOLDER;
     showDistrictList(districtNames);
     updateBreadcrumb('district');
+}
+
+// 自動返回行政區視圖的函數（當縮放級別過小時觸發）
+function returnToDistrictView() {
+    console.log('returnToDistrictView 被調用');
+    console.log('當前視圖狀態:', currentView);
+    
+    // 只在村里視圖時才執行
+    if (currentView !== 'village') {
+        console.log('當前不在村里視圖，不執行返回');
+        return;
+    }
+    
+    // 如果正在返回過程中，則不重複執行
+    if (isReturningToDistrict) {
+        console.log('正在返回過程中，跳過');
+        return;
+    }
+    
+    console.log('縮放級別過小，自動返回行政區視圖');
+    
+    // 設置標誌，防止重複觸發
+    isReturningToDistrict = true;
+    
+    // 清除村里圖層和標籤
+    var mapId = 'MAP_ID_PLACEHOLDER';
+    var map = window[mapId];
+    console.log('獲取地圖對象:', map);
+    
+    if (map && villageLayer) {
+        map.removeLayer(villageLayer);
+        villageLayer = null;
+        console.log('已清除村里圖層');
+    }
+    
+    // 清除村里標籤圖層
+    if (window.villageLabelsLayer) {
+        map.removeLayer(window.villageLabelsLayer);
+        window.villageLabelsLayer = null;
+        console.log('已清除村里標籤圖層');
+    }
+    
+    // 重置地圖視圖到初始狀態，使用動畫效果
+    if (map) {
+        console.log('重置地圖視圖到初始狀態');
+        map.setView(initialMapCenter, initialZoomLevel, {
+            animate: true,
+            duration: 0.8
+        });
+    }
+    
+    // 返回區域列表
+    var districtNames = DISTRICT_NAMES_PLACEHOLDER;
+    showDistrictList(districtNames);
+    updateBreadcrumb('district');
+    console.log('已返回行政區列表');
+    
+    // 動畫完成後重置標誌（延遲一點時間確保動畫完成）
+    setTimeout(function() {
+        isReturningToDistrict = false;
+        console.log('重置 isReturningToDistrict 標誌');
+    }, 1000);
 }
 
 function navigateToDistrict() {
@@ -1492,6 +1555,45 @@ function showVillagesForDistrict(districtName, map) {
         });
         
         console.log('地圖區域點擊事件監聽器設置完成！');
+        
+        // 添加縮放事件監聽器：當縮小到一定級別時自動返回行政區視圖
+        console.log('開始設置縮放事件監聽器...');
+        console.log('當前地圖對象:', map);
+        console.log('當前視圖狀態:', currentView);
+        console.log('初始縮放級別:', initialZoomLevel);
+        
+        map.on('zoomend', function() {
+            console.log('=== 縮放事件觸發 ===');
+            console.log('當前縮放級別:', map.getZoom());
+            console.log('當前視圖狀態:', currentView);
+            console.log('是否正在返回:', isReturningToDistrict);
+            console.log('初始縮放級別:', initialZoomLevel);
+            
+            // 如果正在返回過程中，則不處理
+            if (isReturningToDistrict) {
+                console.log('正在返回過程中，跳過處理');
+                return;
+            }
+            
+            var currentZoom = map.getZoom();
+            // 使用閾值 12：當縮放級別小於等於 12 時就返回
+            var thresholdZoom = 12;
+            console.log('檢查條件: currentView === "village" && currentZoom <= thresholdZoom');
+            console.log('currentView === "village":', currentView === 'village');
+            console.log('currentZoom <= thresholdZoom:', currentZoom <= thresholdZoom, '(', currentZoom, '<=', thresholdZoom, ')');
+            console.log('初始縮放級別:', initialZoomLevel, '，閾值:', thresholdZoom);
+            
+            // 如果當前在村里視圖且縮放級別小於等於閾值，則自動返回行政區視圖
+            if (currentView === 'village' && currentZoom <= thresholdZoom) {
+                console.log('✓ 條件滿足，觸發自動返回行政區視圖');
+                console.log('檢測到縮放級別:', currentZoom, '小於等於閾值:', thresholdZoom, '，自動返回行政區視圖');
+                returnToDistrictView();
+            } else {
+                console.log('條件不滿足，不執行自動返回');
+            }
+        });
+        
+        console.log('地圖縮放事件監聽器設置完成！');
     }, 1000);  // 延遲 1 秒確保地圖完全初始化
 })();
 </script>
@@ -2452,7 +2554,7 @@ fixed_html = fixed_html.replace("INITIAL_ZOOM_LEVEL_PLACEHOLDER", str(initial_zo
 fixed_html = fixed_html.replace("L.geoJson(null,", f"L.geoJson({geojson_json},")
 fixed_html = fixed_html.replace(
     "document.addEventListener('DOMContentLoaded', function() {",
-    f"// 人口資料\nvar populationData = {population_data_json};\n\n// 登革熱預測數據\nvar forecastData = {forecast_data_json};\n\n// 區域名稱翻譯對照表\nwindow.districtTranslations = {json.dumps(district_translations[language])};\n\n// 村里名稱翻譯對照表\nwindow.villageTranslations = {json.dumps(village_translations[language])};\n\ndocument.addEventListener('DOMContentLoaded', function() {{"
+    f"// 人口資料\nvar populationData = {population_data_json};\n\n// 登革熱預測數據\nvar forecastData = {forecast_data_json};\nwindow.forecastData = forecastData;\n\n// 區域名稱翻譯對照表\nwindow.districtTranslations = {json.dumps(district_translations[language])};\n\n// 村里名稱翻譯對照表\nwindow.villageTranslations = {json.dumps(village_translations[language])};\n\ndocument.addEventListener('DOMContentLoaded', function() {{"
 )
 
 # 替換語言相關的文本
